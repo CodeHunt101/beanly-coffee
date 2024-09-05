@@ -35,8 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/.husky
-
 *.sketch
 *.fig
 *.xd
