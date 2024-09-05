@@ -12,6 +12,12 @@ $colours: (
   // #83888F (Grey)
 );
 
+$clr-primary: map-get($colours, "primary");
+$clr-neutral: map-get($colours, "neutral");
+$clr-accent: map-get($colours, "accent");
+$clr-background: map-get($colours, "background");
+$clr-dark: map-get($colours, "dark");
+
 // Font sizes
 $fs-map: (
   800: 9.375rem,
@@ -41,6 +47,7 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+$breakpoint-xxl: 1440px;
 
 //Spacings
 $flex-alignments: start, end, center, space-between, space-around;

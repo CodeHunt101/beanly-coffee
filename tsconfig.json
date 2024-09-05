@@ -20,7 +20,9 @@
       "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
       "@/styles/*": ["styles/*"],
-      "@/types/*": ["types/*"]
+      "@/types/*": ["types/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/public/*": ["public/*"]
     },
     "plugins": [
       {

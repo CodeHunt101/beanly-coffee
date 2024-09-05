@@ -1,0 +1,63 @@
+@import "../styles/abstracts/mixins", "../styles/abstracts/variables";
+
+// Navbar styles
+.navbar {
+}
+
+// Primary navigation styles
+.primary-navigation {
+  min-width: 283px;
+
+  // Hamburger menu styles
+  .hamburger {
+    display: block;
+    margin: 2rem 1.5rem 0 auto;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    @include md {
+      position: relative;
+      margin: 0;
+      display: none;
+    }
+  }
+
+  // Navigation list styles
+  ul {
+    display: none;
+    margin: 0;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include md {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      --list-height: 4rem;
+    }
+
+    // Navigation link styles
+    li {
+      margin: 1em 0;
+      @include md {
+        margin: 0 0;
+        * {
+          padding: 0 0;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      span {
+        margin-right: 0.5em;
+        font-weight: 700;
+      }
+    }
+  }
+}

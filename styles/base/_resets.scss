@@ -24,6 +24,7 @@ blockquote,
 dl,
 dd {
   margin-block-end: 0;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -37,19 +38,9 @@ body {
   font-family: var(--ff-sans-serif);
   min-height: 100vh;
   line-height: 1.5;
+  font-weight: 400;
   @include bg-colour(map-get($colours, "background"));
   @include text-colour(map-get($colours, "neutral"));
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-  line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
@@ -57,7 +48,12 @@ h1,
 h2,
 h3,
 h4 {
+  font-weight: 900;
   text-wrap: balance;
+}
+
+p {
+  font-weight: 400;
 }
 
 /* A elements that don't have a class get default styles */

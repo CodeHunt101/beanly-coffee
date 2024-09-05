@@ -8,36 +8,40 @@
   &-column {
     flex-direction: column;
   }
+}
 
-  @each $alignment in $flex-alignments {
-    .align-content-#{$alignment} {
-      align-content: #{$alignment};
-    }
-
-    .justify-content-#{$alignment} {
-      justify-content: #{$alignment};
-    }
-
-    .align-items-#{$alignment} {
-      align-items: #{$alignment};
-    }
+@each $alignment in $flex-alignments {
+  .align-content-#{$alignment} {
+    align-content: #{$alignment};
   }
 
-  // Additional justify-content for space-evenly
-  .justify-content-evenly {
-    justify-content: space-evenly;
+  .justify-#{$alignment} {
+    justify-content: #{$alignment};
   }
 
-  // Additional align-items option
-  .align-items-baseline {
-    align-items: baseline;
+  .align-items-#{$alignment} {
+    align-items: #{$alignment};
   }
+}
+
+// Additional justify-content for space-evenly
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+// Additional align-items option
+.align-items-baseline {
+  align-items: baseline;
 }
 
 .container {
   padding-inline: 1.333em;
   margin-inline: auto;
   max-width: 80rem;
+
+  @include xxl {
+    padding-inline: 0;
+  }
 }
 
 .sr-only {
