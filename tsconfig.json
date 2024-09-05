@@ -19,7 +19,8 @@
     "paths": {
       "@/app/*": ["app/*"],
       "@/components/*": ["components/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/types/*": ["types/*"]
     },
     "plugins": [
       {
