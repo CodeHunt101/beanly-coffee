@@ -1,11 +1,3 @@
-@mixin bg-colour($colour, $alpha: 100%) {
-  background-color: #{"hsl(#{$colour} / #{$alpha})"};
-}
-
-@mixin text-colour($colour, $alpha: 100%) {
-  color: #{"hsl(#{$colour} / #{$alpha})"};
-}
-
 @mixin sm {
   @media (min-width: #{$breakpoint-sm}) {
     @content;

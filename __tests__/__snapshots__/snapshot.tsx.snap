@@ -2,8 +2,10 @@
 
 exports[`renders homepage unchanged 1`] = `
 <div>
-  <h1>
-    Beanly
-  </h1>
+  <main>
+    <h1>
+      Beanly
+    </h1>
+  </main>
 </div>
 `;

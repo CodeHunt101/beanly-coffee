@@ -36,7 +36,7 @@ export default function RootLayout({
         {/* <a href="#main-content" className="skip-link">
           Skip to main content
         </a> */}
-        <header id={styles.mainHeader} className="sticky">
+        <header id={styles.mainHeader} className="container sticky">
           <section className={`${styles.menu} flex justify-space-between`}>
             <div className={`${styles.logo}`}>
               <Link href={Path.HOME}>

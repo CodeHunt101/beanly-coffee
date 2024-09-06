@@ -42,7 +42,7 @@ const NavBar = () => {
       key={path + Math.random()}
     >
       <Link
-        className="uppercase text-neutral letter-spacing-1"
+        className="letter-spacing-1"
         href={path}
         aria-current={pathname === path ? "page" : undefined}
         onClick={() => setIsMenuOpen(false)}
@@ -56,7 +56,7 @@ const NavBar = () => {
     <div
       ref={navWrapperRef}
       data-testid="nav-wrapper"
-      className={`${styles["primary-navigation"]} flex ${
+      className={`${styles["primary-navigation"]} ${
         isMenuOpen ? styles.open : styles.closed
       }`}
     >
@@ -72,14 +72,10 @@ const NavBar = () => {
           alt={isMenuOpen ? "Close menu icon" : "Open menu icon"}
         />
       </button>
-      <nav
-        className={`${styles.navbar} flex align-items-center ${isMenuOpen ? styles.open : ""}`}
-      >
+      <nav className={`${styles.navbar} ${isMenuOpen ? styles.open : ""}`}>
         <ul
           id="primary-navigation"
-          className={`flex justify-space-around fs-200 fw-700 ${
-            isMenuOpen ? styles.open : ""
-          }`}
+          className={`fw-700 ${isMenuOpen ? styles.open : ""}`}
         >
           {renderNavItem(Path.HOME, "Home")}
           {renderNavItem(Path.NOT_READY, "About us")}

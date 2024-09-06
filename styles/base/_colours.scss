@@ -1,10 +1,10 @@
 // Loop to generate background and text classes dynamically
 @each $name, $colour in $colours {
   .bg-#{$name} {
-    @include bg-colour($colour);
+    background-color: $colour;
   }
 
   .text-#{$name} {
-    @include text-colour($colour);
+    color: $colour;
   }
 }

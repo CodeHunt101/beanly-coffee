@@ -1,3 +1,13 @@
+@import "../styles/abstracts/mixins", "../styles/abstracts/variables";
 #mainHeader {
-  padding-top: 2.723em;
+  padding: 2em 0 2em;
+  background-image: linear-gradient($clr-background 75%, transparent);
+
+  @include md {
+    padding: 2.5em 0 2.5em;
+  }
+
+  @include lg {
+    padding: 2.723em 0 2.723em;
+  }
 }

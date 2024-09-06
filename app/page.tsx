@@ -3,5 +3,9 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <h1>Beanly</h1>;
+  return (
+    <main>
+      <h1>Beanly</h1>
+    </main>
+  );
 }
