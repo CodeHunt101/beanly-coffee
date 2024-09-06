@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/navbar/NavBar";
 import { usePathname } from "next/navigation";
 
 // Mock the usePathname hook from next/navigation

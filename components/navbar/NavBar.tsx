@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback } from "react";
 import styles from "./NavBar.module.scss";
 import Image from "next/image";
 import iconHamburger from "@/public/assets/shared/mobile/icon-hamburger.svg";

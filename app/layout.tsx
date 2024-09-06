@@ -7,7 +7,7 @@ import { Path } from "./utils/types";
 import logo from "@/public/assets/shared/desktop/logo.svg";
 import Image from "next/image";
 import { Suspense } from "react";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/navbar/NavBar";
 
 export const metadata: Metadata = {
   title: "Beanly",

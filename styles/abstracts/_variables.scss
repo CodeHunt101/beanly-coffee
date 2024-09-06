@@ -1,10 +1,12 @@
 //Colours
 $colours: (
   "primary": #0e8784,
+  "accent": #66d2cf,
   "dark": #333d4b,
-  "accent": #fdd6ba,
+  "secondary": #fdd6ba,
   "background": #fefcf7,
   "neutral": #83888f,
+  "disabled": #e2dedb,
 );
 
 $clr-primary: map-get($colours, "primary");
@@ -12,6 +14,8 @@ $clr-neutral: map-get($colours, "neutral");
 $clr-accent: map-get($colours, "accent");
 $clr-background: map-get($colours, "background");
 $clr-dark: map-get($colours, "dark");
+$clr-secondary: map-get($colours, "secondary");
+$clr-disabled: map-get($colours, "disabled");
 
 // Font sizes
 $fs-map: (
