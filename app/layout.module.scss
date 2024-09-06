@@ -1,3 +1,6 @@
+@import "../styles/abstracts/variables";
 #mainHeader {
   padding-top: 2.723em;
+  padding-bottom: 2.723em;
+  background-image: linear-gradient($clr-background 75%, transparent);
 }

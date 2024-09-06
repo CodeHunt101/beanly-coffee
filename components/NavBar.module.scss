@@ -1,24 +1,55 @@
-@import "../styles/abstracts/mixins", "../styles/abstracts/variables";
+@import "../styles/abstracts/mixins", "../styles/abstracts/variables",
+  "../styles/base/typography";
 
 // Navbar styles
 .navbar {
+  opacity: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  color: $clr-neutral;
+  @extend .fs-200, .uppercase;
+
+  &.open {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 4.4rem;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    padding-top: 3em;
+    height: 100vh;
+    background-image: linear-gradient($clr-background 50%, transparent);
+    color: $clr-dark;
+    @extend .ff-serif, .fs-500, .capitalise;
+  }
+
+  @include md {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    opacity: 1;
+  }
 }
 
 // Primary navigation styles
 .primary-navigation {
-  min-width: 283px;
+  @include md {
+    display: flex;
+    min-width: 283px;
+  }
 
   // Hamburger menu styles
   .hamburger {
     display: block;
-    margin: 2rem 1.5rem 0 auto;
+    margin: 0.5rem 0.5rem 0 auto;
     border: none;
     padding: 0;
     cursor: pointer;
 
     @include md {
-      position: relative;
-      margin: 0;
       display: none;
     }
   }
@@ -27,36 +58,34 @@
   ul {
     display: none;
     margin: 0;
+    padding: 0;
 
     &.open {
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
 
     @include md {
       display: flex;
       flex-direction: row;
-      padding: 0;
-      --list-height: 4rem;
+      justify-content: space-around;
+      width: inherit;
     }
 
     // Navigation link styles
     li {
-      margin: 1em 0;
+      margin: 0.25em 0;
       @include md {
-        margin: 0 0;
-        * {
-          padding: 0 0;
-        }
+        margin: 0;
       }
     }
 
     a {
       text-decoration: none;
-
-      span {
-        margin-right: 0.5em;
-        font-weight: 700;
+      color: $clr-dark;
+      @include md {
+        color: $clr-neutral;
       }
     }
   }

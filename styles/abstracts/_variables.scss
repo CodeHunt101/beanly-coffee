@@ -1,15 +1,10 @@
 //Colours
 $colours: (
-  "primary": 179 81% 29%,
-  // #0E8784 (Dark Cyan)
-  "neutral": 215 19% 25%,
-  // #333D4B (Dark Grey Blue)
-  "accent": 25 94% 86%,
-  // #FDD6BA (Pale Orange)
-  "background": 43 78% 98%,
-  // #FEFCF7 (Light Cream)
-  "dark": 215 5% 54%,
-  // #83888F (Grey)
+  "primary": #0e8784,
+  "dark": #333d4b,
+  "accent": #fdd6ba,
+  "background": #fefcf7,
+  "neutral": #83888f,
 );
 
 $clr-primary: map-get($colours, "primary");
