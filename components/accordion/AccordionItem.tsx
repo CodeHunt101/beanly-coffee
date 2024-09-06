@@ -47,6 +47,7 @@ const AccordionItem = ({ title, children }: AccordionItemProps) => {
         />
       </button>
       <div
+        data-testid="accordion-content"
         ref={contentRef}
         className={`${styles["accordion-content"]} ${isOpen ? `${styles["open"]}` : ""}`}
         style={{ maxHeight, transition: "max-height 0.3s ease" }}
