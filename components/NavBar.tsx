@@ -12,53 +12,36 @@ import useScreenSizeHandler from "@/hooks/useScreenSizeHandler";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const navWrapperRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);
 
-  const handleClickOutside = useCallback((event: MouseEvent) => {
-    if (
-      navWrapperRef.current &&
-      !navWrapperRef.current.contains(event.target as HTMLDivElement)
-    ) {
-      setIsMenuOpen(false);
-    }
-  }, []);
-
   useScreenSizeHandler(setIsMenuOpen, false, BreakPoints.MD);
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [handleClickOutside]);
-
   const renderNavItem = (path: Path, label: string) => (
-    <li
-      className={`${pathname === path ? "active" : ""} flex`}
-      key={path + Math.random()}
-    >
+    <li className={`${pathname === path ? "active" : ""} flex`} key={path}>
       <Link
         className="letter-spacing-1"
         href={path}
         aria-current={pathname === path ? "page" : undefined}
-        onClick={() => setIsMenuOpen(false)}
       >
         {label}
       </Link>
     </li>
   );
 
+  const handleNavClick = useCallback((event: React.MouseEvent) => {
+    const target = event.target as HTMLElement;
+    if (target.tagName === "A") {
+      setIsMenuOpen(false);
+    }
+  }, []);
+
   return (
     <div
-      ref={navWrapperRef}
       data-testid="nav-wrapper"
-      className={`${styles["primary-navigation"]} ${
-        isMenuOpen ? styles.open : styles.closed
-      }`}
+      className={`${styles["primary-navigation"]} ${isMenuOpen ? styles["menu-open"] : styles.closed}`}
     >
       <button
         className={styles.hamburger}
@@ -72,10 +55,13 @@ const NavBar = () => {
           alt={isMenuOpen ? "Close menu icon" : "Open menu icon"}
         />
       </button>
-      <nav className={`${styles.navbar} ${isMenuOpen ? styles.open : ""}`}>
+      <nav
+        className={`${styles.navbar} ${isMenuOpen ? styles["menu-open"] : ""}`}
+        onClick={handleNavClick}
+      >
         <ul
           id="primary-navigation"
-          className={`fw-700 ${isMenuOpen ? styles.open : ""}`}
+          className={`fw-700 ${isMenuOpen ? styles["menu-open"] : ""}`}
         >
           {renderNavItem(Path.HOME, "Home")}
           {renderNavItem(Path.NOT_READY, "About us")}

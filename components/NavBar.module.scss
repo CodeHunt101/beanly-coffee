@@ -11,7 +11,7 @@
   color: $clr-neutral;
   @extend .fs-200, .uppercase;
 
-  &.open {
+  &.menu-open {
     display: flex;
     align-items: center;
     position: fixed;
@@ -60,31 +60,33 @@
     margin: 0;
     padding: 0;
 
-    &.open {
+    &.menu-open {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    @include md {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: inherit;
-    }
-
-    // Navigation link styles
     li {
       margin: 0.25em 0;
-      @include md {
-        margin: 0;
-      }
     }
 
     a {
       text-decoration: none;
       color: $clr-dark;
-      @include md {
+    }
+
+    // Media query specific styles
+    @include md {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: inherit;
+
+      li {
+        margin: 0;
+      }
+
+      a {
         color: $clr-neutral;
 
         &:hover,
