@@ -1,71 +1,75 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom"; // for custom matchers like "toBeDisabled"
+import "@testing-library/jest-dom";
 import Button from "@/components/button/Button";
 
 describe("Button Component", () => {
-  const mockOnClick = jest.fn();
+  const buttonText = "Click Me";
 
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
-  describe("Rendering", () => {
-    it("renders with provided content", () => {
-      const content = "Click me";
-      render(<Button content={content} />);
-
-      const buttonElement = screen.getByRole("button");
-      expect(buttonElement).toHaveTextContent(content);
+  describe("Initial render", () => {
+    it("should render the button with the correct text", () => {
+      render(<Button>{buttonText}</Button>);
+      expect(
+        screen.getByRole("button", { name: buttonText }),
+      ).toBeInTheDocument();
     });
 
-    it("has the correct bg-primary class", () => {
-      render(<Button content="Click me" />);
-      const buttonElement = screen.getByRole("button");
-      expect(buttonElement).toHaveClass("bg-primary");
+    it("should apply the correct class to the button", () => {
+      const { container } = render(<Button>{buttonText}</Button>);
+      const button = container.querySelector("button");
+      expect(button).toHaveClass("btn");
     });
 
-    it("has the correct ff-serif class", () => {
-      render(<Button content="Click me" />);
-      const buttonElement = screen.getByRole("button");
-      expect(buttonElement).toHaveClass("ff-serif");
+    it("should render the button as enabled by default", () => {
+      render(<Button>{buttonText}</Button>);
+      expect(
+        screen.getByRole("button", { name: buttonText }),
+      ).not.toBeDisabled();
     });
 
-    it("has the correct text-background class", () => {
-      render(<Button content="Click me" />);
-      const buttonElement = screen.getByRole("button");
-      expect(buttonElement).toHaveClass("text-background");
+    it("should render the button with the correct default background color class", () => {
+      const { container } = render(<Button>{buttonText}</Button>);
+      const button = container.querySelector("button");
+      expect(button).toHaveClass("bg-primary");
     });
-  });
 
-  describe("onClick Functionality", () => {
-    it("calls onClick when button is clicked", () => {
-      render(<Button content="Click me" onClick={mockOnClick} />);
-      const buttonElement = screen.getByRole("button");
-      fireEvent.click(buttonElement);
-
-      expect(mockOnClick).toHaveBeenCalledTimes(1);
+    it("should render the button with the correct default text color class", () => {
+      const { container } = render(<Button>{buttonText}</Button>);
+      const button = container.querySelector("button");
+      expect(button).toHaveClass("text-background");
     });
   });
 
-  describe("Disabled State", () => {
-    it("does not call onClick when button is disabled", () => {
-      render(<Button content="Click me" onClick={mockOnClick} disabled />);
-      const buttonElement = screen.getByRole("button");
-      fireEvent.click(buttonElement);
-
-      expect(mockOnClick).not.toHaveBeenCalled();
+  describe("Disabled state", () => {
+    it("should disable the button when the disabled prop is true", () => {
+      render(<Button disabled>{buttonText}</Button>);
+      expect(screen.getByRole("button", { name: buttonText })).toBeDisabled();
     });
 
-    it("has the disabled attribute when disabled is true", () => {
-      render(<Button content="Click me" disabled />);
-      const buttonElement = screen.getByRole("button");
-      expect(buttonElement).toBeDisabled();
+    it("should render the button as enabled when the disabled prop is false", () => {
+      render(<Button disabled={false}>{buttonText}</Button>);
+      expect(
+        screen.getByRole("button", { name: buttonText }),
+      ).not.toBeDisabled();
+    });
+  });
+
+  describe("onClick functionality", () => {
+    it("should call onClick handler when the button is clicked", () => {
+      const handleClick = jest.fn();
+      render(<Button onClick={handleClick}>{buttonText}</Button>);
+      fireEvent.click(screen.getByRole("button", { name: buttonText }));
+      expect(handleClick).toHaveBeenCalled();
     });
 
-    it("does not have the disabled attribute when disabled is false", () => {
-      render(<Button content="Click me" disabled={false} />);
-      const buttonElement = screen.getByRole("button");
-      expect(buttonElement).not.toBeDisabled();
+    it("should not call onClick handler when the button is disabled", () => {
+      const handleClick = jest.fn();
+      render(
+        <Button onClick={handleClick} disabled>
+          {buttonText}
+        </Button>,
+      );
+      fireEvent.click(screen.getByRole("button", { name: buttonText }));
+      expect(handleClick).not.toHaveBeenCalled();
     });
   });
 });
