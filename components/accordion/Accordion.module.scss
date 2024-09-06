@@ -1,0 +1,46 @@
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
+  "@/styles/base/typography";
+
+.accordion {
+  .accordion-item {
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      @extend .fs-400;
+
+      @include md {
+        font-size: map-get($fs-map, 500);
+      }
+
+      @include lg {
+        font-size: map-get($fs-map, 600);
+      }
+
+      .accordion-icon {
+        transition: transform 0.3s ease;
+
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .accordion-content {
+      overflow: hidden;
+      display: none;
+
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}
