@@ -7,6 +7,7 @@ $colours: (
   "background": #fefcf7,
   "neutral": #83888f,
   "disabled": #e2dedb,
+  "muted": #f4f1eb,
 );
 
 $clr-primary: map-get($colours, "primary");
@@ -16,6 +17,7 @@ $clr-background: map-get($colours, "background");
 $clr-dark: map-get($colours, "dark");
 $clr-secondary: map-get($colours, "secondary");
 $clr-disabled: map-get($colours, "disabled");
+$clr-muted: map-get($colours, "muted");
 
 // Font sizes
 $fs-map: (

@@ -1,21 +1,22 @@
 "use client";
 
+import { ReactNode } from "react";
 import styles from "./Button.module.scss";
 
 type ButtonProps = {
-  content: string;
+  children: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
 };
 
-const Button = ({ content, onClick, disabled = false }: ButtonProps) => {
+const Button = ({ children, onClick, disabled = false }: ButtonProps) => {
   return (
     <button
       className={`${styles.btn} bg-primary ff-serif text-background`}
       disabled={disabled}
       onClick={onClick}
     >
-      {content}
+      {children}
     </button>
   );
 };
