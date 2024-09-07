@@ -47,7 +47,7 @@
       max-width: max-content;
       gap: 2em;
       padding-inline: 3.5rem;
-      margin-top: -3.875rem;
+      translate: 1.125rem -4.688rem;
     }
 
     @include lg {
@@ -55,14 +55,12 @@
       justify-content: center;
       flex-wrap: wrap;
       padding-inline: 0;
-
-      margin-top: -3.8rem;
       gap: 3em;
     }
 
     @include xl {
       gap: 0;
-      margin-top: -5.813rem;
+      translate: -0.625rem -6.75rem;
     }
   }
 
