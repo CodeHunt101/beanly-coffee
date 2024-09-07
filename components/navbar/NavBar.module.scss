@@ -11,7 +11,7 @@
   @include text-colour($clr-neutral);
   @extend .fs-100, .uppercase;
 
-  &.menu-open {
+  &.menuOpen {
     display: flex;
     align-items: center;
     position: fixed;
@@ -38,7 +38,7 @@
 }
 
 // Primary navigation styles
-.primary-navigation {
+.primaryNavigation {
   @include md {
     display: flex;
     min-width: 283px;
@@ -63,7 +63,7 @@
     margin: 0;
     padding: 0;
 
-    &.menu-open {
+    &.menuOpen {
       display: flex;
       flex-direction: column;
       align-items: center;

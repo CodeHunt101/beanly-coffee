@@ -2,12 +2,12 @@
   "@/styles/base/typography";
 
 .accordion {
-  .accordion-item {
+  .accordionItem {
     &:last-child {
       border-bottom: none;
     }
 
-    .accordion-toggle {
+    .accordionToggle {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -25,24 +25,24 @@
         @include font-size(600);
       }
 
-      &:hover .accordion-icon {
+      &:hover .accordionIcon {
         opacity: 0.5;
       }
 
       &:disabled {
         cursor: auto;
 
-        .accordion-label,
-        .accordion-icon {
+        .accordionLabel,
+        .accordionIcon {
           opacity: 0.5;
         }
       }
 
-      .accordion-label {
+      .accordionLabel {
         @include text-colour($clr-neutral);
       }
 
-      .accordion-icon {
+      .accordionIcon {
         transition: transform 0.3s ease;
 
         &.open {
@@ -52,7 +52,7 @@
       }
     }
 
-    .accordion-content {
+    .accordionContent {
       overflow: hidden;
       display: none;
 

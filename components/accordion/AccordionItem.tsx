@@ -44,19 +44,19 @@ const AccordionItem = ({
   useScreenSizeHandler(setIsOpen, false, BreakPoints.SM);
 
   return (
-    <div className={`${styles["accordion-item"]}`}>
+    <div className={`${styles.accordionItem}`}>
       <button
-        className={`${styles["accordion-toggle"]} bg-background`}
+        className={`${styles.accordionToggle} bg-background`}
         onClick={toggleAccordion}
         disabled={disabled}
       >
         <span
-          className={`${styles["accordion-label"]} ${isOpen ? `${styles["open"]}` : ""} ff-serif`}
+          className={`${styles.accordionLabel} ${isOpen ? styles.open : ""} ff-serif`}
         >
           {title}
         </span>
         <Image
-          className={`${styles["accordion-icon"]} ${isOpen ? `${styles["open"]}` : ""}`}
+          className={`${styles.accordionIcon} ${isOpen ? styles.open : ""}`}
           src={arrow}
           alt={"arrow"}
         />
@@ -64,7 +64,7 @@ const AccordionItem = ({
       <div
         data-testid="accordion-content"
         ref={contentRef}
-        className={`${styles["accordion-content"]} ${isOpen ? `${styles["open"]}` : ""}`}
+        className={`${styles.accordionContent} ${isOpen ? styles.open : ""}`}
         style={{ maxHeight, transition: "max-height 0.3s ease" }}
       >
         {children}

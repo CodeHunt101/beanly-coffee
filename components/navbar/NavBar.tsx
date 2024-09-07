@@ -41,7 +41,7 @@ const NavBar = () => {
   return (
     <div
       data-testid="nav-wrapper"
-      className={`${styles["primary-navigation"]} ${isMenuOpen ? styles["menu-open"] : styles.closed}`}
+      className={`${styles.primaryNavigation} ${isMenuOpen ? styles.menuOpen : styles.closed}`}
     >
       <button
         className={styles.hamburger}
@@ -56,12 +56,12 @@ const NavBar = () => {
         />
       </button>
       <nav
-        className={`${styles.navbar} ${isMenuOpen ? styles["menu-open"] : ""}`}
+        className={`${styles.navbar} ${isMenuOpen ? styles.menuOpen : ""}`}
         onClick={handleNavClick}
       >
         <ul
           id="primary-navigation"
-          className={`fw-700 ${isMenuOpen ? styles["menu-open"] : ""}`}
+          className={`fw-700 ${isMenuOpen ? styles.menuOpen : ""}`}
         >
           {renderNavItem(Path.HOME, "Home")}
           {renderNavItem(Path.NOT_READY, "About us")}
