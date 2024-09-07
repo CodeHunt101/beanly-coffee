@@ -3,179 +3,30 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <main>
-    <h1>
-      Beanly
-    </h1>
-    <button
-      class="btn bg-primary ff-serif text-background"
-    >
-      My Button
-    </button>
-    <hr />
-    <div
-      class="accordion"
+    <section
+      class="hero text-background"
+      id="hero-section"
     >
       <div
-        class="accordion-item"
+        class="content"
       >
+        <h1
+          class="title ff-serif"
+        >
+          Great coffee made simple.
+        </h1>
+        <p
+          class="description fw-300"
+        >
+          Start your mornings with the world's best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.
+        </p>
         <button
-          class="accordion-toggle bg-background"
+          class="btn bg-primary ff-serif text-background"
         >
-          <span
-            class="ff-serif"
-          >
-            Section 1
-          </span>
-          <img
-            alt="arrow"
-            class="accordion-icon "
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
+          Create your plan
         </button>
-        <div
-          class="accordion-content "
-          data-testid="accordion-content"
-          style="max-height: 0px; transition: max-height 0.3s ease;"
-        >
-          <div
-            class="cardsContainer"
-          >
-            <button
-              class="btn  bg-muted text-dark"
-              role="tab"
-            >
-              <h4
-                class="fs-400"
-              >
-                Title 1
-              </h4>
-              <p
-                class="fs-300"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </button>
-            <button
-              class="btn  bg-muted text-dark"
-              role="tab"
-            >
-              <h4
-                class="fs-400"
-              >
-                Title 2
-              </h4>
-              <p
-                class="fs-300"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </button>
-            <button
-              class="btn  bg-muted text-dark"
-              role="tab"
-            >
-              <h4
-                class="fs-400"
-              >
-                Title 3
-              </h4>
-              <p
-                class="fs-300"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </button>
-          </div>
-        </div>
       </div>
-      <div
-        class="accordion-item"
-      >
-        <button
-          class="accordion-toggle bg-background"
-        >
-          <span
-            class="ff-serif"
-          >
-            Section 2
-          </span>
-          <img
-            alt="arrow"
-            class="accordion-icon "
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
-        </button>
-        <div
-          class="accordion-content "
-          data-testid="accordion-content"
-          style="max-height: 0px; transition: max-height 0.3s ease;"
-        >
-          <div
-            class="cardsContainer"
-          >
-            <button
-              class="btn  bg-muted text-dark"
-              role="tab"
-            >
-              <h4
-                class="fs-400"
-              >
-                Title 4
-              </h4>
-              <p
-                class="fs-300"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </button>
-            <button
-              class="btn  bg-muted text-dark"
-              role="tab"
-            >
-              <h4
-                class="fs-400"
-              >
-                Title 5
-              </h4>
-              <p
-                class="fs-300"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </button>
-            <button
-              class="btn  bg-muted text-dark"
-              role="tab"
-            >
-              <h4
-                class="fs-400"
-              >
-                Title 6
-              </h4>
-              <p
-                class="fs-300"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   </main>
 </div>
 `;

@@ -6,6 +6,7 @@
     "start": "next start",
     "test": "jest --watch",
     "test:ci": "jest --ci",
+    "jest-clear": "jest --clearCache",
     "prepare": "husky install .husky && chmod ug+x .husky/*",
     "prettier-check": "npx prettier . --check",
     "prettier-write": "npx prettier . --write"
