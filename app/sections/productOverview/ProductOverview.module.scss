@@ -1,0 +1,113 @@
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
+  "@/styles/abstracts/functions";
+
+.productOverview {
+  margin-top: 7.5rem;
+
+  @include md {
+    margin-top: 9rem;
+  }
+
+  @include lg {
+    margin-top: 8.5rem;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .title {
+    background: -webkit-linear-gradient(
+      to-hsl-comma-sep($clr-neutral, 0.5) 1%,
+      white 99%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include font-size(600);
+
+    @include md {
+      font-size: 6rem;
+      width: 102%;
+    }
+
+    @include xl {
+      @include font-size(800);
+    }
+  }
+
+  .productList {
+    flex-direction: column;
+    list-style: none;
+    gap: 3em;
+    padding-inline: 1rem;
+    margin: 0.813rem auto;
+    max-width: 380px;
+
+    @include md {
+      max-width: max-content;
+      gap: 2em;
+      padding-inline: 3.5rem;
+      margin-top: -3.875rem;
+    }
+
+    @include lg {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-inline: 0;
+
+      margin-top: -3.8rem;
+      gap: 3em;
+    }
+
+    @include xl {
+      gap: 0;
+      margin-top: -5.813rem;
+    }
+  }
+
+  .productCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5em;
+
+    @include md {
+      flex-direction: row;
+      gap: 2.25em;
+      text-align: start;
+    }
+
+    @include lg {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    img {
+      width: 200px;
+      height: 151px;
+      @include md {
+        width: 255px;
+        height: 193px;
+      }
+    }
+  }
+
+  .productName {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .productDescription {
+    font-size: 0.938rem;
+
+    @include lg {
+      font-size: 1rem;
+      max-width: 350px;
+    }
+
+    @include xl {
+      max-width: 255px;
+    }
+  }
+}

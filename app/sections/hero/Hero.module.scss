@@ -1,8 +1,8 @@
 @import "@/styles/abstracts/mixins", "@/styles/abstracts/variables";
 
-$image-mobile: "../../public/assets/home/mobile/image-hero-coffeepress.jpg";
-$image-tablet: "../../public/assets/home/tablet/image-hero-coffeepress.jpg";
-$image-desktop: "../../public/assets/home/desktop/image-hero-coffeepress.jpg";
+$image-mobile: "../../../public/assets/home/mobile/image-hero-coffeepress.jpg";
+$image-tablet: "../../../public/assets/home/tablet/image-hero-coffeepress.jpg";
+$image-desktop: "../../../public/assets/home/desktop/image-hero-coffeepress.jpg";
 
 .hero {
   background-image: url($image-mobile);

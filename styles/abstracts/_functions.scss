@@ -1,17 +1,4 @@
-// @function to-hsl-comma-sep($hsl-string) {
-//   // Split the string into a list using a space as the delimiter
-//   $hsl-values: str-split($hsl-string, ' ');
-
-//   // Extract the individual components
-//   $hue: nth($hsl-values, 1);
-//   $saturation: nth($hsl-values, 2);
-//   $lightness: nth($hsl-values, 3);
-
-//   // Return the HSL value in the correct format
-//   @return hsl($hue, $saturation, $lightness);
-// }
-
-@function to-hsl-comma-sep($hsl-string) {
+@function to-hsl-comma-sep($hsl-string, $opacity: 1) {
   $hsl-list: str-split($hsl-string, " ");
 
   @if length($hsl-list) != 3 {
@@ -26,7 +13,7 @@
     @error "Saturation and lightness must include '%' symbol.";
   }
 
-  @return unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
+  @return unquote("hsl(#{$hue}, #{$saturation}, #{$lightness}, #{$opacity})");
 }
 
 // Helper function to split a string
