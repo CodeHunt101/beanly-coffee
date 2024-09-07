@@ -18,11 +18,11 @@
       @extend .fs-400;
 
       @include md {
-        font-size: map-get($fs-map, 500);
+        @include font-size(500);
       }
 
       @include lg {
-        font-size: map-get($fs-map, 600);
+        @include font-size(600);
       }
 
       &:hover .accordion-icon {
@@ -39,7 +39,7 @@
       }
 
       .accordion-label {
-        color: $clr-neutral;
+        @include text-colour($clr-neutral);
       }
 
       .accordion-icon {

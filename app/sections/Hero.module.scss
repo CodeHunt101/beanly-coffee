@@ -1,0 +1,66 @@
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables";
+
+$image-mobile: "../../public/assets/home/mobile/image-hero-coffeepress.jpg";
+$image-tablet: "../../public/assets/home/tablet/image-hero-coffeepress.jpg";
+$image-desktop: "../../public/assets/home/desktop/image-hero-coffeepress.jpg";
+
+.hero {
+  background-image: url($image-mobile);
+  background-size: cover;
+  padding: 6.25em 1.5em;
+  text-align: center;
+  border-radius: 10px;
+
+  @include md {
+    padding: 6.5em 3.5em;
+    text-align: start;
+    background-image: url($image-tablet);
+
+    .content {
+      width: 68%;
+      max-width: 500px;
+    }
+  }
+
+  @include lg {
+    padding: 7.25em 5.313em;
+    background-image: url($image-desktop);
+    .content {
+      width: 55%;
+      min-width: 491px;
+      max-width: auto;
+    }
+  }
+
+  @include xl {
+    .content {
+      width: 45%;
+    }
+  }
+
+  .title {
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    @include font-size(600);
+
+    @include md {
+      font-size: 3rem;
+    }
+
+    @include lg {
+      margin-bottom: 2rem;
+      @include font-size(700);
+    }
+  }
+
+  .description {
+    margin-bottom: 2.5rem;
+    font-size: 0.938rem;
+    @include text-colour($clr-background, 80%);
+
+    @include lg {
+      margin-bottom: 3.5rem;
+      width: 80%;
+    }
+  }
+}

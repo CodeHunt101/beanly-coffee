@@ -1,5 +1,5 @@
 @import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
-  "@/styles/base/typography";
+  "@/styles/base/typography", "@/styles/abstracts/functions";
 
 // Navbar styles
 .navbar {
@@ -8,7 +8,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  color: $clr-neutral;
+  @include text-colour($clr-neutral);
   @extend .fs-200, .uppercase;
 
   &.menu-open {
@@ -21,8 +21,11 @@
     transition: opacity 0.5s ease;
     padding-top: 2.5em;
     height: 100vh;
-    background-image: linear-gradient($clr-background 50%, transparent);
-    color: $clr-dark;
+    background-image: linear-gradient(
+      to-hsl-comma-sep($clr-background) 50%,
+      transparent
+    );
+    @include text-colour($clr-dark);
     @extend .ff-serif, .fs-500, .capitalise;
   }
 
@@ -72,7 +75,7 @@
 
     a {
       text-decoration: none;
-      color: $clr-dark;
+      @include text-colour($clr-dark);
     }
 
     // Media query specific styles
@@ -87,12 +90,12 @@
       }
 
       a {
-        color: $clr-neutral;
+        @include text-colour($clr-neutral);
 
         &:hover,
         &:focus,
         &:active {
-          color: $clr-dark;
+          @include text-colour($clr-dark);
         }
       }
     }

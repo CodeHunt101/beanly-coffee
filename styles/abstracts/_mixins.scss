@@ -27,3 +27,15 @@
     @content;
   }
 }
+
+@mixin font-size($size) {
+  font-size: map-get($fs-map, $size);
+}
+
+@mixin bg-colour($colour, $alpha: 100%) {
+  background-color: #{"hsl(#{$colour} / #{$alpha})"};
+}
+
+@mixin text-colour($colour, $alpha: 100%) {
+  color: #{"hsl(#{$colour} / #{$alpha})"};
+}

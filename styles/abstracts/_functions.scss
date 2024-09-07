@@ -1,0 +1,44 @@
+// @function to-hsl-comma-sep($hsl-string) {
+//   // Split the string into a list using a space as the delimiter
+//   $hsl-values: str-split($hsl-string, ' ');
+
+//   // Extract the individual components
+//   $hue: nth($hsl-values, 1);
+//   $saturation: nth($hsl-values, 2);
+//   $lightness: nth($hsl-values, 3);
+
+//   // Return the HSL value in the correct format
+//   @return hsl($hue, $saturation, $lightness);
+// }
+
+@function to-hsl-comma-sep($hsl-string) {
+  $hsl-list: str-split($hsl-string, " ");
+
+  @if length($hsl-list) != 3 {
+    @error "Invalid HSL format. Expected 3 space-separated values.";
+  }
+
+  $hue: nth($hsl-list, 1);
+  $saturation: nth($hsl-list, 2);
+  $lightness: nth($hsl-list, 3);
+
+  @if not str-index($saturation, "%") or not str-index($lightness, "%") {
+    @error "Saturation and lightness must include '%' symbol.";
+  }
+
+  @return unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
+}
+
+// Helper function to split a string
+@function str-split($string, $separator) {
+  $split-arr: ();
+  $index: str-index($string, $separator);
+  @while $index != null {
+    $item: str-slice($string, 1, $index - 1);
+    $split-arr: append($split-arr, $item);
+    $string: str-slice($string, $index + str-length($separator));
+    $index: str-index($string, $separator);
+  }
+  $split-arr: append($split-arr, $string);
+  @return $split-arr;
+}

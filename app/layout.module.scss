@@ -1,7 +1,11 @@
-@import "../styles/abstracts/mixins", "../styles/abstracts/variables";
+@import "../styles/abstracts/mixins", "../styles/abstracts/functions",
+  "../styles/abstracts/variables";
 #mainHeader {
   padding: 2em 0 2em;
-  background-image: linear-gradient($clr-background 75%, transparent);
+  background-image: linear-gradient(
+    to-hsl-comma-sep($clr-background) 75%,
+    transparent
+  );
 
   @include md {
     padding: 2.5em 0 2.5em;

@@ -9,7 +9,7 @@ const frauncesInit = Fraunces({
   adjustFontFallback: false,
 });
 const barlowInit = Barlow({
-  weight: ["400", "700"],
+  weight: ["300", "400", "700"],
   display: "swap",
   subsets: ["latin"],
   variable: "--ff-sans-serif",

@@ -1,4 +1,4 @@
-@import "@/styles/abstracts/variables";
+@import "@/styles/abstracts/variables", "@/styles/abstracts/mixins";
 
 .btn {
   cursor: pointer;
@@ -8,12 +8,12 @@
   border-radius: 0.375rem;
 
   &:hover {
-    background-color: $clr-accent;
+    @include bg-colour($clr-accent);
   }
 
   &:disabled {
-    background-color: $clr-disabled;
-    color: $clr-dark;
+    @include bg-colour($clr-disabled);
+    @include text-colour($clr-dark);
     cursor: auto;
   }
 }

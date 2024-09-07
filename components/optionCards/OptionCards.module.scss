@@ -32,18 +32,18 @@
     }
 
     &:hover {
-      background-color: $clr-secondary;
+      @include bg-colour($clr-secondary);
     }
 
     &:disabled {
-      background-color: $clr-disabled;
-      color: $clr-dark;
+      @include bg-colour($clr-disabled);
+      @include text-colour($clr-dark);
       cursor: auto;
     }
 
     &.selected {
-      background-color: $clr-primary;
-      color: $clr-background;
+      @include bg-colour($clr-primary);
+      @include text-colour($clr-background);
     }
   }
 
