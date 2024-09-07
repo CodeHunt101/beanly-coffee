@@ -44,7 +44,7 @@ $image-desktop: "../../../public/assets/home/desktop/image-hero-coffeepress.jpg"
     @include font-size(600);
 
     @include md {
-      font-size: 3rem;
+      @include font-size(650);
     }
 
     @include lg {
@@ -55,7 +55,7 @@ $image-desktop: "../../../public/assets/home/desktop/image-hero-coffeepress.jpg"
 
   .description {
     margin-bottom: 2.5rem;
-    font-size: 0.938rem;
+    @include font-size(200); // 0.938rem
     @include text-colour($clr-background, 80%);
 
     @include lg {

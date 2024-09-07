@@ -15,7 +15,7 @@
       border: none;
       text-align: left;
       cursor: pointer;
-      @extend .fs-400;
+      @extend .fs-450;
 
       @include md {
         @include font-size(500);

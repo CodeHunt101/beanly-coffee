@@ -21,13 +21,17 @@ $clr-muted: map-get($colours, "muted");
 
 // Font sizes
 $fs-map: (
-  800: 9.375rem,
+  900: 9.375rem,
+  800: 6rem,
   700: 4.5rem,
+  650: 3rem,
   600: 2.5rem,
-  500: 2rem,
-  400: 1.5rem,
+  500: 1.75rem,
+  450: 1.5rem,
+  400: 1.25rem,
   300: 1rem,
-  200: 0.75rem,
+  200: 0.938rem,
+  100: 0.75rem,
 );
 
 // Line heights
@@ -41,7 +45,7 @@ $lh-map: (
   200: 0.938,
 );
 
-$font-sizes: 800, 700, 600, 500, 400, 300, 200;
+$font-sizes: 900, 800, 700, 650, 600, 500, 450, 400, 300, 200, 100;
 
 //Breakpoints
 $breakpoint-sm: 576px;

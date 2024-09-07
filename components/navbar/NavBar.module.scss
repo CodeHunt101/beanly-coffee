@@ -9,7 +9,7 @@
   flex-direction: column;
   width: 100%;
   @include text-colour($clr-neutral);
-  @extend .fs-200, .uppercase;
+  @extend .fs-100, .uppercase;
 
   &.menu-open {
     display: flex;

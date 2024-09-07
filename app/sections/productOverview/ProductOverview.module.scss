@@ -19,19 +19,19 @@
   .title {
     background: -webkit-linear-gradient(
       to-hsl-comma-sep($clr-neutral, 0.5) 1%,
-      white 99%
+      to-hsl-comma-sep($clr-background, 0.5) 99%
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
     @include font-size(600);
 
     @include md {
-      font-size: 6rem;
+      @include font-size(800);
       width: 102%;
     }
 
     @include xl {
-      @include font-size(800);
+      @include font-size(900);
     }
   }
 
@@ -92,15 +92,15 @@
   }
 
   .productName {
-    font-size: 1.25rem;
+    @include font-size(400);
     margin-bottom: 0.75rem;
   }
 
   .productDescription {
-    font-size: 0.938rem;
+    @include font-size(200);
 
     @include lg {
-      font-size: 1rem;
+      @include font-size(300);
       max-width: 350px;
     }
 
