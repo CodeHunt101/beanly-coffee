@@ -21,38 +21,38 @@ export default function Page() {
               {
                 title: "Title 1",
                 content:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
               {
                 title: "Title 2",
                 content:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
               {
                 title: "Title 3",
                 content:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
             ]}
           />
         </AccordionItem>
-        <AccordionItem title="Section 2">
+        <AccordionItem title="Section 2" disabled>
           <OptionCards
             options={[
               {
                 title: "Title 4",
                 content:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
               {
                 title: "Title 5",
                 content:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
               {
                 title: "Title 6",
                 content:
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               },
             ]}
           />

@@ -25,11 +25,29 @@
         font-size: map-get($fs-map, 600);
       }
 
+      &:hover .accordion-icon {
+        opacity: 0.5;
+      }
+
+      &:disabled {
+        cursor: auto;
+
+        .accordion-label,
+        .accordion-icon {
+          opacity: 0.5;
+        }
+      }
+
+      .accordion-label {
+        color: $clr-neutral;
+      }
+
       .accordion-icon {
         transition: transform 0.3s ease;
 
         &.open {
           transform: rotate(180deg);
+          opacity: 1;
         }
       }
     }

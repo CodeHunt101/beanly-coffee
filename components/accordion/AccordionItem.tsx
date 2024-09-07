@@ -4,13 +4,20 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 import styles from "./Accordion.module.scss";
 import arrow from "@/public/assets/plan/desktop/icon-arrow.svg";
 import Image from "next/image";
+import useScreenSizeHandler from "@/hooks/useScreenSizeHandler";
+import { BreakPoints } from "@/app/utils/types";
 
 type AccordionItemProps = {
   title: string;
+  disabled?: boolean;
   children: ReactNode;
 };
 
-const AccordionItem = ({ title, children }: AccordionItemProps) => {
+const AccordionItem = ({
+  title,
+  children,
+  disabled = false,
+}: AccordionItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [maxHeight, setMaxHeight] = useState("0px");
   const contentRef = useRef<HTMLDivElement>(null);
@@ -33,13 +40,21 @@ const AccordionItem = ({ title, children }: AccordionItemProps) => {
     }
   }, [isOpen]);
 
+  // Reset accordion if user resizes screen
+  useScreenSizeHandler(setIsOpen, false, BreakPoints.SM);
+
   return (
     <div className={`${styles["accordion-item"]}`}>
       <button
         className={`${styles["accordion-toggle"]} bg-background`}
         onClick={toggleAccordion}
+        disabled={disabled}
       >
-        <span className="ff-serif">{title}</span>
+        <span
+          className={`${styles["accordion-label"]} ${isOpen ? `${styles["open"]}` : ""} ff-serif`}
+        >
+          {title}
+        </span>
         <Image
           className={`${styles["accordion-icon"]} ${isOpen ? `${styles["open"]}` : ""}`}
           src={arrow}

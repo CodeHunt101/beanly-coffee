@@ -14,12 +14,21 @@
 
   .btn {
     cursor: pointer;
-    padding: 1em 2em;
+    padding: 1.5em 1.563em;
     border: none;
     border-radius: 0.375rem;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
 
     @include md {
-      max-width: 13.563em;
+      max-width: 228px;
+      min-height: 250px;
+      padding: 1.75em 1.563em;
+    }
+
+    @include lg {
+      padding: 2em 1.75em;
     }
 
     &:hover {
@@ -36,5 +45,9 @@
       background-color: $clr-primary;
       color: $clr-background;
     }
+  }
+
+  * {
+    text-align: start;
   }
 }
