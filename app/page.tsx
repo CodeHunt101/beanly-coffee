@@ -1,6 +1,6 @@
 import Hero from "./_sections/hero/Hero";
 import Features from "./_sections/features/Features";
-import Products from "./_sections/products/products";
+import Products from "./_sections/products/Products";
 
 export const metadata = {
   title: "Beanly",

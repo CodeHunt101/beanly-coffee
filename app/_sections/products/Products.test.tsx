@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Products from "./products";
+import Products from "./Products";
 
 jest.mock("./ProductList", () => () => <ul data-testid="mock-product-list" />);
 
