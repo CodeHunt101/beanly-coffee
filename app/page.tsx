@@ -1,4 +1,5 @@
 import Hero from "./_sections/hero/Hero";
+import Features from "./_sections/features/Features";
 import Products from "./_sections/products/products";
 
 export const metadata = {
@@ -10,6 +11,7 @@ export default function Page() {
     <main>
       <Hero />
       <Products />
+      <Features />
     </main>
   );
 }

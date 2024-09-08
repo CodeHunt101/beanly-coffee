@@ -5,11 +5,11 @@
   margin-top: 7.5rem;
 
   @include md {
-    margin-top: 9rem;
+    margin-top: 4.312rem;
   }
 
   @include lg {
-    margin-top: 8.5rem;
+    margin-top: 1.75rem;
   }
 
   .header {
@@ -17,6 +17,8 @@
   }
 
   .title {
+    position: relative;
+    z-index: -1;
     background: -webkit-linear-gradient(
       to-hsl-comma-sep($clr-neutral, 0.5) 1%,
       to-hsl-comma-sep($clr-background, 0.5) 99%
@@ -28,10 +30,12 @@
     @include md {
       @include font-size(800);
       width: 102%;
+      translate: -1.125rem 4.688rem;
     }
 
     @include xl {
       @include font-size(900);
+      translate: 0.625rem 6.75rem;
     }
   }
 
@@ -40,14 +44,14 @@
     list-style: none;
     gap: 3em;
     padding-inline: 1rem;
-    margin: 0.813rem auto;
+    margin: 0.813rem auto 0;
     max-width: 380px;
 
     @include md {
       max-width: max-content;
       gap: 2em;
       padding-inline: 3.5rem;
-      translate: 1.125rem -4.688rem;
+      // translate: 1.125rem -4.688rem;
     }
 
     @include lg {
@@ -60,7 +64,6 @@
 
     @include xl {
       gap: 0;
-      translate: -0.625rem -6.75rem;
     }
   }
 
@@ -74,26 +77,37 @@
       flex-direction: row;
       gap: 2.25em;
       text-align: start;
+      align-items: start;
     }
 
     @include lg {
+      align-items: center;
       flex-direction: column;
       text-align: center;
     }
 
     img {
       width: 200px;
-      height: 151px;
+      height: auto;
       @include md {
         width: 255px;
-        height: 193px;
+        height: auto;
       }
     }
   }
 
   .productName {
     @include font-size(400);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+
+    @include md {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @include lg {
+      margin-top: 0;
+    }
   }
 
   .productDescription {
