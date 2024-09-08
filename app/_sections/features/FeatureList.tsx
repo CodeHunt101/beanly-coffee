@@ -3,7 +3,6 @@ import styles from "./Features.module.scss";
 import coffeeBeanIcon from "@/public/assets/home/desktop/icon-coffee-bean.svg";
 import giftIcon from "@/public/assets/home/desktop/icon-gift.svg";
 import truckIcon from "@/public/assets/home/desktop/icon-truck.svg";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 const features: FeatureCardProps[] = [
   {

@@ -1,7 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import Hero from "./Hero";
-import Button from "@/components/button/Button";
-import { ReactNode } from "react";
 
 // Mock the Button component
 jest.mock("../../../components/button/Button", () => ({ children }: any) => (
