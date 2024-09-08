@@ -18,11 +18,11 @@ jest.mock("./Features.module.scss", () => ({
 }));
 
 describe("FeatureList", () => {
-  describe("renders the correct number of FeatureCards", () => {
-    beforeEach(() => {
-      render(<FeatureList />);
-    });
+  beforeEach(() => {
+    render(<FeatureList />);
+  });
 
+  describe("renders the correct number of FeatureCards", () => {
     it("renders three FeatureCard components", () => {
       const featureCards = screen.getAllByTestId("feature-card");
       expect(featureCards.length).toBe(3);
@@ -37,10 +37,6 @@ describe("FeatureList", () => {
   });
 
   describe("FeatureCard content", () => {
-    beforeEach(() => {
-      render(<FeatureList />);
-    });
-
     describe("renders the correct title for each FeatureCard", () => {
       it('renders the title for "Best quality"', () => {
         expect(screen.getByText("Best quality")).toBeInTheDocument();
@@ -83,10 +79,6 @@ describe("FeatureList", () => {
   });
 
   describe("CSS classes", () => {
-    beforeEach(() => {
-      render(<FeatureList />);
-    });
-
     it("applies the correct class to the list container", () => {
       const list = screen.getByRole("list");
       expect(list).toHaveClass("mock-feature-list");
