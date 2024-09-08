@@ -28,7 +28,7 @@ exports[`renders homepage unchanged 1`] = `
       </div>
     </section>
     <section
-      class="productOverview"
+      class="products"
     >
       <header
         class="header"
