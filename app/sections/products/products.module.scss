@@ -1,7 +1,7 @@
 @import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
   "@/styles/abstracts/functions";
 
-.productOverview {
+.products {
   margin-top: 7.5rem;
 
   @include md {

@@ -1,5 +1,5 @@
 import Hero from "./sections/hero/Hero";
-import ProductOverview from "./sections/productOverview/ProductOverview";
+import Products from "./sections/products/products";
 
 export const metadata = {
   title: "Beanly",
@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <main>
       <Hero />
-      <ProductOverview />
+      <Products />
     </main>
   );
 }

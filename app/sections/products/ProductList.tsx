@@ -1,4 +1,4 @@
-import styles from "./ProductOverview.module.scss";
+import styles from "./Products.module.scss";
 import granEspressoImage from "@/public/assets/home/desktop/image-gran-espresso.png";
 import planaltoImage from "@/public/assets/home/desktop/image-planalto.png";
 import picolloImage from "@/public/assets/home/desktop/image-piccollo.png";

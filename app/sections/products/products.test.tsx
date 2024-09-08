@@ -1,29 +1,29 @@
 import { render, screen } from "@testing-library/react";
-import ProductOverview from "./ProductOverview";
+import Products from "./products";
 
 jest.mock("./ProductList", () => () => <ul data-testid="mock-product-list" />);
 
-describe("ProductOverview component", () => {
+describe("Products component", () => {
   it("should render the header with the correct class", () => {
-    render(<ProductOverview />);
+    render(<Products />);
     const header = screen.getByRole("banner");
     expect(header).toHaveClass("header");
   });
 
   it("should render the title with correct text", () => {
-    render(<ProductOverview />);
+    render(<Products />);
     const title = screen.getByText("Our Collection");
     expect(title).toBeInTheDocument();
   });
 
   it("should apply the correct class to the title element", () => {
-    render(<ProductOverview />);
+    render(<Products />);
     const title = screen.getByText("Our Collection");
     expect(title).toHaveClass("title");
   });
 
   it("should render the ProductList component", () => {
-    render(<ProductOverview />);
+    render(<Products />);
     const productList = screen.getByTestId("mock-product-list");
     expect(productList).toBeInTheDocument();
   });

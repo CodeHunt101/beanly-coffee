@@ -1,4 +1,4 @@
-import styles from "./ProductOverview.module.scss";
+import styles from "./Products.module.scss";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 
