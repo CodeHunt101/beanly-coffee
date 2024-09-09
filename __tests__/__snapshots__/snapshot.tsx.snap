@@ -293,6 +293,89 @@ exports[`renders homepage unchanged 1`] = `
         </li>
       </ul>
     </section>
+    <section
+      class="howItWorks"
+    >
+      <header
+        class="header"
+      >
+        <h2
+          class="title ff-serif fs-450 text-neutral"
+        >
+          How it works
+        </h2>
+      </header>
+      <ol
+        class="stepsList"
+      >
+        <li
+          class="stepItem light"
+        >
+          <div
+            class="stepNumber ff-serif fs-700"
+          >
+            01
+          </div>
+          <h3
+            class="stepTitle ff-serif"
+          >
+            Pick your coffee
+          </h3>
+          <p
+            class="stepDescription"
+          >
+            Select from our evolving range of artisan coffees. Our beans are ethically sourced, and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.
+          </p>
+        </li>
+        <li
+          class="stepItem light"
+        >
+          <div
+            class="stepNumber ff-serif fs-700"
+          >
+            02
+          </div>
+          <h3
+            class="stepTitle ff-serif"
+          >
+            Choose the frequency
+          </h3>
+          <p
+            class="stepDescription"
+          >
+            Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.
+          </p>
+        </li>
+        <li
+          class="stepItem light"
+        >
+          <div
+            class="stepNumber ff-serif fs-700"
+          >
+            03
+          </div>
+          <h3
+            class="stepTitle ff-serif"
+          >
+            Receive and enjoy!
+          </h3>
+          <p
+            class="stepDescription"
+          >
+            We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.
+          </p>
+        </li>
+      </ol>
+      <div
+        class="ctaBtn"
+      >
+        <button
+          class="btn bg-primary ff-serif text-background"
+        >
+          Create your plan
+        </button>
+      </div>
+    </section>
   </main>
 </div>
 `;

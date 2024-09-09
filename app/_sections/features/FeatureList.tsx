@@ -28,9 +28,9 @@ const features: FeatureCardProps[] = [
 const FeatureList = () => {
   return (
     <ul className={styles.featureList}>
-      {features.map((feature, index) => (
+      {features.map((feature) => (
         <FeatureCard
-          key={index}
+          key={feature.title}
           icon={feature.icon}
           alt={feature.alt}
           title={feature.title}
