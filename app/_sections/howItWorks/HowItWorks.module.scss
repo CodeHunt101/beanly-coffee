@@ -1,8 +1,19 @@
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
+  "@/styles/abstracts/functions";
+
 .howItWorks {
   margin-top: 7.5rem;
 
+  @include lg {
+    padding-left: 5.313rem;
+    width: 90%;
+  }
+
   .header {
     text-align: center;
+    @include md {
+      text-align: start;
+    }
   }
 
   .title {
@@ -13,5 +24,10 @@
   .ctaBtn {
     margin: 4.938rem 0 0;
     text-align: center;
+
+    @include md {
+      text-align: start;
+      margin-top: 2.75rem;
+    }
   }
 }

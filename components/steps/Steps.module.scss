@@ -7,15 +7,25 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+    text-align: start;
+    gap: 25px;
+    min-width: 689px;
+  }
 }
 
-//   .stepItem {
-//     flex: 1 1 250px;
-//     max-width: 280px;
-//     margin: 1rem;
-//     text-align: center;
-//   }
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  @include md {
+    flex-direction: column;
+    flex: 1;
+    max-width: 285px;
+  }
+}
 
 .stepNumber {
   font-weight: bold;
@@ -26,6 +36,15 @@
 .stepTitle {
   margin: 0 0 1.5rem;
   @include font-size(500);
+
+  @include md {
+    max-width: 223px;
+  }
+
+  @include lg {
+    max-width: 255px;
+    @include font-size(550);
+  }
 }
 
 .stepDescription {

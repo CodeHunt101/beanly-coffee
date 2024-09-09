@@ -78,8 +78,11 @@
     }
 
     @include lg {
+      padding-inline: 0;
       margin-top: -15rem;
       flex-direction: row;
+      margin-inline: auto;
+      width: 85.305%;
     }
   }
 
