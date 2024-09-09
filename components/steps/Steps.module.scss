@@ -8,11 +8,12 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  --gap: 41px;
 
   @include md {
     flex-direction: row;
     text-align: start;
-    gap: 25px;
+    gap: var(--gap);
     min-width: 689px;
   }
 }
@@ -20,10 +21,42 @@
 .stepItem {
   display: flex;
   flex-direction: column;
+  --circle-line-height: 2px;
+  --circle-diameter: 31px;
   @include md {
     flex-direction: column;
-    flex: 1;
+    width: 100%;
+  }
+
+  @include md {
+    &:not(:last-child)::before {
+      position: relative;
+      content: "";
+      display: block;
+      height: var(--circle-line-height);
+      width: calc(100% + var(--gap));
+      top: calc(var(--circle-diameter) / 2);
+      left: 0%;
+      background-color: black;
+      color: black;
+      z-index: -1;
+    }
+  }
+}
+
+.stepContent {
+  @include md {
     max-width: 285px;
+  }
+}
+
+.circle {
+  @include md {
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    border: 2px solid black;
+    border-radius: 50%;
+    @include bg-colour($clr-background);
   }
 }
 
