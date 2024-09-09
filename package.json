@@ -31,8 +31,8 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "6.1.5",
-    "@testing-library/react": "14.1.2",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^15.0.6",
     "@types/jest": "29.5.11",
     "@types/react": "18.2.45",
     "husky": "^8.0.0",

@@ -171,20 +171,24 @@ exports[`renders homepage unchanged 1`] = `
     <section
       class="features"
     >
-      <header
-        class="header"
+      <div
+        class="wrapper"
       >
-        <h2
-          class="title ff-serif"
+        <header
+          class="header"
         >
-          Why choose us?
-        </h2>
-        <p
-          class="description"
-        >
-          A large part of our role is choosing which particular coffees will be featured in our range. This means working closely with the best coffee growers to give you a more impactful experience on every level.
-        </p>
-      </header>
+          <h2
+            class="title ff-serif"
+          >
+            Why choose us?
+          </h2>
+          <p
+            class="description"
+          >
+            A large part of our role is choosing which particular coffees will be featured in our range. This means working closely with the best coffee growers to give you a more impactful experience on every level.
+          </p>
+        </header>
+      </div>
       <ul
         class="featureList"
       >

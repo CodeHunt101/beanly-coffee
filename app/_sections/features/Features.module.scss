@@ -3,21 +3,28 @@
 
 .features {
   margin-top: 7.5rem;
-  border-radius: 0.625rem;
-  padding: 4rem 1.5rem;
-  height: 58.5rem;
-  @include bg-colour($clr-dark);
-
   @include md {
     margin-top: 9rem;
-    height: 35.3rem;
-    padding: 4rem 3.625rem;
   }
 
   @include lg {
     margin-top: 12.5rem;
-    padding-top: 6.25rem;
-    height: 36.8rem;
+  }
+
+  .wrapper {
+    padding: 4rem 0;
+    min-height: 58.5rem;
+    border-radius: 0.625rem;
+    @include bg-colour($clr-dark);
+
+    @include md {
+      min-height: 35.3rem;
+    }
+
+    @include lg {
+      padding-top: 6.25rem;
+      min-height: 36.8rem;
+    }
   }
 
   .header {
@@ -26,13 +33,9 @@
   }
 
   .title {
-    @include font-size(500);
     margin-bottom: 0.857em;
     @include text-colour($clr-background);
-
-    @include md {
-      @include font-size(500);
-    }
+    @include font-size(500);
 
     @include lg {
       @include font-size(600);
@@ -45,11 +48,11 @@
     font-weight: 200;
     margin-bottom: 4rem;
     margin-inline: auto;
+    width: 88%;
     max-width: 33.75rem;
 
     @include md {
       margin-bottom: 4.375rem;
-      width: 88%;
     }
 
     @include lg {
@@ -64,15 +67,18 @@
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding-inline: 1.5rem;
+    margin: -38rem 0 0 0;
     gap: 1.5rem;
 
     @include md {
+      padding-inline: 3.625rem;
       align-items: stretch;
+      margin-top: -18.5rem;
     }
 
     @include lg {
+      margin-top: -15rem;
       flex-direction: row;
     }
   }

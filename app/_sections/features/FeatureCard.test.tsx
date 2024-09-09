@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import FeatureCard, { FeatureCardProps } from "./FeatureCard";
 import "@testing-library/jest-dom";
 import { StaticImageData } from "next/image";
@@ -75,15 +75,17 @@ describe("FeatureCard", () => {
   });
 
   describe("renders with default alt text when not provided", () => {
-    it("applies an empty alt attribute when alt is not provided", () => {
+    it("applies an empty alt attribute when alt is not provided", async () => {
       const propsWithoutAlt: FeatureCardProps = {
         ...mockProps,
         alt: undefined,
       };
       render(<FeatureCard {...propsWithoutAlt} />);
 
-      const image = screen.getByRole("img");
-      expect(image).toHaveAttribute("alt", "");
+      waitFor(() => {
+        const image = screen.getByRole("img");
+        expect(image).toHaveAttribute("alt", "");
+      });
     });
   });
 
