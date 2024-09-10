@@ -4,7 +4,7 @@ exports[`renders homepage unchanged 1`] = `
 <div>
   <main>
     <section
-      class="hero container text-light"
+      class="hero text-light"
       id="hero-section"
     >
       <div
@@ -32,7 +32,7 @@ exports[`renders homepage unchanged 1`] = `
       </div>
     </section>
     <section
-      class="products container"
+      class="products"
     >
       <header
         class="header"
@@ -173,7 +173,7 @@ exports[`renders homepage unchanged 1`] = `
       </ul>
     </section>
     <section
-      class="features container"
+      class="features"
     >
       <div
         class="wrapper"

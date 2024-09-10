@@ -10,7 +10,7 @@
   }
 
   @include md {
-    padding-inline: 2.5em;
+    padding-inline: 0;
   }
 
   @include lg {
@@ -20,16 +20,16 @@
   }
 
   .ctaBtn {
-    margin: 4.938rem 0 0;
+    margin: 4.938rem 0 7.5rem 0;
     text-align: center;
 
     @include md {
       text-align: start;
-      margin-top: 2.75rem;
+      margin: 2.75rem 0 9rem 0;
     }
 
     @include lg {
-      margin-left: 6.25rem;
+      margin-bottom: 12.5rem;
     }
   }
 }

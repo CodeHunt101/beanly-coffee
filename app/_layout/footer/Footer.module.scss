@@ -33,7 +33,10 @@
 
     a {
       min-width: 236px;
-      margin-right: 1.353rem;
+
+      @include md {
+        margin-right: 1.353rem;
+      }
     }
 
     img {

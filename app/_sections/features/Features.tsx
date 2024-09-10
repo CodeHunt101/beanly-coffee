@@ -3,7 +3,7 @@ import styles from "./Features.module.scss";
 
 const Features = () => {
   return (
-    <section className={`${styles.features} container`}>
+    <section className={`${styles.features}`}>
       <div className={styles.wrapper}>
         <header className={styles.header}>
           <h2 className={`${styles.title} ff-serif`}>Why choose us?</h2>

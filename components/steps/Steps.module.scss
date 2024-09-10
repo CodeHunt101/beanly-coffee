@@ -4,9 +4,13 @@
 .stepsWrapper {
   border-radius: 0.625rem;
 
+  @include md {
+    padding: 2.75em 0 0 0;
+  }
+
   @include lg {
     width: 90%;
-    padding: 6.25em 0 5em 6.25em;
+    padding: 6.25em 0 0 0;
   }
 
   &.light {
@@ -47,7 +51,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  --gap: 2.563rem;
+  --gap: 0.625rem;
 
   @include md {
     flex-direction: row;
@@ -84,6 +88,7 @@
 .stepContent {
   @include md {
     max-width: 285px;
+    min-width: 223px;
   }
 }
 
@@ -110,7 +115,7 @@
   @include font-size(500);
 
   @include md {
-    max-width: 223px;
+    max-width: 200px;
   }
 
   @include lg {

@@ -5,20 +5,20 @@ $image-tablet: "../../../public/assets/home/tablet/image-hero-coffeepress.jpg";
 $image-desktop: "../../../public/assets/home/desktop/image-hero-coffeepress.jpg";
 
 .hero {
-  background-image: url($image-mobile);
   background-size: cover;
-  padding: 6.25em 1.5em;
   text-align: center;
   border-radius: 0.625rem;
 
+  padding: 6.25em 1.5em;
+  background-image: url($image-mobile);
   a {
     text-decoration: none;
   }
-
   @include md {
+    background-image: url($image-tablet);
+
     padding: 6.5em 3.5em;
     text-align: start;
-    background-image: url($image-tablet);
 
     .content {
       width: 68%;
@@ -27,8 +27,9 @@ $image-desktop: "../../../public/assets/home/desktop/image-hero-coffeepress.jpg"
   }
 
   @include lg {
-    padding: 7.25em 5.313em;
     background-image: url($image-desktop);
+    padding: 7.25em 5.313em;
+
     .content {
       width: 55%;
       min-width: 491px;
