@@ -1,13 +1,8 @@
 import "@/styles/global.scss";
 import { barlow, fraunces } from "./utils/fonts";
 import { Metadata } from "next";
-import styles from "./layout.module.scss";
-import Link from "next/link";
-import { Path } from "./utils/types";
-import logo from "@/public/assets/shared/desktop/logo.svg";
-import Image from "next/image";
-import { Suspense } from "react";
-import NavBar from "@/components/navbar/NavBar";
+import Header from "./_layout/header/Header";
+import Footer from "./_layout/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Beanly",
@@ -36,19 +31,9 @@ export default function RootLayout({
         {/* <a href="#main-content" className="skip-link">
           Skip to main content
         </a> */}
-        <header id={styles.mainHeader} className="container sticky">
-          <section className={`${styles.menu} flex justify-space-between`}>
-            <div className={`${styles.logo}`}>
-              <Link href={Path.HOME}>
-                <Image src={logo} alt="beanly logo" priority />
-              </Link>
-            </div>
-            <Suspense fallback={<div>Loading navigation...</div>}>
-              <NavBar />
-            </Suspense>
-          </section>
-        </header>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

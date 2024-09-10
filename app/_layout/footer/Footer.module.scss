@@ -1,0 +1,58 @@
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/functions",
+  "@/styles/abstracts/variables";
+
+.footer {
+  margin: 7.5rem auto 4.5rem;
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 3.375em 0;
+
+    @include lg {
+      flex-direction: row;
+      padding: 2.938rem 5.313rem;
+    }
+  }
+
+  .navList {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 3.031rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+
+    @include md {
+      flex-direction: row;
+      margin: 2rem 0 4.063rem 1.5rem;
+      gap: 2.75em;
+    }
+
+    @include lg {
+      margin: 0;
+    }
+
+    .navLink {
+      text-decoration: none;
+      @include text-colour($clr-light, 60%);
+      &:hover,
+      &:focus {
+        @include text-colour($clr-light);
+      }
+    }
+  }
+
+  .socialList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    min-width: 120px;
+    justify-content: space-between;
+  }
+}
