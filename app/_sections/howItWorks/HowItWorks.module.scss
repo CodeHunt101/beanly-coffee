@@ -23,5 +23,9 @@
       text-align: start;
       margin-top: 2.75rem;
     }
+
+    @include lg {
+      margin-left: 6.25rem;
+    }
   }
 }

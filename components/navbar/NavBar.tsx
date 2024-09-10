@@ -21,11 +21,7 @@ const NavBar = () => {
 
   const renderNavItem = (path: Path, label: string) => (
     <li className={`${pathname === path ? "active" : ""} flex`} key={path}>
-      <Link
-        className="letter-spacing-1"
-        href={path}
-        aria-current={pathname === path ? "page" : undefined}
-      >
+      <Link href={path} aria-current={pathname === path ? "page" : undefined}>
         {label}
       </Link>
     </li>
@@ -61,7 +57,7 @@ const NavBar = () => {
       >
         <ul
           id="primary-navigation"
-          className={`fw-700 ${isMenuOpen ? styles.menuOpen : ""}`}
+          className={`fw-700 ${isMenuOpen ? styles.menuOpen : ""} letter-spacing-1`}
         >
           {renderNavItem(Path.HOME, "Home")}
           {renderNavItem(Path.NOT_READY, "About us")}
