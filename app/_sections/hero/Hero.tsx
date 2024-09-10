@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="hero-section"
-      className={`${styles.hero} container text-background`}
+      className={`${styles.hero} container text-light`}
     >
       <div className={styles.content}>
         <h1 className={`${styles.title} ff-serif`}>

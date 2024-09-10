@@ -22,7 +22,7 @@
     padding-top: 2.5em;
     height: 100vh;
     background-image: linear-gradient(
-      to-hsl-comma-sep($clr-background) 50%,
+      to-hsl-comma-sep($clr-light) 50%,
       transparent
     );
     @include text-colour($clr-dark);

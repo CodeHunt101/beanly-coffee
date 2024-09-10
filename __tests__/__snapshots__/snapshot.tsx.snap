@@ -4,7 +4,7 @@ exports[`renders homepage unchanged 1`] = `
 <div>
   <main>
     <section
-      class="hero container text-background"
+      class="hero container text-light"
       id="hero-section"
     >
       <div
@@ -21,7 +21,7 @@ exports[`renders homepage unchanged 1`] = `
           Start your mornings with the world's best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.
         </p>
         <button
-          class="btn bg-primary ff-serif text-background"
+          class="btn bg-primary ff-serif text-light"
         >
           Create your plan
         </button>
@@ -395,7 +395,7 @@ exports[`renders homepage unchanged 1`] = `
         class="ctaBtn"
       >
         <button
-          class="btn bg-primary ff-serif text-background"
+          class="btn bg-primary ff-serif text-light"
         >
           Create your plan
         </button>

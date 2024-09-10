@@ -34,7 +34,7 @@
 
   .title {
     margin-bottom: 0.857em;
-    @include text-colour($clr-background);
+    @include text-colour($clr-light);
     @include font-size(500);
 
     @include lg {
@@ -44,7 +44,7 @@
 
   .description {
     @include font-size(200);
-    @include text-colour($clr-background, 80%);
+    @include text-colour($clr-light, 80%);
     font-weight: 200;
     margin-bottom: 4rem;
     margin-inline: auto;
@@ -95,7 +95,7 @@
     text-align: center;
     height: 23.875em;
     max-width: 26.25em;
-    @include text-colour($clr-background);
+    @include text-colour($clr-light);
     @include bg-colour($clr-primary);
 
     @include md {

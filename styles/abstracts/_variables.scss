@@ -4,7 +4,7 @@ $colours: (
   "accent": "178 55% 61%",
   "dark": "215 19% 25%",
   "secondary": "25 94% 86%",
-  "background": "43 78% 98%",
+  "light": "43 78% 98%",
   "neutral": "215 5% 54%",
   "disabled": "26 11% 87%",
   "muted": "40 29% 94%",
@@ -13,7 +13,7 @@ $colours: (
 $clr-primary: map-get($colours, "primary");
 $clr-neutral: map-get($colours, "neutral");
 $clr-accent: map-get($colours, "accent");
-$clr-background: map-get($colours, "background");
+$clr-light: map-get($colours, "light");
 $clr-dark: map-get($colours, "dark");
 $clr-secondary: map-get($colours, "secondary");
 $clr-disabled: map-get($colours, "disabled");

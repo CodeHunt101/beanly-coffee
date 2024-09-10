@@ -9,12 +9,12 @@
   }
 
   &.light {
-    @include bg-colour($clr-background);
+    @include bg-colour($clr-light);
   }
 
   &.dark {
     @include bg-colour($clr-dark);
-    @include text-colour($clr-background);
+    @include text-colour($clr-light);
 
     .circle {
       background-color: transparent;
@@ -94,7 +94,7 @@
     border-radius: 50%;
     border-color: to-hsl-comma-sep($clr-primary);
     z-index: 1;
-    @include bg-colour($clr-background);
+    @include bg-colour($clr-light);
   }
 }
 

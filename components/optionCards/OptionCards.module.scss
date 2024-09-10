@@ -43,7 +43,7 @@
 
     &.selected {
       @include bg-colour($clr-primary);
-      @include text-colour($clr-background);
+      @include text-colour($clr-light);
     }
   }
 

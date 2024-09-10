@@ -21,7 +21,7 @@
     z-index: -1;
     background: -webkit-linear-gradient(
       to-hsl-comma-sep($clr-neutral, 0.5) 1%,
-      to-hsl-comma-sep($clr-background, 0.5) 99%
+      to-hsl-comma-sep($clr-light, 0.5) 99%
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;

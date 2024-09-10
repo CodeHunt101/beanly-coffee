@@ -46,7 +46,7 @@ const AccordionItem = ({
   return (
     <div className={`${styles.accordionItem}`}>
       <button
-        className={`${styles.accordionToggle} bg-background`}
+        className={`${styles.accordionToggle} bg-light`}
         onClick={toggleAccordion}
         disabled={disabled}
       >
