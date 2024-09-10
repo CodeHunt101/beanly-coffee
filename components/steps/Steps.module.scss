@@ -3,6 +3,7 @@
 
 .stepsWrapper {
   border-radius: 0.625rem;
+
   @include lg {
     width: 90%;
     padding: 6.25em 0 5em 6.25em;
@@ -24,6 +25,7 @@
 
 .header {
   text-align: center;
+
   @include md {
     text-align: start;
   }
@@ -34,7 +36,6 @@
 }
 
 .title {
-  font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
@@ -46,7 +47,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  --gap: 41px;
+  --gap: 2.563rem;
 
   @include md {
     flex-direction: row;
@@ -61,20 +62,20 @@
   flex-direction: column;
   --circle-line-height: 2px;
   --circle-diameter: 31px;
+
   @include md {
     flex-direction: column;
     width: 100%;
-  }
 
-  @include md {
+    // Add a line between steps, except after the last step
     &:not(:last-child)::before {
-      position: relative;
+      position: relative; // Position relative to allow positioning of the pseudo-element
       content: "";
       display: block;
       height: var(--circle-line-height);
-      width: calc(100% + var(--gap));
-      top: calc(var(--circle-diameter) / 2);
-      left: calc(var(--circle-diameter) / 2);
+      width: calc(100% + var(--gap)); // Set width to full width plus flex gap
+      top: calc(var(--circle-diameter) / 2); // Position vertically centered
+      left: calc(var(--circle-diameter) / 2); // Position horizontally centered
       background-color: to-hsl-comma-sep($clr-secondary);
     }
   }
@@ -90,10 +91,10 @@
   @include md {
     width: var(--circle-diameter);
     height: var(--circle-diameter);
-    border: 2px solid black;
+    border: 2px solid;
     border-radius: 50%;
     border-color: to-hsl-comma-sep($clr-primary);
-    z-index: 1;
+    z-index: 1; // Ensure the circle appears above connecting line
     @include bg-colour($clr-light);
   }
 }
