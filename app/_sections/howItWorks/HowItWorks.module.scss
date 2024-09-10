@@ -2,23 +2,17 @@
   "@/styles/abstracts/functions";
 
 .howItWorks {
-  margin-top: 7.5rem;
+  margin-top: 6.25rem;
+  padding-inline: 1.5em;
+
+  @include md {
+    padding-inline: 2.5em;
+  }
 
   @include lg {
-    padding-left: 5.313rem;
-    width: 90%;
-  }
-
-  .header {
-    text-align: center;
-    @include md {
-      text-align: start;
-    }
-  }
-
-  .title {
-    font-weight: bold;
-    margin-bottom: 1.5rem;
+    padding-left: 5.313em;
+    padding-right: 5em;
+    width: 100%;
   }
 
   .ctaBtn {

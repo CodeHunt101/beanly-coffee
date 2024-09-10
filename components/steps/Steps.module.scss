@@ -1,4 +1,42 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables";
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
+  "@/styles/abstracts/functions";
+
+.stepsWrapper {
+  border-radius: 0.625rem;
+  @include lg {
+    width: 90%;
+    padding: 6.25em 0 5em 6.25em;
+  }
+
+  &.light {
+    @include bg-colour($clr-background);
+  }
+
+  &.dark {
+    @include bg-colour($clr-dark);
+    @include text-colour($clr-background);
+
+    .circle {
+      background-color: transparent;
+    }
+  }
+}
+
+.header {
+  text-align: center;
+  @include md {
+    text-align: start;
+  }
+
+  @include lg {
+    margin-bottom: 5rem;
+  }
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
 
 .stepsList {
   text-align: center;
@@ -36,10 +74,8 @@
       height: var(--circle-line-height);
       width: calc(100% + var(--gap));
       top: calc(var(--circle-diameter) / 2);
-      left: 0%;
-      background-color: black;
-      color: black;
-      z-index: -1;
+      left: calc(var(--circle-diameter) / 2);
+      background-color: to-hsl-comma-sep($clr-secondary);
     }
   }
 }
@@ -56,14 +92,16 @@
     height: var(--circle-diameter);
     border: 2px solid black;
     border-radius: 50%;
+    border-color: to-hsl-comma-sep($clr-primary);
+    z-index: 1;
     @include bg-colour($clr-background);
   }
 }
 
 .stepNumber {
-  font-weight: bold;
   line-height: 1;
   margin: 3.5rem 0 1.5rem;
+  @include text-colour($clr-secondary);
 }
 
 .stepTitle {

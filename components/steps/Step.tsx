@@ -9,7 +9,9 @@ type StepProps = {
 
 const Step = ({ number, title, description, theme }: StepProps) => {
   return (
-    <li className={`${styles.stepItem} ${theme}`}>
+    <li
+      className={`${styles.stepItem} ${theme === "light" ? styles.light : styles.dark}`}
+    >
       <span className={`${styles.circle}`}></span>
       <div className={styles.stepContent}>
         <div className={`${styles.stepNumber} ff-serif fs-700`}>{number}</div>

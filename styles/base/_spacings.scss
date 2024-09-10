@@ -35,16 +35,16 @@
 }
 
 .container {
-  padding-inline: 1.5em;
-  margin-inline: auto;
+  margin-inline: 1.5em;
+  // margin-inline: auto;
   max-width: 90rem;
 
   @include md {
-    padding-inline: 2.5em;
+    margin-inline: 2.5em;
   }
 
   @include lg {
-    padding-inline: 5em;
+    margin-inline: 5em;
   }
 }
 

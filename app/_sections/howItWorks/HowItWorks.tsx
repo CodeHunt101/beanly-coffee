@@ -5,12 +5,7 @@ import Button from "@/components/button/Button";
 const HowItWorks = () => {
   return (
     <section className={styles.howItWorks}>
-      <header className={styles.header}>
-        <h2 className={`${styles.title} ff-serif fs-450 text-neutral`}>
-          How it works
-        </h2>
-      </header>
-      <Steps />
+      <Steps title="How it works" />
       <div className={styles.ctaBtn}>
         <Button>Create your plan</Button>
       </div>

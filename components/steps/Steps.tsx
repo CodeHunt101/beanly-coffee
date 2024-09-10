@@ -2,6 +2,7 @@ import Step from "./Step";
 import styles from "./Steps.module.scss";
 
 type StepsProps = {
+  title?: string;
   theme?: "light" | "dark";
 };
 
@@ -26,19 +27,30 @@ const stepsData = [
   },
 ];
 
-const Steps = ({ theme = "light" }: StepsProps) => {
+const Steps = ({ title, theme = "light" }: StepsProps) => {
   return (
-    <ol className={styles.stepsList}>
-      {stepsData.map((step) => (
-        <Step
-          key={`${step.number} ${step.title}`}
-          number={step.number}
-          title={step.title}
-          description={step.description}
-          theme={theme}
-        />
-      ))}
-    </ol>
+    <div
+      className={`${styles.stepsWrapper} ${theme === "light" ? styles.light : styles.dark}`}
+    >
+      {title && (
+        <div className={styles.header}>
+          <h2 className={`${styles.title} ff-serif fs-450 text-neutral`}>
+            {title}
+          </h2>
+        </div>
+      )}
+      <ol className={`${styles.stepsList}`}>
+        {stepsData.map((step) => (
+          <Step
+            key={`${step.number} ${step.title}`}
+            number={step.number}
+            title={step.title}
+            description={step.description}
+            theme={theme}
+          />
+        ))}
+      </ol>
+    </div>
   );
 };
 

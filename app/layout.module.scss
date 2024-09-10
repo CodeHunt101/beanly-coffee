@@ -2,6 +2,7 @@
   "../styles/abstracts/variables";
 #mainHeader {
   padding: 2em 0 2em;
+  width: auto;
   background-image: linear-gradient(
     to-hsl-comma-sep($clr-background) 75%,
     transparent
@@ -14,4 +15,8 @@
   @include lg {
     padding: 2.723em 0 2.723em;
   }
+}
+
+.menu {
+  width: 100%;
 }

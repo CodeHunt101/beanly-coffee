@@ -4,7 +4,7 @@ exports[`renders homepage unchanged 1`] = `
 <div>
   <main>
     <section
-      class="hero text-background"
+      class="hero container text-background"
       id="hero-section"
     >
       <div
@@ -28,7 +28,7 @@ exports[`renders homepage unchanged 1`] = `
       </div>
     </section>
     <section
-      class="products"
+      class="products container"
     >
       <header
         class="header"
@@ -169,7 +169,7 @@ exports[`renders homepage unchanged 1`] = `
       </ul>
     </section>
     <section
-      class="features"
+      class="features container"
     >
       <div
         class="wrapper"
@@ -296,97 +296,101 @@ exports[`renders homepage unchanged 1`] = `
     <section
       class="howItWorks"
     >
-      <header
-        class="header"
+      <div
+        class="stepsWrapper light"
       >
-        <h2
-          class="title ff-serif fs-450 text-neutral"
+        <div
+          class="header"
         >
-          How it works
-        </h2>
-      </header>
-      <ol
-        class="stepsList"
-      >
-        <li
-          class="stepItem light"
-        >
-          <span
-            class="circle"
-          />
-          <div
-            class="stepContent"
+          <h2
+            class="title ff-serif fs-450 text-neutral"
           >
-            <div
-              class="stepNumber ff-serif fs-700"
-            >
-              01
-            </div>
-            <h3
-              class="stepTitle ff-serif"
-            >
-              Pick your coffee
-            </h3>
-            <p
-              class="stepDescription"
-            >
-              Select from our evolving range of artisan coffees. Our beans are ethically sourced, and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.
-            </p>
-          </div>
-        </li>
-        <li
-          class="stepItem light"
+            How it works
+          </h2>
+        </div>
+        <ol
+          class="stepsList"
         >
-          <span
-            class="circle"
-          />
-          <div
-            class="stepContent"
+          <li
+            class="stepItem light"
           >
+            <span
+              class="circle"
+            />
             <div
-              class="stepNumber ff-serif fs-700"
+              class="stepContent"
             >
-              02
+              <div
+                class="stepNumber ff-serif fs-700"
+              >
+                01
+              </div>
+              <h3
+                class="stepTitle ff-serif"
+              >
+                Pick your coffee
+              </h3>
+              <p
+                class="stepDescription"
+              >
+                Select from our evolving range of artisan coffees. Our beans are ethically sourced, and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.
+              </p>
             </div>
-            <h3
-              class="stepTitle ff-serif"
-            >
-              Choose the frequency
-            </h3>
-            <p
-              class="stepDescription"
-            >
-              Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.
-            </p>
-          </div>
-        </li>
-        <li
-          class="stepItem light"
-        >
-          <span
-            class="circle"
-          />
-          <div
-            class="stepContent"
+          </li>
+          <li
+            class="stepItem light"
           >
+            <span
+              class="circle"
+            />
             <div
-              class="stepNumber ff-serif fs-700"
+              class="stepContent"
             >
-              03
+              <div
+                class="stepNumber ff-serif fs-700"
+              >
+                02
+              </div>
+              <h3
+                class="stepTitle ff-serif"
+              >
+                Choose the frequency
+              </h3>
+              <p
+                class="stepDescription"
+              >
+                Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.
+              </p>
             </div>
-            <h3
-              class="stepTitle ff-serif"
+          </li>
+          <li
+            class="stepItem light"
+          >
+            <span
+              class="circle"
+            />
+            <div
+              class="stepContent"
             >
-              Receive and enjoy!
-            </h3>
-            <p
-              class="stepDescription"
-            >
-              We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.
-            </p>
-          </div>
-        </li>
-      </ol>
+              <div
+                class="stepNumber ff-serif fs-700"
+              >
+                03
+              </div>
+              <h3
+                class="stepTitle ff-serif"
+              >
+                Receive and enjoy!
+              </h3>
+              <p
+                class="stepDescription"
+              >
+                We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
       <div
         class="ctaBtn"
       >
