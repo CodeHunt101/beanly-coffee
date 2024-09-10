@@ -1,7 +1,7 @@
 import Step from "./Step";
 import styles from "./Steps.module.scss";
 
-type StepsProps = {
+export type StepsProps = {
   title?: string;
   theme?: "light" | "dark";
 };

@@ -1,5 +1,5 @@
 import "@/styles/global.scss";
-import { barlow, fraunces } from "./utils/fonts";
+import { barlow, fraunces } from "@/app/_utils/fonts";
 import { Metadata } from "next";
 import Header from "./_layout/header/Header";
 import Footer from "./_layout/footer/Footer";

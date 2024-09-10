@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Path } from "@/app/utils/types";
+import { Path } from "@/app/_utils/types";
 import logoHeader from "@/public/assets/shared/desktop/logo-header.svg";
 import logoFooter from "@/public/assets/shared/desktop/logo-footer.svg";
 

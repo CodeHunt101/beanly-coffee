@@ -5,6 +5,10 @@
   margin-top: 6.25rem;
   padding-inline: 1.5em;
 
+  a {
+    text-decoration: none;
+  }
+
   @include md {
     padding-inline: 2.5em;
   }

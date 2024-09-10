@@ -11,6 +11,10 @@ $image-desktop: "../../../public/assets/home/desktop/image-hero-coffeepress.jpg"
   text-align: center;
   border-radius: 0.625rem;
 
+  a {
+    text-decoration: none;
+  }
+
   @include md {
     padding: 6.5em 3.5em;
     text-align: start;

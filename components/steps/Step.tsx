@@ -1,6 +1,6 @@
 import styles from "./Steps.module.scss";
 
-type StepProps = {
+export type StepProps = {
   number: string;
   title: string;
   description: string;

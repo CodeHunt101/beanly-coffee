@@ -5,7 +5,7 @@ import styles from "./Accordion.module.scss";
 import arrow from "@/public/assets/plan/desktop/icon-arrow.svg";
 import Image from "next/image";
 import useScreenSizeHandler from "@/hooks/useScreenSizeHandler";
-import { BreakPoints } from "@/app/utils/types";
+import { BreakPoints } from "@/app/_utils/types";
 
 type AccordionItemProps = {
   title: string;

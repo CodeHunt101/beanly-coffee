@@ -7,7 +7,7 @@ export const metadata = {
   title: "Beanly",
 };
 
-export default function Page() {
+export default function Home() {
   return (
     <main>
       <Hero />

@@ -1,7 +1,7 @@
 import Logo from "@/components/logo/Logo";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
-import { Path } from "@/app/utils/types";
+import { Path } from "@/app/_utils/types";
 import FacebookLogo from "@/public/assets/shared/desktop/icon-facebook.svg";
 import TwitterLogo from "@/public/assets/shared/desktop/icon-twitter.svg";
 import InstagramLogo from "@/public/assets/shared/desktop/icon-instagram.svg";
@@ -23,12 +23,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href={Path.NOT_READY} className={styles.navLink}>
+                <Link href={Path.ABOUT} className={styles.navLink}>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href={Path.NOT_READY} className={styles.navLink}>
+                <Link href={Path.CREATE_PLAN} className={styles.navLink}>
                   Create Your Plan
                 </Link>
               </li>

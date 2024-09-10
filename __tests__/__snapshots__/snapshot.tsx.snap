@@ -23,7 +23,11 @@ exports[`renders homepage unchanged 1`] = `
         <button
           class="btn bg-primary ff-serif text-light"
         >
-          Create your plan
+          <a
+            href="/create-plan"
+          >
+            Create your plan
+          </a>
         </button>
       </div>
     </section>
@@ -397,7 +401,11 @@ exports[`renders homepage unchanged 1`] = `
         <button
           class="btn bg-primary ff-serif text-light"
         >
-          Create your plan
+          <a
+            href="/create-plan"
+          >
+            Create your plan
+          </a>
         </button>
       </div>
     </section>

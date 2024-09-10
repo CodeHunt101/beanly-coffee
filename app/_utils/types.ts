@@ -1,5 +1,7 @@
 export enum Path {
   HOME = "/",
+  ABOUT = "/about",
+  CREATE_PLAN = "/create-plan",
   NOT_READY = "#",
 }
 

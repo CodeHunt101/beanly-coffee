@@ -6,8 +6,8 @@ import iconHamburger from "@/public/assets/shared/mobile/icon-hamburger.svg";
 import iconClose from "@/public/assets/shared/mobile/icon-close.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BreakPoints, Path } from "@/app/utils/types";
 import useScreenSizeHandler from "@/hooks/useScreenSizeHandler";
+import { BreakPoints, Path } from "@/app/_utils/types";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,8 +60,8 @@ const NavBar = () => {
           className={`fw-700 ${isMenuOpen ? styles.menuOpen : ""} letter-spacing-1`}
         >
           {renderNavItem(Path.HOME, "Home")}
-          {renderNavItem(Path.NOT_READY, "About us")}
-          {renderNavItem(Path.NOT_READY, "Create your plan")}
+          {renderNavItem(Path.ABOUT, "About us")}
+          {renderNavItem(Path.CREATE_PLAN, "Create your plan")}
         </ul>
       </nav>
     </div>

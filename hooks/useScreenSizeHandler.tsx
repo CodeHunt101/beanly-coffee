@@ -1,5 +1,5 @@
 import { SetStateAction, useEffect } from "react";
-import { BreakPoints } from "@/app/utils/types";
+import { BreakPoints } from "@/app/_utils/types";
 
 export const useScreenSizeHandler = (
   setState: SetStateAction<any>,
