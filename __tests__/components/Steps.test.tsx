@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Steps from "@/components/steps/Steps";
 
 // Mock the Step component
-jest.mock("../../components/steps/Step", () => () => <div>Mock Step</div>);
+jest.mock("@/components/steps/Step", () => () => <div>Mock Step</div>);
 
 describe("Steps component", () => {
   it("renders without crashing", () => {

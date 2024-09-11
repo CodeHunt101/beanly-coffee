@@ -20,15 +20,13 @@ exports[`renders homepage unchanged 1`] = `
         >
           Start your mornings with the world's best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.
         </p>
-        <button
+        <a
           class="btn bg-primary ff-serif text-light"
+          href="/create-plan"
+          role="button"
         >
-          <a
-            href="/create-plan"
-          >
-            Create your plan
-          </a>
-        </button>
+          Create your plan
+        </a>
       </div>
     </section>
     <section
@@ -398,15 +396,13 @@ exports[`renders homepage unchanged 1`] = `
       <div
         class="ctaBtn"
       >
-        <button
+        <a
           class="btn bg-primary ff-serif text-light"
+          href="/create-plan"
+          role="button"
         >
-          <a
-            href="/create-plan"
-          >
-            Create your plan
-          </a>
-        </button>
+          Create your plan
+        </a>
       </div>
     </section>
   </main>

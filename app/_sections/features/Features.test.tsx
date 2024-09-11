@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Features from "./Features";
-import FeatureList from "./FeatureList";
 import "@testing-library/jest-dom";
 
 // Mock the FeatureList component to simplify the test

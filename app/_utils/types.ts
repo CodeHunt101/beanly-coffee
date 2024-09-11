@@ -12,3 +12,7 @@ export enum BreakPoints {
   XL = 1200,
   XXL = 1440,
 }
+
+export type Styles = {
+  readonly [key: string]: string;
+};

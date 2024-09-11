@@ -3,7 +3,7 @@ import Hero from "./Hero";
 import { Path } from "@/app/_utils/types";
 
 // Mock the Button component
-jest.mock("../../../components/button/Button", () => ({ children }: any) => (
+jest.mock("@/components/buttons/Button", () => ({ children }: any) => (
   <button>{children}</button>
 ));
 
@@ -36,7 +36,7 @@ describe("Hero Component", () => {
 
   it(`contains a link to the ${Path.CREATE_PLAN} page`, () => {
     render(<Hero />);
-    const link = screen.getByRole("link", { name: /Create your plan/i });
+    const link = screen.getByRole("button", { name: /Create your plan/i });
     expect(link).toHaveAttribute("href", Path.CREATE_PLAN);
   });
 });

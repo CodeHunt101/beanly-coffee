@@ -1,10 +1,7 @@
-import Button from "@/components/button/Button";
 import styles from "./Hero.module.scss";
-import Link from "next/link";
+import ButtonLink from "@/components/buttons/ButtonLink";
 
 const Hero = () => {
-  const navigateToCreatePlan = () => {};
-
   return (
     <section id="hero-section" className={`${styles.hero} text-light`}>
       <div className={styles.content}>
@@ -16,9 +13,7 @@ const Hero = () => {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <Button>
-          <Link href="/create-plan">Create your plan</Link>
-        </Button>
+        <ButtonLink href="/create-plan">Create your plan</ButtonLink>
       </div>
     </section>
   );

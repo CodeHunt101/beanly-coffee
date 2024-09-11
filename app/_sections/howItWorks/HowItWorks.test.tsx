@@ -2,10 +2,10 @@ import { render, screen } from "@testing-library/react";
 import HowItWorks from "./HowItWorks";
 
 // Mocking the Steps and Button components
-jest.mock("../../../components/steps/Step", () => () => (
+jest.mock("@/components/steps/Step", () => () => (
   <div>Mock Steps Component</div>
 ));
-jest.mock("../../../components/button/Button", () => ({ children }: any) => (
+jest.mock("@/components/buttons/Button", () => ({ children }: any) => (
   <div>{children}</div>
 ));
 jest.mock("next/link", () => ({ children }: any) => <div>{children}</div>);

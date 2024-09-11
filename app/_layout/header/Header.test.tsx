@@ -2,12 +2,10 @@ import { render, screen, waitFor } from "@testing-library/react";
 import Header from "./Header";
 
 // Mock the Logo and NavBar components
-jest.mock("../../../components/navbar/NavBar", () => () => (
+jest.mock("@/components/navbar/NavBar", () => () => (
   <nav data-testid="navbar" />
 ));
-jest.mock("../../../components/logo/Logo", () => () => (
-  <div data-testid="logo" />
-));
+jest.mock("@/components/logo/Logo", () => () => <div data-testid="logo" />);
 
 describe("Header Component", () => {
   it("should render the header element with the correct id and class", () => {
