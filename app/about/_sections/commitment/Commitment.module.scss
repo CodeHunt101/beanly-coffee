@@ -1,0 +1,69 @@
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables";
+
+.commitment {
+  margin: 7.5rem 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include md {
+    text-align: start;
+    flex-direction: row;
+    gap: 4.313rem;
+  }
+
+  @include lg {
+    gap: 5rem;
+    max-width: 1110px;
+    margin-inline: auto;
+    align-items: center;
+  }
+
+  @include xl {
+    gap: 7.813rem;
+  }
+
+  .image {
+    height: auto;
+    border-radius: 0.5rem;
+
+    @include md {
+      min-width: 281px;
+    }
+
+    @include lg {
+      min-width: 445px;
+    }
+  }
+
+  .content {
+    margin: 3rem 0 0;
+
+    @include md {
+      margin-top: 0.5rem;
+    }
+
+    @include lg {
+      margin: 0;
+    }
+  }
+
+  .title {
+    @include font-size(550);
+
+    @include xl {
+      @include font-size(600);
+    }
+  }
+
+  .description {
+    margin: 1.875rem 0 0;
+    @include font-size(200);
+    @include line-height(200);
+
+    @include lg {
+      @include font-size(300);
+      @include line-height(300);
+    }
+  }
+}

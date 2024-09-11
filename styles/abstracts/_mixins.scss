@@ -32,6 +32,10 @@
   font-size: map-get($fs-map, $size);
 }
 
+@mixin line-height($size) {
+  font-size: map-get($lh-map, $size);
+}
+
 @mixin bg-colour($colour, $alpha: 100%) {
   background-color: #{"hsl(#{$colour} / #{$alpha})"};
 }
