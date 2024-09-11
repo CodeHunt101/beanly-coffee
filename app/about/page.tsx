@@ -1,5 +1,13 @@
-const About = () => {
-  return <h1 className="container">Coming soon...</h1>;
+import HeroSection from "./_sections/hero/HeroSection";
+
+export const metadata = {
+  title: "Beanly About Page",
 };
 
-export default About;
+export default function About() {
+  return (
+    <main>
+      <HeroSection />
+    </main>
+  );
+}

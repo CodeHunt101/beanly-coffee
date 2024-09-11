@@ -34,7 +34,6 @@ const Hero = ({
       <p className={`${styles?.description} fw-300`}>{description}</p>
       {linkButton && (
         <ButtonLink href="/create-plan">
-          {" "}
           {(props as HeroPropsWithLink).linkButtonContent}
         </ButtonLink>
       )}

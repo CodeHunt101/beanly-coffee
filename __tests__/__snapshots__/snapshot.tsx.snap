@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders homepage unchanged 1`] = `
+exports[`renders / page unchanged 1`] = `
 <div>
   <main>
     <section
@@ -403,6 +403,58 @@ exports[`renders homepage unchanged 1`] = `
         >
           Create your plan
         </a>
+      </div>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`renders /about page unchanged 1`] = `
+<div>
+  <main>
+    <section
+      class="hero text-light"
+      id="hero-section"
+    >
+      <div
+        class="content"
+      >
+        <h1
+          class="title ff-serif"
+        >
+          About us
+        </h1>
+        <p
+          class="description fw-300"
+        >
+          Coffeeroasters began its journey of exotic discovery in 1999,  highlighting stories of coffee from around the world.  We have since been dedicated to bring the perfect cup  - from bean to brew - in every shipment.
+        </p>
+      </div>
+    </section>
+  </main>
+</div>
+`;
+
+exports[`renders /create-plan page unchanged 1`] = `
+<div>
+  <main>
+    <section
+      class="hero text-light"
+      id="hero-section"
+    >
+      <div
+        class="content"
+      >
+        <h1
+          class="title ff-serif"
+        >
+          Create plan
+        </h1>
+        <p
+          class="description fw-300"
+        >
+          Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week.  For whatever brew method you use. For choice, for convenience, for quality.
+        </p>
       </div>
     </section>
   </main>

@@ -1,14 +1,14 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables";
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
+  "@/styles/base/typography";
 
-$image-mobile: "/assets/home/mobile/image-hero-coffeepress.jpg";
-$image-tablet: "/assets/home/tablet/image-hero-coffeepress.jpg";
-$image-desktop: "/assets/home/desktop/image-hero-coffeepress.jpg";
+$image-mobile: "/assets/plan/mobile/image-hero-blackcup.jpg";
+$image-tablet: "/assets/plan/tablet/image-hero-blackcup.jpg";
+$image-desktop: "/assets/plan/desktop/image-hero-blackcup.jpg";
 
 .hero {
   background-size: cover;
   text-align: center;
   border-radius: 0.625rem;
-
   padding: 6.25em 1.5em;
   background-image: url($image-mobile);
   a {
@@ -28,7 +28,7 @@ $image-desktop: "/assets/home/desktop/image-hero-coffeepress.jpg";
 
   @include lg {
     background-image: url($image-desktop);
-    padding: 7.25em 5.313em;
+    padding: 8.563em 5.313em;
 
     .content {
       width: 55%;
@@ -54,19 +54,17 @@ $image-desktop: "/assets/home/desktop/image-hero-coffeepress.jpg";
 
     @include lg {
       margin-bottom: 2rem;
-      @include font-size(700);
+      @include font-size(600);
     }
   }
 
   .description {
-    margin-bottom: 2.5rem;
-    font-weight: 200;
+    font-weight: 400;
     @include font-size(200);
     @include text-colour($clr-light, 80%);
 
     @include lg {
-      margin-bottom: 3.5rem;
-      width: 80%;
+      width: 85%;
     }
   }
 }

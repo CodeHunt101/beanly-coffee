@@ -1,5 +1,13 @@
-const CreatePlan = () => {
-  return <h1 className="container">Coming soon...</h1>;
+import HeroSection from "./_sections/hero/HeroSection";
+
+export const metadata = {
+  title: "Beanly Create Plan Page",
 };
 
-export default CreatePlan;
+export default function CreatePlan() {
+  return (
+    <main>
+      <HeroSection />
+    </main>
+  );
+}
