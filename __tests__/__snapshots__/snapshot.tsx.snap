@@ -472,6 +472,50 @@ exports[`renders /about page unchanged 1`] = `
         </p>
       </div>
     </section>
+    <section
+      class="quality"
+    >
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="/img.jpg"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/img.jpg"
+        />
+        <img
+          alt="A coffee cup with latte art being grabbed by a hand"
+          class="image"
+          data-nimg="1"
+          decoding="async"
+          height="40"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="40"
+        />
+      </picture>
+      <div
+        class="wrapper"
+      >
+        <div
+          class="content"
+        >
+          <h2
+            class="title ff-serif"
+          >
+            Uncompromising quality
+          </h2>
+          <p
+            class="description"
+          >
+            Although we work with growers who pay close attention to all stages of harvest and processing, we employ, on our end, a rigorous quality control program to avoid over-roasting or baking the coffee dry. Every bag of coffee is tagged with a roast date and batch number. Our goal is to roast consistent, user-friendly coffee, so that brewing is easy and enjoyable.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 </div>
 `;

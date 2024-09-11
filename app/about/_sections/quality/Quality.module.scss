@@ -1,0 +1,90 @@
+@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
+  "@/styles/abstracts/functions";
+
+$padding-inline-xl: 5.313rem;
+$image-mobile: "/assets/about/mobile/bg-quality.png";
+$image-tablet: "/assets/about/tablet/bg-quality.png";
+$image-desktop: "/assets/about/desktop/bg-quality.png";
+
+.quality {
+  margin-top: 7.5rem;
+  @include md {
+    margin-top: 9rem;
+  }
+
+  @include xl {
+    flex-direction: row-reverse;
+    margin-top: 12.5rem;
+  }
+
+  .image {
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 0 auto -4.875rem;
+    max-width: 279px;
+
+    @include md {
+      margin: 0 auto -10rem;
+      min-width: 573px;
+    }
+
+    @include xl {
+      min-width: 445px;
+      margin: 0 $padding-inline-xl -24.125rem auto;
+    }
+  }
+
+  .wrapper {
+    padding: 8.875rem 0 3.813rem;
+    border-radius: 0.625rem;
+    background-image: url($image-mobile);
+    background-size: cover;
+    z-index: -1;
+
+    @include md {
+      padding: 14rem 0 4.188rem;
+      background-image: url($image-tablet);
+    }
+
+    @include xl {
+      padding-top: 6.25rem;
+      min-height: 29.625rem;
+      background-image: url($image-desktop);
+    }
+  }
+
+  .content {
+    text-align: center;
+
+    @include xl {
+      text-align: start;
+      margin-left: $padding-inline-xl;
+    }
+  }
+
+  .title {
+    margin-bottom: 0.857em;
+    line-height: 1em;
+    @include text-colour($clr-light);
+    @include font-size(500);
+
+    @include xl {
+      @include font-size(600);
+    }
+  }
+
+  .description {
+    @include font-size(200);
+    @include text-colour($clr-light, 80%);
+    font-weight: 200;
+    margin-inline: auto;
+    width: 88%;
+    max-width: 33.75rem;
+    line-height: 1.667;
+
+    @include xl {
+      margin-left: 0;
+      @include font-size(300);
+    }
+  }
+}

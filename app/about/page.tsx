@@ -1,5 +1,6 @@
 import Commitment from "./_sections/commitment/Commitment";
 import HeroSection from "./_sections/hero/HeroSection";
+import Quality from "./_sections/quality/Quality";
 
 export const metadata = {
   title: "Beanly About Page",
@@ -10,6 +11,7 @@ export default function About() {
     <main>
       <HeroSection />
       <Commitment />
+      <Quality />
     </main>
   );
 }
