@@ -1,0 +1,50 @@
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+
+.locations {
+  margin: 7.5rem 0 0 0;
+  text-align: center;
+
+  .title {
+    line-height: 1.333;
+  }
+
+  .countries {
+    margin: 4.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  .countryCard:not(:last-child) {
+    margin: 0 0 5rem 0;
+  }
+
+  .countryInfo {
+    margin: 3rem 0 0 0;
+  }
+
+  .countryName {
+    line-height: 1.288;
+    @include font-size(500);
+  }
+
+  .countryImage {
+    margin-inline: auto;
+    @include md {
+      margin: 0;
+    }
+  }
+
+  .locationInfo {
+    margin: 1.375rem 0 0 0;
+
+    p {
+      @include line-height(300);
+    }
+  }
+}

@@ -516,6 +516,146 @@ exports[`renders /about page unchanged 1`] = `
         </div>
       </div>
     </section>
+    <section
+      class="locations"
+    >
+      <header
+        class="header"
+      >
+        <h2
+          class="title ff-serif"
+        >
+          Our headquarters
+        </h2>
+      </header>
+      <ul
+        class="countries"
+      >
+        <li
+          class="countryCard"
+        >
+          <img
+            alt="Country of The United Kingdom"
+            class="countryImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="countryInfo"
+          >
+            <h3
+              class="countryName ff-serif"
+            >
+              United Kingdom
+            </h3>
+            <div
+              class="locationInfo"
+            >
+              <p>
+                68 Asfordby Rd
+              </p>
+              <p>
+                Alcaston
+              </p>
+              <p>
+                SY6 1YA
+              </p>
+              <p>
+                +44 1241 918425
+              </p>
+            </div>
+          </div>
+        </li>
+        <li
+          class="countryCard"
+        >
+          <img
+            alt="Country of Canada"
+            class="countryImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="countryInfo"
+          >
+            <h3
+              class="countryName ff-serif"
+            >
+              Canada
+            </h3>
+            <div
+              class="locationInfo"
+            >
+              <p>
+                1528 Eglinton Avenue
+              </p>
+              <p>
+                Toronto
+              </p>
+              <p>
+                Ontario M4P 1A6
+              </p>
+              <p>
+                +1 416 485 2997
+              </p>
+            </div>
+          </div>
+        </li>
+        <li
+          class="countryCard"
+        >
+          <img
+            alt="Country of Australia"
+            class="countryImage"
+            data-nimg="1"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+          <div
+            class="countryInfo"
+          >
+            <h3
+              class="countryName ff-serif"
+            >
+              Australia
+            </h3>
+            <div
+              class="locationInfo"
+            >
+              <p>
+                68 Asfordby Rd
+              </p>
+              <p>
+                Kewell
+              </p>
+              <p>
+                Victoria
+              </p>
+              <p>
+                +61 4 9928 3629
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
   </main>
 </div>
 `;
