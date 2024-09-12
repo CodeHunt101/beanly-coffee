@@ -4,7 +4,9 @@ import styles from "./Instructions.module.scss";
 const Instructions = () => {
   return (
     <section className={styles.instructions}>
-      <Steps theme="dark" />
+      <div className={styles.content}>
+        <Steps theme="dark" />
+      </div>
     </section>
   );
 };

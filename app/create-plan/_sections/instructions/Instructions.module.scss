@@ -2,23 +2,38 @@
 @use "@/styles/abstracts/variables" as *;
 
 .instructions {
+  min-height: 1028px;
   margin-top: 6.25rem;
-  padding-inline: 1.5em;
-  @include bg-colour($clr-dark);
-  border-radius: 0.625rem;
-  position: absolute;
-  left: 0;
 
   @include md {
-    padding-inline: 2.5em;
-    padding-top: 3.313em;
-    padding-bottom: 4.375em;
+    min-height: 640px;
   }
 
   @include lg {
-    position: static;
-    padding-left: 5.313em;
-    padding-right: 5em;
-    width: 100%;
+    min-height: auto;
+  }
+  .content {
+    position: absolute;
+    padding: 1.5em 1.5em 5em 1.5em;
+    @include bg-colour($clr-dark);
+    left: 0;
+    min-height: 1028px;
+
+    @include md {
+      padding-inline: 2.5em;
+      padding-top: 3.313em;
+      padding-bottom: 4.375em;
+      min-height: 640px;
+    }
+
+    @include lg {
+      position: static;
+      padding-left: 5.313em;
+      padding-right: 5em;
+      padding-top: 1.5em;
+      width: 100%;
+      border-radius: 0.625rem;
+      min-height: auto;
+    }
   }
 }

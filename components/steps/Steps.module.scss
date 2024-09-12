@@ -51,13 +51,23 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  --gap: 0.625rem;
+  --gap-md: 0.625rem;
+  --gap-lg: 2.5rem;
+  --gap-xl: 5.625rem;
 
   @include md {
     flex-direction: row;
     text-align: start;
-    gap: var(--gap);
+    gap: var(--gap-md);
     min-width: 689px;
+  }
+
+  @include lg {
+    gap: var(--gap-lg);
+  }
+
+  @include xl {
+    gap: var(--gap-xl);
   }
 }
 
@@ -77,10 +87,24 @@
       content: "";
       display: block;
       height: var(--circle-line-height);
-      width: calc(100% + var(--gap)); // Set width to full width plus flex gap
+      width: calc(
+        100% + var(--gap-md)
+      ); // Set width to full width plus flex gap
       top: calc(var(--circle-diameter) / 2); // Position vertically centered
       left: calc(var(--circle-diameter) / 2); // Position horizontally centered
       background-color: to-hsl-comma-sep($clr-secondary);
+    }
+  }
+
+  @include lg {
+    &:not(:last-child)::before {
+      width: calc(100% + var(--gap-lg));
+    }
+  }
+
+  @include xl {
+    &:not(:last-child)::before {
+      width: calc(100% + var(--gap-xl));
     }
   }
 }
@@ -112,6 +136,7 @@
 
 .stepTitle {
   margin: 0 0 1.5rem;
+  line-height: 1.143;
   @include font-size(500);
 
   @include md {
@@ -126,7 +151,9 @@
 
 .stepDescription {
   @include font-size(200);
+  line-height: 1.667;
   @include lg {
+    @include line-height(300);
     @include font-size(300);
   }
 }
