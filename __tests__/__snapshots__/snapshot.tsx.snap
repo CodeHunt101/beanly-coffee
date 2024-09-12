@@ -681,13 +681,20 @@ exports[`renders /create-plan page unchanged 1`] = `
         <h1
           class="title ff-serif"
         >
-          Create plan
+          Great coffee made simple.
         </h1>
         <p
           class="description fw-300"
         >
-          Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week.  For whatever brew method you use. For choice, for convenience, for quality.
+          Start your mornings with the world's best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.
         </p>
+        <a
+          class="btn bg-primary ff-serif text-light"
+          href="/create-plan"
+          role="button"
+        >
+          Create your plan
+        </a>
       </div>
     </section>
     <section
@@ -781,6 +788,448 @@ exports[`renders /create-plan page unchanged 1`] = `
               </div>
             </li>
           </ol>
+        </div>
+      </div>
+    </section>
+    <section
+      class="createPlanSection"
+    >
+      <ol
+        class="orderList"
+      >
+        <li>
+          <span>
+            01
+          </span>
+          Preferences
+        </li>
+        <li>
+          <span>
+            02
+          </span>
+          Bean Type
+        </li>
+        <li>
+          <span>
+            03
+          </span>
+          Quantity
+        </li>
+        <li>
+          <span>
+            04
+          </span>
+          Grind Option
+        </li>
+        <li>
+          <span>
+            05
+          </span>
+          Deliveries
+        </li>
+      </ol>
+      <div
+        class="accordion"
+      >
+        <div
+          class="accordionItem"
+        >
+          <button
+            class="accordionToggle bg-light"
+          >
+            <span
+              class="accordionLabel  ff-serif"
+            >
+              How do you drink your coffee?
+            </span>
+            <img
+              alt="arrow"
+              class="accordionIcon "
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </button>
+          <div
+            class="accordionContent "
+            data-testid="accordion-content"
+            style="max-height: 0px; transition: max-height 0.3s ease;"
+          >
+            <div
+              class="cardsContainer"
+            >
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Capsule
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Compatible with Nespresso systems and similar brewers
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Filter
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  For pour over or drip methods like Aeropress, Chemex, and V60
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Espresso
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Dense and finely ground beans for an intense, flavorful experience
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="accordionItem"
+        >
+          <button
+            class="accordionToggle bg-light"
+          >
+            <span
+              class="accordionLabel  ff-serif"
+            >
+              What type of coffee?
+            </span>
+            <img
+              alt="arrow"
+              class="accordionIcon "
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </button>
+          <div
+            class="accordionContent "
+            data-testid="accordion-content"
+            style="max-height: 0px; transition: max-height 0.3s ease;"
+          >
+            <div
+              class="cardsContainer"
+            >
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Single Origin
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Distinct, high quality coffee from a specific family-owned farm
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Decaf
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Just like regular coffee, except the caffeine has been removed
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Blended
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Combination of two or three dark roasted beans of organic coffees
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="accordionItem"
+        >
+          <button
+            class="accordionToggle bg-light"
+          >
+            <span
+              class="accordionLabel  ff-serif"
+            >
+              How much would you like?
+            </span>
+            <img
+              alt="arrow"
+              class="accordionIcon "
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </button>
+          <div
+            class="accordionContent "
+            data-testid="accordion-content"
+            style="max-height: 0px; transition: max-height 0.3s ease;"
+          >
+            <div
+              class="cardsContainer"
+            >
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  250g
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Perfect for the solo drinker. Yields about 12 delicious cups.
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  500g
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Perfect option for a couple. Yields about 40 delectable cups.
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  1000g
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Perfect for offices and events. Yields about 90 delightful cups.
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="accordionItem"
+        >
+          <button
+            class="accordionToggle bg-light"
+          >
+            <span
+              class="accordionLabel  ff-serif"
+            >
+              Want us to grind them?
+            </span>
+            <img
+              alt="arrow"
+              class="accordionIcon "
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </button>
+          <div
+            class="accordionContent "
+            data-testid="accordion-content"
+            style="max-height: 0px; transition: max-height 0.3s ease;"
+          >
+            <div
+              class="cardsContainer"
+            >
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Wholebean
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Best choice if you cherish the full sensory experience
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Filter
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  For drip or pour-over coffee methods such as V60 or Aeropress
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Cafetiére
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  Coarse ground beans specially suited for French press coffee
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="accordionItem"
+        >
+          <button
+            class="accordionToggle bg-light"
+          >
+            <span
+              class="accordionLabel  ff-serif"
+            >
+              How often should we deliver?
+            </span>
+            <img
+              alt="arrow"
+              class="accordionIcon "
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </button>
+          <div
+            class="accordionContent "
+            data-testid="accordion-content"
+            style="max-height: 0px; transition: max-height 0.3s ease;"
+          >
+            <div
+              class="cardsContainer"
+            >
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Every week
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  $7.20 per shipment. Includes free first-class shipping.
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Every 2 weeks
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  $9.60 per shipment. Includes free priority shipping.
+                </p>
+              </button>
+              <button
+                class="btn  bg-muted text-dark"
+                role="tab"
+              >
+                <h4
+                  class="fs-400"
+                >
+                  Every month
+                </h4>
+                <p
+                  class="fs-300"
+                >
+                  $12.00 per shipment. Includes free priority shipping.
+                </p>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

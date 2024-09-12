@@ -1,0 +1,17 @@
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+
+.createPlanSection {
+  margin-top: 7.5rem;
+  @include lg {
+    display: flex;
+  }
+
+  .orderList {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+}
