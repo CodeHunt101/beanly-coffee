@@ -1,0 +1,24 @@
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+
+.instructions {
+  margin-top: 6.25rem;
+  padding-inline: 1.5em;
+  @include bg-colour($clr-dark);
+  border-radius: 0.625rem;
+  position: absolute;
+  left: 0;
+
+  @include md {
+    padding-inline: 2.5em;
+    padding-top: 3.313em;
+    padding-bottom: 4.375em;
+  }
+
+  @include lg {
+    position: static;
+    padding-left: 5.313em;
+    padding-right: 5em;
+    width: 100%;
+  }
+}

@@ -519,15 +519,11 @@ exports[`renders /about page unchanged 1`] = `
     <section
       class="locations"
     >
-      <header
-        class="header"
+      <h2
+        class="title ff-serif"
       >
-        <h2
-          class="title ff-serif"
-        >
-          Our headquarters
-        </h2>
-      </header>
+        Our headquarters
+      </h2>
       <ul
         class="countries"
       >
@@ -692,6 +688,96 @@ exports[`renders /create-plan page unchanged 1`] = `
         >
           Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week.  For whatever brew method you use. For choice, for convenience, for quality.
         </p>
+      </div>
+    </section>
+    <section
+      class="instructions"
+    >
+      <div
+        class="stepsWrapper dark"
+      >
+        <ol
+          class="stepsList"
+        >
+          <li
+            class="stepItem dark"
+          >
+            <span
+              class="circle"
+            />
+            <div
+              class="stepContent"
+            >
+              <div
+                class="stepNumber ff-serif fs-700"
+              >
+                01
+              </div>
+              <h3
+                class="stepTitle ff-serif"
+              >
+                Pick your coffee
+              </h3>
+              <p
+                class="stepDescription"
+              >
+                Select from our evolving range of artisan coffees. Our beans are ethically sourced, and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.
+              </p>
+            </div>
+          </li>
+          <li
+            class="stepItem dark"
+          >
+            <span
+              class="circle"
+            />
+            <div
+              class="stepContent"
+            >
+              <div
+                class="stepNumber ff-serif fs-700"
+              >
+                02
+              </div>
+              <h3
+                class="stepTitle ff-serif"
+              >
+                Choose the frequency
+              </h3>
+              <p
+                class="stepDescription"
+              >
+                Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.
+              </p>
+            </div>
+          </li>
+          <li
+            class="stepItem dark"
+          >
+            <span
+              class="circle"
+            />
+            <div
+              class="stepContent"
+            >
+              <div
+                class="stepNumber ff-serif fs-700"
+              >
+                03
+              </div>
+              <h3
+                class="stepTitle ff-serif"
+              >
+                Receive and enjoy!
+              </h3>
+              <p
+                class="stepDescription"
+              >
+                We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.
+              </p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
   </main>

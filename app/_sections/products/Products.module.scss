@@ -13,12 +13,9 @@
     margin-top: 1.75rem;
   }
 
-  .header {
-    text-align: center;
-  }
-
   .title {
     position: relative;
+    text-align: center;
     z-index: -1;
     background: -webkit-linear-gradient(
       to-hsl-comma-sep($clr-neutral, 0.5) 1%,
