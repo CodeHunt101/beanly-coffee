@@ -534,18 +534,22 @@ exports[`renders /about page unchanged 1`] = `
         <li
           class="countryCard"
         >
-          <img
-            alt="Country of The United Kingdom"
-            class="countryImage"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
+          <div
+            class="imageWrapper"
+          >
+            <img
+              alt="Country of The United Kingdom"
+              class="countryImage"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
           <div
             class="countryInfo"
           >
@@ -575,18 +579,22 @@ exports[`renders /about page unchanged 1`] = `
         <li
           class="countryCard"
         >
-          <img
-            alt="Country of Canada"
-            class="countryImage"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
+          <div
+            class="imageWrapper"
+          >
+            <img
+              alt="Country of Canada"
+              class="countryImage"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
           <div
             class="countryInfo"
           >
@@ -616,18 +624,22 @@ exports[`renders /about page unchanged 1`] = `
         <li
           class="countryCard"
         >
-          <img
-            alt="Country of Australia"
-            class="countryImage"
-            data-nimg="1"
-            decoding="async"
-            height="40"
-            loading="lazy"
-            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-            style="color: transparent;"
-            width="40"
-          />
+          <div
+            class="imageWrapper"
+          >
+            <img
+              alt="Country of Australia"
+              class="countryImage"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </div>
           <div
             class="countryInfo"
           >
@@ -640,7 +652,7 @@ exports[`renders /about page unchanged 1`] = `
               class="locationInfo"
             >
               <p>
-                68 Asfordby Rd
+                36 Swanston Street
               </p>
               <p>
                 Kewell

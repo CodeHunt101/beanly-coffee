@@ -2,49 +2,88 @@
 @use "@/styles/abstracts/variables" as *;
 
 .locations {
-  margin: 7.5rem 0 0 0;
+  margin-top: 7.5rem;
   text-align: center;
+
+  @include md {
+    text-align: start;
+  }
+
+  @include lg {
+    margin-left: 5.313rem;
+    max-width: 1045px;
+  }
 
   .title {
     line-height: 1.333;
+    @include text-colour($clr-neutral);
   }
 
   .countries {
-    margin: 4.5rem 0 0 0;
+    margin-top: 4.5rem;
     padding: 0;
     display: flex;
     flex-direction: column;
 
     @include md {
       flex-direction: row;
+      justify-content: space-between;
     }
   }
 
-  .countryCard:not(:last-child) {
-    margin: 0 0 5rem 0;
+  .countryCard {
+    min-width: 223.5px;
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
+    @include md {
+      margin-bottom: 1.5rem;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 
-  .countryInfo {
-    margin: 3rem 0 0 0;
-  }
-
-  .countryName {
-    line-height: 1.288;
-    @include font-size(500);
+  .imageWrapper {
+    min-height: 50px;
   }
 
   .countryImage {
     margin-inline: auto;
+
     @include md {
       margin: 0;
     }
   }
 
+  .countryInfo {
+    margin-top: 3rem;
+
+    @include md {
+      margin-top: 3.031rem;
+    }
+  }
+
+  .countryName {
+    line-height: 1.288;
+    @include font-size(500);
+
+    @include md {
+      @include font-size(450);
+    }
+  }
+
   .locationInfo {
-    margin: 1.375rem 0 0 0;
+    margin-top: 1.375rem;
 
     p {
       @include line-height(300);
+    }
+
+    @include md {
+      margin-top: 1.313rem;
     }
   }
 }

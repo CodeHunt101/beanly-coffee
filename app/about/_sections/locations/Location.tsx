@@ -18,8 +18,9 @@ const Location = ({ image, alt, name, location }: LocationProps) => {
   const { address, city, state, phone } = location;
   return (
     <li className={styles.countryCard}>
-      {/* <div className={`${styles.locationCard} flex`}> */}
-      <Image src={image} alt={alt} className={styles.countryImage} />
+      <div className={styles.imageWrapper}>
+        <Image src={image} alt={alt} className={styles.countryImage} />
+      </div>
       <div className={styles.countryInfo}>
         <h3 className={`${styles.countryName} ff-serif`}>{name}</h3>
         <div className={styles.locationInfo}>
@@ -29,7 +30,6 @@ const Location = ({ image, alt, name, location }: LocationProps) => {
           <p>{phone}</p>
         </div>
       </div>
-      {/* </div> */}
     </li>
   );
 };
