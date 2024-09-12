@@ -3,7 +3,7 @@ import LocationList from "./LocationList";
 
 const Locations = () => {
   return (
-    <section className={`${styles.locations}`}>
+    <section className={styles.locations}>
       <header className={styles.header}>
         <h2 className={`${styles.title} ff-serif`}>Our headquarters</h2>
       </header>
