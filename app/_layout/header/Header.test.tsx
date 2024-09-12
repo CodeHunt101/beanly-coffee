@@ -12,7 +12,7 @@ describe("Header Component", () => {
     render(<Header />);
     const header = screen.getByRole("banner");
     expect(header).toHaveAttribute("id", expect.stringContaining("mainHeader"));
-    expect(header).toHaveClass("container sticky");
+    expect(header).toHaveClass("sticky");
   });
 
   describe("Logo", () => {

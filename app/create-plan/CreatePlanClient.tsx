@@ -6,7 +6,7 @@ import CreatePlanSection from "./_sections/plan/CreatePlanSection";
 
 const CreatePlanClient = () => {
   return (
-    <main>
+    <main className="container">
       <HeroSection />
       <Instructions />
       <CreatePlanSection />
