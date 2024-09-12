@@ -1,5 +1,6 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
-  "@/styles/abstracts/functions";
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/functions" as *;
 
 .products {
   margin-top: 7.5rem;
@@ -51,7 +52,6 @@
       max-width: max-content;
       gap: 2em;
       padding-inline: 3.5rem;
-      // translate: 1.125rem -4.688rem;
     }
 
     @include lg {

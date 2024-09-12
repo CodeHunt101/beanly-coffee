@@ -1,5 +1,7 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
-  "@/styles/base/typography", "@/styles/abstracts/functions";
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/base/typography" as *;
+@use "@/styles/abstracts/functions" as *;
 
 // Navbar styles
 .navbar {

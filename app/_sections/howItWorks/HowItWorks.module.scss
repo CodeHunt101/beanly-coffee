@@ -1,5 +1,5 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
-  "@/styles/abstracts/functions";
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
 
 .howItWorks {
   margin-top: 6.25rem;

@@ -1,5 +1,6 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
-  "@/styles/abstracts/functions";
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/functions" as *;
 
 .stepsWrapper {
   border-radius: 0.625rem;

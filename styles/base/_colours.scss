@@ -1,3 +1,5 @@
+@use "../abstracts/index" as *;
+
 // Loop to generate background and text classes dynamically
 @each $name, $colour in $colours {
   .bg-#{$name} {

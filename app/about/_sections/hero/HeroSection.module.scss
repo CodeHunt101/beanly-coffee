@@ -1,5 +1,6 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
-  "@/styles/base/typography";
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/base/typography" as *;
 
 $image-mobile: "/assets/about/mobile/image-hero-whitecup.jpg";
 $image-tablet: "/assets/about/tablet/image-hero-whitecup.jpg";

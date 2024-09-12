@@ -1,5 +1,7 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/functions",
-  "@/styles/abstracts/variables";
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/functions" as *;
+
 #mainHeader {
   padding: 2em 0 2em;
   width: auto;

@@ -1,4 +1,7 @@
-@import "./resets", "./typography", "./spacings", "./colours";
+@use "./resets" as *;
+@use "./typography" as *;
+@use "./spacings" as *;
+@use "./colours" as *;
 
 .sticky {
   position: sticky;

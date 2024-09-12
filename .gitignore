@@ -38,3 +38,7 @@ next-env.d.ts
 *.sketch
 *.fig
 *.xd
+
+#internal
+script.js
+*.txt

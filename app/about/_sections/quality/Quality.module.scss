@@ -1,5 +1,5 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables",
-  "@/styles/abstracts/functions";
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
 
 $padding-inline-xl: 5.313rem;
 $image-mobile: "/assets/about/mobile/bg-quality.png";

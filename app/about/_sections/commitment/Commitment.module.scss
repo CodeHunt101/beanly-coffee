@@ -1,4 +1,5 @@
-@import "@/styles/abstracts/mixins", "@/styles/abstracts/variables";
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
 
 .commitment {
   margin: 7.5rem 0;
