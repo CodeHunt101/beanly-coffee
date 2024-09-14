@@ -58,18 +58,4 @@ describe("OptionCard component", () => {
       expect(mockOnSelect).toHaveBeenCalledTimes(1);
     });
   });
-
-  describe("Font sizes", () => {
-    it("renders the correct heading font size", () => {
-      render(<OptionCard {...props} />);
-      const heading = screen.getByRole("heading", { level: 4 });
-      expect(heading).toHaveClass("fs-400");
-    });
-
-    it("renders the correct content font size", () => {
-      render(<OptionCard {...props} />);
-      const content = screen.getByText("Test Content");
-      expect(content).toHaveClass("fs-300");
-    });
-  });
 });

@@ -6,9 +6,9 @@ import OptionCards, {
 
 describe("OptionCards component", () => {
   const mockOptions: OptionCardData[] = [
-    { title: "Option 1", content: "Content for Option 1" },
-    { title: "Option 2", content: "Content for Option 2" },
-    { title: "Option 3", content: "Content for Option 3" },
+    { optionTitle: "Option 1", content: "Content for Option 1" },
+    { optionTitle: "Option 2", content: "Content for Option 2" },
+    { optionTitle: "Option 3", content: "Content for Option 3" },
   ];
 
   describe("Rendering", () => {
@@ -21,7 +21,7 @@ describe("OptionCards component", () => {
     it("renders the correct title for each OptionCard", () => {
       render(<OptionCards options={mockOptions} />);
       mockOptions.forEach((option) => {
-        expect(screen.getByText(option.title)).toBeInTheDocument();
+        expect(screen.getByText(option.optionTitle)).toBeInTheDocument();
       });
     });
 
@@ -35,7 +35,7 @@ describe("OptionCards component", () => {
     it("does not select any card initially", () => {
       render(<OptionCards options={mockOptions} />);
       mockOptions.forEach((option) => {
-        const card = screen.getByText(option.title).closest("button");
+        const card = screen.getByText(option.optionTitle).closest("button");
         expect(card).not.toHaveClass("selected");
       });
     });

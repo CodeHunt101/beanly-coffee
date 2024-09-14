@@ -19,8 +19,8 @@ const OptionCard = ({
       className={`${styles.btn} ${isSelected ? styles.selected : ""} bg-muted text-dark`}
       onClick={onSelect}
     >
-      <h4 className="fs-400">{title}</h4>
-      <p className="fs-300">{content}</p>
+      <h4 className={`${styles.btnTitle} fs-400 ff-serif`}>{title}</h4>
+      <p className={`${styles.btnContent} lh-300`}>{content}</p>
     </button>
   );
 };

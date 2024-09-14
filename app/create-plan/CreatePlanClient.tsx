@@ -1,6 +1,6 @@
 "use client";
 
-import HeroSection from "../_sections/hero/HeroSection";
+import HeroSection from "./_sections/hero/HeroSection";
 import Instructions from "./_sections/instructions/Instructions";
 import CreatePlanSection from "./_sections/plan/CreatePlanSection";
 

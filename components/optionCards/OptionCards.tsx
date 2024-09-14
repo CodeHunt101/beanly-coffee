@@ -4,7 +4,7 @@ import OptionCard from "./OptionCard";
 import styles from "./OptionCards.module.scss";
 
 export type OptionCardData = {
-  title: string;
+  optionTitle: string;
   content: string;
 };
 
@@ -21,13 +21,13 @@ const OptionCards = ({ options }: OptionCardsProps) => {
 
   return (
     <div className={styles.cardsContainer}>
-      {options.map((option) => (
+      {options.map(({ optionTitle, content }) => (
         <OptionCard
-          key={option.title}
-          title={option.title}
-          content={option.content}
-          isSelected={selectedCard === option.title}
-          onSelect={() => handleSelect(option.title)}
+          key={optionTitle}
+          title={optionTitle}
+          content={content}
+          isSelected={selectedCard === optionTitle}
+          onSelect={() => handleSelect(optionTitle)}
         />
       ))}
     </div>

@@ -21,6 +21,7 @@
     min-height: 140px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     @include md {
       max-width: 228px;
@@ -46,6 +47,11 @@
       @include bg-colour($clr-primary);
       @include text-colour($clr-light);
     }
+  }
+
+  .btnTitle {
+    line-height: 1.333;
+    @include font-size(450);
   }
 
   * {

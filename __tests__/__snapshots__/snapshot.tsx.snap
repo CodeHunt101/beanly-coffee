@@ -687,20 +687,13 @@ exports[`renders /create-plan page unchanged 1`] = `
         <h1
           class="title ff-serif"
         >
-          Great coffee made simple.
+          Create plan
         </h1>
         <p
           class="description fw-300"
         >
-          Start your mornings with the world's best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.
+          Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week.  For whatever brew method you use. For choice, for convenience, for quality.
         </p>
-        <a
-          class="btn bg-primary ff-serif text-light"
-          href="/create-plan"
-          role="button"
-        >
-          Create your plan
-        </a>
       </div>
     </section>
     <section
@@ -874,12 +867,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Capsule
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Compatible with Nespresso systems and similar brewers
                 </p>
@@ -889,12 +882,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Filter
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   For pour over or drip methods like Aeropress, Chemex, and V60
                 </p>
@@ -904,12 +897,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Espresso
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Dense and finely ground beans for an intense, flavorful experience
                 </p>
@@ -954,12 +947,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Single Origin
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Distinct, high quality coffee from a specific family-owned farm
                 </p>
@@ -969,12 +962,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Decaf
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Just like regular coffee, except the caffeine has been removed
                 </p>
@@ -984,12 +977,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Blended
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Combination of two or three dark roasted beans of organic coffees
                 </p>
@@ -1034,12 +1027,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   250g
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Perfect for the solo drinker. Yields about 12 delicious cups.
                 </p>
@@ -1049,12 +1042,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   500g
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Perfect option for a couple. Yields about 40 delectable cups.
                 </p>
@@ -1064,12 +1057,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   1000g
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Perfect for offices and events. Yields about 90 delightful cups.
                 </p>
@@ -1114,12 +1107,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Wholebean
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Best choice if you cherish the full sensory experience
                 </p>
@@ -1129,12 +1122,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Filter
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   For drip or pour-over coffee methods such as V60 or Aeropress
                 </p>
@@ -1144,12 +1137,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Cafetiére
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   Coarse ground beans specially suited for French press coffee
                 </p>
@@ -1194,12 +1187,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Every week
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   $7.20 per shipment. Includes free first-class shipping.
                 </p>
@@ -1209,12 +1202,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Every 2 weeks
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   $9.60 per shipment. Includes free priority shipping.
                 </p>
@@ -1224,12 +1217,12 @@ exports[`renders /create-plan page unchanged 1`] = `
                 role="tab"
               >
                 <h4
-                  class="fs-400"
+                  class="btnTitle fs-400 ff-serif"
                 >
                   Every month
                 </h4>
                 <p
-                  class="fs-300"
+                  class="btnContent lh-300"
                 >
                   $12.00 per shipment. Includes free priority shipping.
                 </p>

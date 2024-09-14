@@ -11,14 +11,16 @@ type AccordionItemProps = {
   title: string;
   disabled?: boolean;
   children: ReactNode;
+  index: number;
 };
 
 const AccordionItem = ({
   title,
   children,
   disabled = false,
+  index,
 }: AccordionItemProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(index === 0);
   const [maxHeight, setMaxHeight] = useState("0px");
   const contentRef = useRef<HTMLDivElement>(null);
 

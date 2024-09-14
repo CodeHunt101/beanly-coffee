@@ -4,6 +4,7 @@
 
 .accordion {
   .accordionItem {
+    margin-bottom: 6.875rem;
     &:last-child {
       border-bottom: none;
     }
@@ -13,6 +14,7 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      padding: 0;
       border: none;
       text-align: left;
       cursor: pointer;
@@ -40,11 +42,13 @@
       }
 
       .accordionLabel {
+        line-height: 1.167;
         @include text-colour($clr-neutral);
       }
 
       .accordionIcon {
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease-in;
+        margin-left: 4.313rem;
 
         &.open {
           transform: rotate(180deg);
@@ -56,6 +60,7 @@
     .accordionContent {
       overflow: hidden;
       display: none;
+      padding-top: 2em;
 
       &.open {
         display: flex;
