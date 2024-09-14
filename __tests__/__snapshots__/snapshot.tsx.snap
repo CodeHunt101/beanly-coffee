@@ -834,16 +834,19 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="accordionItem"
         >
           <button
+            aria-controls="accordion-content-How do you drink your coffee?"
+            aria-expanded="true"
             class="accordionToggle bg-light"
           >
             <span
-              class="accordionLabel  ff-serif"
+              class="accordionLabel open ff-serif"
             >
               How do you drink your coffee?
             </span>
             <img
-              alt="arrow"
-              class="accordionIcon "
+              alt="toggle icon"
+              aria-hidden="true"
+              class="accordionIcon open"
               data-nimg="1"
               decoding="async"
               height="40"
@@ -855,9 +858,10 @@ exports[`renders /create-plan page unchanged 1`] = `
             />
           </button>
           <div
-            class="accordionContent "
+            class="accordionContent open"
             data-testid="accordion-content"
-            style="max-height: 0px; transition: max-height 0.3s ease;"
+            id="accordion-content-How do you drink your coffee?"
+            style="max-height: 0px;"
           >
             <div
               class="cardsContainer"
@@ -914,6 +918,8 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="accordionItem"
         >
           <button
+            aria-controls="accordion-content-What type of coffee?"
+            aria-expanded="false"
             class="accordionToggle bg-light"
           >
             <span
@@ -922,7 +928,8 @@ exports[`renders /create-plan page unchanged 1`] = `
               What type of coffee?
             </span>
             <img
-              alt="arrow"
+              alt="toggle icon"
+              aria-hidden="true"
               class="accordionIcon "
               data-nimg="1"
               decoding="async"
@@ -937,7 +944,8 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent "
             data-testid="accordion-content"
-            style="max-height: 0px; transition: max-height 0.3s ease;"
+            id="accordion-content-What type of coffee?"
+            style="max-height: 0px;"
           >
             <div
               class="cardsContainer"
@@ -994,6 +1002,8 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="accordionItem"
         >
           <button
+            aria-controls="accordion-content-How much would you like?"
+            aria-expanded="false"
             class="accordionToggle bg-light"
           >
             <span
@@ -1002,7 +1012,8 @@ exports[`renders /create-plan page unchanged 1`] = `
               How much would you like?
             </span>
             <img
-              alt="arrow"
+              alt="toggle icon"
+              aria-hidden="true"
               class="accordionIcon "
               data-nimg="1"
               decoding="async"
@@ -1017,7 +1028,8 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent "
             data-testid="accordion-content"
-            style="max-height: 0px; transition: max-height 0.3s ease;"
+            id="accordion-content-How much would you like?"
+            style="max-height: 0px;"
           >
             <div
               class="cardsContainer"
@@ -1074,6 +1086,8 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="accordionItem"
         >
           <button
+            aria-controls="accordion-content-Want us to grind them?"
+            aria-expanded="false"
             class="accordionToggle bg-light"
           >
             <span
@@ -1082,7 +1096,8 @@ exports[`renders /create-plan page unchanged 1`] = `
               Want us to grind them?
             </span>
             <img
-              alt="arrow"
+              alt="toggle icon"
+              aria-hidden="true"
               class="accordionIcon "
               data-nimg="1"
               decoding="async"
@@ -1097,7 +1112,8 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent "
             data-testid="accordion-content"
-            style="max-height: 0px; transition: max-height 0.3s ease;"
+            id="accordion-content-Want us to grind them?"
+            style="max-height: 0px;"
           >
             <div
               class="cardsContainer"
@@ -1154,6 +1170,8 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="accordionItem"
         >
           <button
+            aria-controls="accordion-content-How often should we deliver?"
+            aria-expanded="false"
             class="accordionToggle bg-light"
           >
             <span
@@ -1162,7 +1180,8 @@ exports[`renders /create-plan page unchanged 1`] = `
               How often should we deliver?
             </span>
             <img
-              alt="arrow"
+              alt="toggle icon"
+              aria-hidden="true"
               class="accordionIcon "
               data-nimg="1"
               decoding="async"
@@ -1177,7 +1196,8 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent "
             data-testid="accordion-content"
-            style="max-height: 0px; transition: max-height 0.3s ease;"
+            id="accordion-content-How often should we deliver?"
+            style="max-height: 0px;"
           >
             <div
               class="cardsContainer"

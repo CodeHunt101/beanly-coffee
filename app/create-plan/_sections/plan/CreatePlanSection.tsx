@@ -126,7 +126,7 @@ const CreatePlanSection = () => {
       </ol>
       <Accordion>
         {accordionData.map(({ title, options }, index) => (
-          <AccordionItem key={title} title={title} index={index}>
+          <AccordionItem key={title} title={title} defaultOpen={index === 0}>
             <OptionCards options={options} />
           </AccordionItem>
         ))}
