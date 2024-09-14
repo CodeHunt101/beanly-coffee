@@ -7,7 +7,7 @@ import Image from "next/image";
 
 type AccordionItemProps = {
   id: string;
-  title: string;
+  label: string;
   disabled?: boolean;
   children: ReactNode;
   defaultOpen?: boolean;
@@ -15,7 +15,7 @@ type AccordionItemProps = {
 
 const AccordionItem = ({
   id,
-  title,
+  label,
   children,
   disabled = false,
   defaultOpen = false,
@@ -41,12 +41,12 @@ const AccordionItem = ({
         onClick={toggleAccordion}
         disabled={disabled}
         aria-expanded={isOpen}
-        aria-controls={`accordion-content-${title}`}
+        aria-controls={`${label}-content`}
       >
         <span
           className={`${styles.accordionLabel} ${isOpen ? styles.open : ""} ff-serif`}
         >
-          {title}
+          {label}
         </span>
         <Image
           className={`${styles.accordionIcon} ${isOpen ? styles.open : ""}`}
@@ -57,7 +57,7 @@ const AccordionItem = ({
       </button>
       <div
         data-testid="accordion-content"
-        id={`accordion-content-${title}`}
+        id={`${label}-content`}
         ref={contentRef}
         className={`${styles.accordionContent} ${isOpen ? styles.open : ""}`}
       >

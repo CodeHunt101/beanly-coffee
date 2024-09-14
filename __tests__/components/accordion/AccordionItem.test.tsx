@@ -10,22 +10,22 @@ jest.mock("next/image", () => ({
 
 describe("AccordionItem", () => {
   const mockId = "accordion-item-id";
-  const mockTitle = "Test Accordion";
+  const mockLabel = "Test Accordion";
   const mockChildren = <div>Test Content</div>;
 
   describe("Rendering", () => {
-    it("renders the title correctly", () => {
+    it("renders the label correctly", () => {
       const { getByText } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
-      expect(getByText(mockTitle)).toBeInTheDocument();
+      expect(getByText(mockLabel)).toBeInTheDocument();
     });
 
     it("renders the id correctly", () => {
       const { getByRole } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
@@ -34,7 +34,7 @@ describe("AccordionItem", () => {
 
     it("renders the children content", () => {
       const { getByText } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
@@ -45,7 +45,7 @@ describe("AccordionItem", () => {
   describe("Functionality", () => {
     it("starts with the accordion closed", () => {
       const { getByRole } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
@@ -54,7 +54,7 @@ describe("AccordionItem", () => {
 
     it("opens the accordion when clicked", () => {
       const { getByRole } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
@@ -66,7 +66,7 @@ describe("AccordionItem", () => {
 
     it("closes the accordion when clicked again", () => {
       const { getByRole } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
@@ -81,7 +81,7 @@ describe("AccordionItem", () => {
 
     it("sets maxHeight to 0px when closed", () => {
       const { getByTestId } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
@@ -99,7 +99,7 @@ describe("AccordionItem", () => {
 
     it("updates maxHeight when opened", () => {
       const { getByRole, getByTestId } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
@@ -109,7 +109,7 @@ describe("AccordionItem", () => {
 
     it("resets maxHeight to 0px when closed", () => {
       const { getByRole, getByTestId } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           {mockChildren}
         </AccordionItem>,
       );
@@ -123,7 +123,7 @@ describe("AccordionItem", () => {
   describe("useEffect behavior", () => {
     it("updates maxHeight when content changes while open", async () => {
       const { getByRole, getByTestId, rerender } = render(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           <div style={{ height: "50px" }}>Initial Content</div>
         </AccordionItem>,
       );
@@ -133,7 +133,7 @@ describe("AccordionItem", () => {
 
       // Change the content
       rerender(
-        <AccordionItem id={mockId} title={mockTitle}>
+        <AccordionItem id={mockId} label={mockLabel}>
           <div style={{ height: "100px" }}>New Content</div>
         </AccordionItem>,
       );

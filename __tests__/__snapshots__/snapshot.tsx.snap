@@ -795,7 +795,7 @@ exports[`renders /create-plan page unchanged 1`] = `
       </div>
     </section>
     <section
-      aria-label="Create Plan Questionnarie Section"
+      aria-label="Create Plan Steps Section"
       class="createPlanSection"
       role="region"
     >
@@ -903,10 +903,10 @@ exports[`renders /create-plan page unchanged 1`] = `
       >
         <div
           class="accordionItem"
-          id="question-1"
+          id="step-1"
         >
           <button
-            aria-controls="accordion-content-How do you drink your coffee?"
+            aria-controls="How do you drink your coffee?-content"
             aria-expanded="true"
             class="accordionToggle bg-light"
           >
@@ -932,7 +932,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent open"
             data-testid="accordion-content"
-            id="accordion-content-How do you drink your coffee?"
+            id="How do you drink your coffee?-content"
             style="max-height: 0px;"
           >
             <div
@@ -988,10 +988,10 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
         <div
           class="accordionItem"
-          id="question-2"
+          id="step-2"
         >
           <button
-            aria-controls="accordion-content-What type of coffee?"
+            aria-controls="What type of coffee?-content"
             aria-expanded="false"
             class="accordionToggle bg-light"
           >
@@ -1017,7 +1017,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent "
             data-testid="accordion-content"
-            id="accordion-content-What type of coffee?"
+            id="What type of coffee?-content"
             style="max-height: 0px;"
           >
             <div
@@ -1073,10 +1073,10 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
         <div
           class="accordionItem"
-          id="question-3"
+          id="step-3"
         >
           <button
-            aria-controls="accordion-content-How much would you like?"
+            aria-controls="How much would you like?-content"
             aria-expanded="false"
             class="accordionToggle bg-light"
           >
@@ -1102,7 +1102,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent "
             data-testid="accordion-content"
-            id="accordion-content-How much would you like?"
+            id="How much would you like?-content"
             style="max-height: 0px;"
           >
             <div
@@ -1158,10 +1158,10 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
         <div
           class="accordionItem"
-          id="question-4"
+          id="step-4"
         >
           <button
-            aria-controls="accordion-content-Want us to grind them?"
+            aria-controls="Want us to grind them?-content"
             aria-expanded="false"
             class="accordionToggle bg-light"
           >
@@ -1187,7 +1187,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent "
             data-testid="accordion-content"
-            id="accordion-content-Want us to grind them?"
+            id="Want us to grind them?-content"
             style="max-height: 0px;"
           >
             <div
@@ -1243,10 +1243,10 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
         <div
           class="accordionItem"
-          id="question-5"
+          id="step-5"
         >
           <button
-            aria-controls="accordion-content-How often should we deliver?"
+            aria-controls="How often should we deliver?-content"
             aria-expanded="false"
             class="accordionToggle bg-light"
           >
@@ -1272,7 +1272,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           <div
             class="accordionContent "
             data-testid="accordion-content"
-            id="accordion-content-How often should we deliver?"
+            id="How often should we deliver?-content"
             style="max-height: 0px;"
           >
             <div
