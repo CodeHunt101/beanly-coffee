@@ -48,7 +48,11 @@
     }
 
     .selected {
-      @include text-colour($clr-primary);
+      @include text-colour($clr-primary, 50%);
+    }
+
+    .active {
+      @include text-colour($clr-dark);
     }
 
     &:hover,
