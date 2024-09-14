@@ -794,37 +794,77 @@ exports[`renders /create-plan page unchanged 1`] = `
       class="createPlanSection"
     >
       <ol
-        class="orderList"
+        class="stepList ff-serif"
       >
-        <li>
-          <span>
-            01
-          </span>
-          Preferences
+        <li
+          class="stepListItem"
+        >
+          <a
+            href="#question-1"
+          >
+            <span
+              class="number"
+            >
+              01
+            </span>
+            Preferences
+          </a>
         </li>
-        <li>
-          <span>
-            02
-          </span>
-          Bean Type
+        <li
+          class="stepListItem"
+        >
+          <a
+            href="#question-2"
+          >
+            <span
+              class="number"
+            >
+              02
+            </span>
+            Bean Type
+          </a>
         </li>
-        <li>
-          <span>
-            03
-          </span>
-          Quantity
+        <li
+          class="stepListItem"
+        >
+          <a
+            href="#question-3"
+          >
+            <span
+              class="number"
+            >
+              03
+            </span>
+            Quantity
+          </a>
         </li>
-        <li>
-          <span>
-            04
-          </span>
-          Grind Option
+        <li
+          class="stepListItem"
+        >
+          <a
+            href="#question-4"
+          >
+            <span
+              class="number"
+            >
+              04
+            </span>
+            Grind Option
+          </a>
         </li>
-        <li>
-          <span>
-            05
-          </span>
-          Deliveries
+        <li
+          class="stepListItem"
+        >
+          <a
+            href="#question-5"
+          >
+            <span
+              class="number"
+            >
+              05
+            </span>
+            Deliveries
+          </a>
         </li>
       </ol>
       <div
@@ -832,6 +872,7 @@ exports[`renders /create-plan page unchanged 1`] = `
       >
         <div
           class="accordionItem"
+          id="question-1"
         >
           <button
             aria-controls="accordion-content-How do you drink your coffee?"
@@ -916,6 +957,7 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
         <div
           class="accordionItem"
+          id="question-2"
         >
           <button
             aria-controls="accordion-content-What type of coffee?"
@@ -1000,6 +1042,7 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
         <div
           class="accordionItem"
+          id="question-3"
         >
           <button
             aria-controls="accordion-content-How much would you like?"
@@ -1084,6 +1127,7 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
         <div
           class="accordionItem"
+          id="question-4"
         >
           <button
             aria-controls="accordion-content-Want us to grind them?"
@@ -1168,6 +1212,7 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
         <div
           class="accordionItem"
+          id="question-5"
         >
           <button
             aria-controls="accordion-content-How often should we deliver?"

@@ -2,12 +2,16 @@
 
 import Accordion from "@/components/accordion/Accordion";
 import AccordionItem from "@/components/accordion/AccordionItem";
+import styles from "./CreatePlanSection.module.scss";
 import OptionCards, {
   OptionCardData,
 } from "@/components/optionCards/OptionCards";
-import styles from "./CreatePlanSection.module.scss";
+import StepList from "./StepsList";
 
-const accordionData = [
+const accordionData: {
+  title: string;
+  options: OptionCardData[];
+}[] = [
   {
     title: "How do you drink your coffee?",
     options: [
@@ -107,26 +111,15 @@ const accordionData = [
 const CreatePlanSection = () => {
   return (
     <section className={styles.createPlanSection}>
-      <ol className={styles.orderList}>
-        <li>
-          <span>01</span>Preferences
-        </li>
-        <li>
-          <span>02</span>Bean Type
-        </li>
-        <li>
-          <span>03</span>Quantity
-        </li>
-        <li>
-          <span>04</span>Grind Option
-        </li>
-        <li>
-          <span>05</span>Deliveries
-        </li>
-      </ol>
+      <StepList />
       <Accordion>
         {accordionData.map(({ title, options }, index) => (
-          <AccordionItem key={title} title={title} defaultOpen={index === 0}>
+          <AccordionItem
+            key={title}
+            id={`question-${index + 1}`}
+            title={title}
+            defaultOpen={index === 0}
+          >
             <OptionCards options={options} />
           </AccordionItem>
         ))}

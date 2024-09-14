@@ -6,6 +6,7 @@ import arrow from "@/public/assets/plan/desktop/icon-arrow.svg";
 import Image from "next/image";
 
 type AccordionItemProps = {
+  id: string;
   title: string;
   disabled?: boolean;
   children: ReactNode;
@@ -13,6 +14,7 @@ type AccordionItemProps = {
 };
 
 const AccordionItem = ({
+  id,
   title,
   children,
   disabled = false,
@@ -33,7 +35,7 @@ const AccordionItem = ({
   }, [isOpen]);
 
   return (
-    <div className={styles.accordionItem}>
+    <div id={id} className={styles.accordionItem}>
       <button
         className={`${styles.accordionToggle} bg-light`}
         onClick={toggleAccordion}
