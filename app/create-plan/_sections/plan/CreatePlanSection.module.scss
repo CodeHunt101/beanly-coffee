@@ -47,6 +47,10 @@
       @include text-colour($clr-neutral, 50%);
     }
 
+    .selected {
+      @include text-colour($clr-primary);
+    }
+
     &:hover,
     &:focus {
       .step {

@@ -10,13 +10,16 @@ export type OptionCardData = {
 
 type OptionCardsProps = {
   options: OptionCardData[];
+  id: string;
+  setSelectedOption: (id: string, title: string) => void;
 };
 
-const OptionCards = ({ options }: OptionCardsProps) => {
+const OptionCards = ({ options, id, setSelectedOption }: OptionCardsProps) => {
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
 
   const handleSelect = (title: string) => {
     setSelectedCard(title);
+    setSelectedOption(id, title);
   };
 
   return (

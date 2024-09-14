@@ -1,5 +1,6 @@
 "use client";
 
+import { PlanProvider } from "../_context/planContext";
 import HeroSection from "./_sections/hero/HeroSection";
 import Instructions from "./_sections/instructions/Instructions";
 import CreatePlanSection from "./_sections/plan/CreatePlanSection";
@@ -7,9 +8,11 @@ import CreatePlanSection from "./_sections/plan/CreatePlanSection";
 const CreatePlanClient = () => {
   return (
     <main className="container">
-      <HeroSection />
-      <Instructions />
-      <CreatePlanSection />
+      <PlanProvider>
+        <HeroSection />
+        <Instructions />
+        <CreatePlanSection />
+      </PlanProvider>
     </main>
   );
 };

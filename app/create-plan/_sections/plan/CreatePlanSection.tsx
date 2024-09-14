@@ -1,5 +1,3 @@
-"use client";
-
 import Accordion from "@/components/accordion/Accordion";
 import AccordionItem from "@/components/accordion/AccordionItem";
 import styles from "./CreatePlanSection.module.scss";
@@ -7,6 +5,8 @@ import OptionCards, {
   OptionCardData,
 } from "@/components/optionCards/OptionCards";
 import StepList from "./StepsList";
+import { PlanContext, PlanContextType } from "@/app/_context/planContext";
+import { useContext } from "react";
 
 const accordionData: {
   title: string;
@@ -109,6 +109,12 @@ const accordionData: {
 ];
 
 const CreatePlanSection = () => {
+  const { setSelectedOption } = useContext<PlanContextType>(PlanContext);
+
+  const handleSelectedOption = (id: string, title: string) => {
+    setSelectedOption(id, title);
+  };
+
   return (
     <section className={styles.createPlanSection}>
       <StepList />
@@ -120,7 +126,11 @@ const CreatePlanSection = () => {
             title={title}
             defaultOpen={index === 0}
           >
-            <OptionCards options={options} />
+            <OptionCards
+              options={options}
+              id={`step-${index + 1}`}
+              setSelectedOption={handleSelectedOption}
+            />
           </AccordionItem>
         ))}
       </Accordion>
