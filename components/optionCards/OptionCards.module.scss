@@ -10,7 +10,7 @@
   @include md {
     flex-direction: row;
     justify-content: space-between;
-    gap: 0;
+    gap: 0.625rem;
   }
 
   .btn {
@@ -21,7 +21,6 @@
     min-height: 140px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     @include md {
       max-width: 228px;
@@ -52,6 +51,13 @@
   .btnTitle {
     line-height: 1.333;
     @include font-size(450);
+  }
+
+  .btnContent {
+    padding-top: 0.5em;
+    @include md {
+      padding-top: 1.5em;
+    }
   }
 
   * {
