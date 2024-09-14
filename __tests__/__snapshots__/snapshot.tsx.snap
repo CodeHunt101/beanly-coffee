@@ -521,10 +521,12 @@ exports[`renders /about page unchanged 1`] = `
       </div>
     </section>
     <section
+      aria-labelledby="location-section-heading"
       class="locations"
     >
       <h2
         class="title ff-serif"
+        id="location-section-heading"
       >
         Our headquarters
       </h2>
@@ -697,7 +699,9 @@ exports[`renders /create-plan page unchanged 1`] = `
       </div>
     </section>
     <section
+      aria-label="Instructions Section"
       class="instructions"
+      role="region"
     >
       <div
         class="content"
@@ -791,7 +795,9 @@ exports[`renders /create-plan page unchanged 1`] = `
       </div>
     </section>
     <section
+      aria-label="Create Plan Questionnarie Section"
       class="createPlanSection"
+      role="region"
     >
       <ol
         class="stepList ff-serif"
@@ -803,9 +809,10 @@ exports[`renders /create-plan page unchanged 1`] = `
             href="#question-1"
           >
             <span
-              class="number"
+              class="number "
             >
-              01
+              0
+              1
             </span>
             <span
               class="step"
@@ -821,9 +828,10 @@ exports[`renders /create-plan page unchanged 1`] = `
             href="#question-2"
           >
             <span
-              class="number"
+              class="number "
             >
-              02
+              0
+              2
             </span>
             <span
               class="step"
@@ -839,9 +847,10 @@ exports[`renders /create-plan page unchanged 1`] = `
             href="#question-3"
           >
             <span
-              class="number"
+              class="number "
             >
-              03
+              0
+              3
             </span>
             <span
               class="step"
@@ -857,9 +866,10 @@ exports[`renders /create-plan page unchanged 1`] = `
             href="#question-4"
           >
             <span
-              class="number"
+              class="number "
             >
-              04
+              0
+              4
             </span>
             <span
               class="step"
@@ -875,9 +885,10 @@ exports[`renders /create-plan page unchanged 1`] = `
             href="#question-5"
           >
             <span
-              class="number"
+              class="number "
             >
-              05
+              0
+              5
             </span>
             <span
               class="step"

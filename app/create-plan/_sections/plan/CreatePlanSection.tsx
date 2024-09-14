@@ -116,7 +116,11 @@ const CreatePlanSection = () => {
   };
 
   return (
-    <section className={styles.createPlanSection}>
+    <section
+      className={styles.createPlanSection}
+      role="region"
+      aria-label="Create Plan Questionnarie Section"
+    >
       <StepList />
       <Accordion>
         {accordionData.map(({ title, options }, index) => (

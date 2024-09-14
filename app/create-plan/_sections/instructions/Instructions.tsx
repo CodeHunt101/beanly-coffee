@@ -3,7 +3,11 @@ import styles from "./Instructions.module.scss";
 
 const Instructions = () => {
   return (
-    <section className={styles.instructions}>
+    <section
+      className={styles.instructions}
+      role="region"
+      aria-label="Instructions Section"
+    >
       <div className={styles.content}>
         <Steps theme="dark" />
       </div>
