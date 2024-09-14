@@ -3,11 +3,12 @@
 
 .createPlanSection {
   margin-top: 7.5rem;
-  overflow: visible;
+
   @include lg {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; //This ensures sticky position of .stepListItem works
+    gap: 1rem;
+    align-items: flex-start; // Ensures sticky position of .stepListItem works
   }
 
   @include xl {
@@ -19,24 +20,53 @@
     padding: 0;
     margin: 0;
     min-width: 255px;
-    @include text-colour($clr-neutral, 70%);
+    height: 356px;
     @include font-size(450);
 
     @include lg {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       position: sticky;
       top: 113px;
     }
   }
 
   .stepListItem {
+    @include text-colour($clr-neutral, 70%);
+
+    a {
+      text-decoration: none;
+      line-height: 1.334;
+      cursor: pointer;
+    }
+
     .number {
       display: inline-block;
       min-width: 59px;
+      @include text-colour($clr-neutral, 50%);
     }
-  }
 
-  a {
-    text-decoration: none;
+    &:hover,
+    &:focus {
+      .step {
+        @include text-colour($clr-neutral);
+      }
+
+      .number {
+        @include text-colour($clr-neutral, 60%);
+      }
+    }
+
+    &:not(:last-child)::after {
+      display: block;
+      position: relative;
+      content: "";
+      width: 100%;
+      top: 1.5rem;
+      left: 0;
+      height: 1px;
+      @include bg-colour($clr-neutral, 25%);
+    }
   }
 }

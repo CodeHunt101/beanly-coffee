@@ -807,7 +807,11 @@ exports[`renders /create-plan page unchanged 1`] = `
             >
               01
             </span>
-            Preferences
+            <span
+              class="step"
+            >
+              Preferences
+            </span>
           </a>
         </li>
         <li
@@ -821,7 +825,11 @@ exports[`renders /create-plan page unchanged 1`] = `
             >
               02
             </span>
-            Bean Type
+            <span
+              class="step"
+            >
+              Bean Type
+            </span>
           </a>
         </li>
         <li
@@ -835,7 +843,11 @@ exports[`renders /create-plan page unchanged 1`] = `
             >
               03
             </span>
-            Quantity
+            <span
+              class="step"
+            >
+              Quantity
+            </span>
           </a>
         </li>
         <li
@@ -849,7 +861,11 @@ exports[`renders /create-plan page unchanged 1`] = `
             >
               04
             </span>
-            Grind Option
+            <span
+              class="step"
+            >
+              Grind Option
+            </span>
           </a>
         </li>
         <li
@@ -863,7 +879,11 @@ exports[`renders /create-plan page unchanged 1`] = `
             >
               05
             </span>
-            Deliveries
+            <span
+              class="step"
+            >
+              Deliveries
+            </span>
           </a>
         </li>
       </ol>

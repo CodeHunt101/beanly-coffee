@@ -16,7 +16,7 @@ const StepList = () => {
         <li key={index} className={styles.stepListItem}>
           <Link href={`#question-${index + 1}`}>
             <span className={styles.number}>{`0${index + 1}`}</span>
-            {step}
+            <span className={styles.step}>{step}</span>
           </Link>
         </li>
       ))}

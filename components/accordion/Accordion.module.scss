@@ -66,6 +66,10 @@
       max-height: 0;
       transition: max-height 0.3s ease;
 
+      @include lg {
+        padding-top: 3.5rem;
+      }
+
       &.open {
         display: flex;
       }
