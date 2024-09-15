@@ -1,15 +1,19 @@
+import { Option, Step } from "@/app/_utils/types";
 import { steps } from "./content";
 
 // Utility functions to handle accordion open and disable state
 export const shouldOpenAccordion = (
   index: number,
-  selectedOptions: Record<string, string>,
+  selectedOptions: Record<Step, Option>,
 ) => {
   const isFirstStep = index === 0;
-  const isPreviousStepCompleted = !!selectedOptions[`step-${index}`];
-  const isCapsuleCoffeeTypeSelected = selectedOptions["step-1"] === "Capsule";
+  const prevStep = `step-${index}` as Step;
+  const secondPrevStep = `step-${index - 1}` as Step;
+  const isPreviousStepCompleted = !!selectedOptions[prevStep];
+  const isCapsuleCoffeeTypeSelected =
+    selectedOptions[Step.BrewMethod] === "Capsule";
   const isLastStep = index === steps.length - 1;
-  const isSecondPreviousStepCompleted = !!selectedOptions[`step-${index - 1}`];
+  const isSecondPreviousStepCompleted = !!selectedOptions[secondPrevStep];
 
   if (isFirstStep) return true;
   if (isLastStep && isCapsuleCoffeeTypeSelected) {
@@ -20,7 +24,7 @@ export const shouldOpenAccordion = (
 
 export const shouldDisableAccordion = (
   index: number,
-  selectedOptions: Record<string, string>,
+  selectedOptions: Record<Step, Option>,
 ) => {
-  return index === 3 && selectedOptions["step-1"] === "Capsule";
+  return index === 3 && selectedOptions[Step.BrewMethod] === "Capsule";
 };

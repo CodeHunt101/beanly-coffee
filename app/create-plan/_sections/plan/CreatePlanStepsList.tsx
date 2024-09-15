@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState, useCallback } from "react";
 import Link from "next/link";
-import { PlanContext } from "@/app/_context/planContext";
 import styles from "./CreatePlanSection.module.scss";
 import { stepLinks } from "./content";
+import { PlanContext } from "@/app/_context/planContext";
+import { Step } from "@/app/_utils/types";
 
 const SCROLL_OFFSET = 115;
 
@@ -26,23 +27,23 @@ const CreatePlanStepList = () => {
 
   return (
     <ol className={`${styles.stepList} ff-serif`} role="navigation">
-      {stepLinks.map((step, index) => {
-        const stepNumber = index + 1;
-        const isSelected = !!selectedOptions[`step-${stepNumber}`];
+      {stepLinks.map((stepLink, index) => {
+        const step = `step-${index + 1}` as Step;
+        const isSelected = !!selectedOptions[step];
         const isActive = activeStep === index;
 
         return (
-          <li key={step} className={styles.stepListItem}>
-            <Link href={`#step-${stepNumber}`}>
+          <li key={stepLink} className={styles.stepListItem}>
+            <Link href={`#${step}`}>
               <span
                 className={`${styles.number} ${isSelected ? styles.selected : ""}`}
               >
-                {String(stepNumber).padStart(2, "0")}
+                {String(index + 1).padStart(2, "0")}
               </span>
               <span
                 className={`${styles.step} ${isActive ? styles.active : ""}`}
               >
-                {step}
+                {stepLink}
               </span>
             </Link>
           </li>

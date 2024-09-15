@@ -3,18 +3,19 @@ import AccordionItem from "@/components/accordion/AccordionItem";
 import styles from "./CreatePlanSection.module.scss";
 import OptionCards from "@/components/optionCards/OptionCards";
 import CreatePlanStepList from "./CreatePlanStepsList";
-import { PlanContext, PlanContextType } from "@/app/_context/planContext";
 import { useContext, useMemo } from "react";
 import { steps } from "./content";
 import { shouldDisableAccordion, shouldOpenAccordion } from "./utils";
+import { Option, PlanContextType, Step } from "@/app/_utils/types";
+import { PlanContext } from "@/app/_context/planContext";
 
 const CreatePlanSection = () => {
   const { selectedOptions, setSelectedOption } =
     useContext<PlanContextType>(PlanContext);
 
   const handleSelectedOption = useMemo(
-    () => (stepId: string, optionTitle: string) => {
-      setSelectedOption(stepId, optionTitle);
+    () => (stepId: string, optionTitle: string | undefined) => {
+      setSelectedOption(stepId as Step, optionTitle as Option);
     },
     [setSelectedOption],
   );
