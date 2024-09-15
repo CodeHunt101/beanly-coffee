@@ -801,18 +801,18 @@ exports[`renders /create-plan page unchanged 1`] = `
     >
       <ol
         class="stepList ff-serif"
+        role="navigation"
       >
         <li
           class="stepListItem"
         >
           <a
-            href="#question-1"
+            href="#step-1"
           >
             <span
               class="number "
             >
-              0
-              1
+              01
             </span>
             <span
               class="step "
@@ -825,13 +825,12 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="stepListItem"
         >
           <a
-            href="#question-2"
+            href="#step-2"
           >
             <span
               class="number "
             >
-              0
-              2
+              02
             </span>
             <span
               class="step "
@@ -844,13 +843,12 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="stepListItem"
         >
           <a
-            href="#question-3"
+            href="#step-3"
           >
             <span
               class="number "
             >
-              0
-              3
+              03
             </span>
             <span
               class="step "
@@ -863,13 +861,12 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="stepListItem"
         >
           <a
-            href="#question-4"
+            href="#step-4"
           >
             <span
               class="number "
             >
-              0
-              4
+              04
             </span>
             <span
               class="step "
@@ -882,13 +879,12 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="stepListItem"
         >
           <a
-            href="#question-5"
+            href="#step-5"
           >
             <span
               class="number "
             >
-              0
-              5
+              05
             </span>
             <span
               class="step "

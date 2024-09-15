@@ -34,6 +34,14 @@ const AccordionItem = ({
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (disabled) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(defaultOpen);
+    }
+  }, [defaultOpen, disabled]);
+
   return (
     <div id={id} className={styles.accordionItem}>
       <button

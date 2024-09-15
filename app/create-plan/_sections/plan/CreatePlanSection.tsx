@@ -2,16 +2,16 @@ import Accordion from "@/components/accordion/Accordion";
 import AccordionItem from "@/components/accordion/AccordionItem";
 import styles from "./CreatePlanSection.module.scss";
 import OptionCards from "@/components/optionCards/OptionCards";
-import StepList from "./StepsList";
+import CreatePlanStepList from "./CreatePlanStepsList";
 import { PlanContext, PlanContextType } from "@/app/_context/planContext";
 import { useContext } from "react";
-import { steps } from "./questions";
+import { steps } from "./content";
 
 const CreatePlanSection = () => {
-  const { setSelectedOption } = useContext<PlanContextType>(PlanContext);
+  const { selectedOptions, setSelectedOption } =
+    useContext<PlanContextType>(PlanContext);
 
   const handleSelectedOption = (stepId: string, optionTitle: string) => {
-    console.log({ stepId, optionTitle });
     setSelectedOption(stepId, optionTitle);
   };
 
@@ -21,16 +21,30 @@ const CreatePlanSection = () => {
       role="region"
       aria-label="Create Plan Steps Section"
     >
-      <StepList />
+      <CreatePlanStepList />
       <Accordion>
         {steps.map(({ accordionLabel, optionCards }, index) => {
           const accordionItemId = `step-${index + 1}`;
+          const isFirstStep = index === 0;
+          const isPreviousStepOptionSelected =
+            !!selectedOptions[`step-${index}`];
+          const isCapsuleCoffeeTypeSelected =
+            selectedOptions["step-1"] === "Capsule";
+          const isSecondPreviousStepOptionSelected =
+            !!selectedOptions[`step-${index - 1}`];
           return (
             <AccordionItem
               key={accordionLabel}
               id={accordionItemId}
               label={accordionLabel}
-              defaultOpen={index === 0}
+              defaultOpen={
+                isFirstStep ||
+                (!isFirstStep && isPreviousStepOptionSelected) ||
+                (index === 4 &&
+                  isSecondPreviousStepOptionSelected &&
+                  isCapsuleCoffeeTypeSelected)
+              }
+              disabled={index === 3 && isCapsuleCoffeeTypeSelected}
             >
               <OptionCards
                 options={optionCards}

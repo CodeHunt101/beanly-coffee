@@ -1,5 +1,13 @@
 import { OptionCardData } from "@/components/optionCards/OptionCards";
 
+export const stepLinks = [
+  "Preferences",
+  "Bean Type",
+  "Quantity",
+  "Grind Option",
+  "Deliveries",
+];
+
 export const steps: {
   accordionLabel: string;
   optionCards: OptionCardData[];
