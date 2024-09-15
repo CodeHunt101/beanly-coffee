@@ -895,461 +895,484 @@ exports[`renders /create-plan page unchanged 1`] = `
         </li>
       </ol>
       <div
-        class="accordion"
+        class="createPlanContent"
       >
         <div
-          class="accordionItem"
-          id="step-1"
+          class="accordion"
         >
-          <button
-            aria-controls="How do you drink your coffee?-content"
-            aria-expanded="true"
-            class="accordionToggle bg-light"
-          >
-            <span
-              class="accordionLabel open ff-serif"
-            >
-              How do you drink your coffee?
-            </span>
-            <img
-              alt="toggle icon"
-              aria-hidden="true"
-              class="accordionIcon open"
-              data-nimg="1"
-              decoding="async"
-              height="40"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-              style="color: transparent;"
-              width="40"
-            />
-          </button>
           <div
-            class="accordionContent open"
-            data-testid="accordion-content"
-            id="How do you drink your coffee?-content"
-            style="max-height: 0px;"
+            class="accordionItem"
+            id="step-1"
           >
-            <div
-              class="cardsContainer"
+            <button
+              aria-controls="How do you drink your coffee?-content"
+              aria-expanded="true"
+              class="accordionToggle bg-light"
             >
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
+              <span
+                class="accordionLabel open ff-serif"
               >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Capsule
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Compatible with Nespresso systems and similar brewers
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
+                How do you drink your coffee?
+              </span>
+              <img
+                alt="toggle icon"
+                aria-hidden="true"
+                class="accordionIcon open"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+            <div
+              class="accordionContent open"
+              data-testid="accordion-content"
+              id="How do you drink your coffee?-content"
+              style="max-height: 0px;"
+            >
+              <div
+                class="cardsContainer"
               >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
                 >
-                  Filter
-                </h4>
-                <p
-                  class="btnContent lh-300"
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Capsule
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Compatible with Nespresso systems and similar brewers
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
                 >
-                  For pour over or drip methods like Aeropress, Chemex, and V60
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Filter
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    For pour over or drip methods like Aeropress, Chemex, and V60
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Espresso
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Dense and finely ground beans for an intense, flavorful experience
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accordionItem"
+            id="step-2"
+          >
+            <button
+              aria-controls="What type of coffee?-content"
+              aria-expanded="false"
+              class="accordionToggle bg-light"
+            >
+              <span
+                class="accordionLabel  ff-serif"
               >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
+                What type of coffee?
+              </span>
+              <img
+                alt="toggle icon"
+                aria-hidden="true"
+                class="accordionIcon "
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+            <div
+              class="accordionContent "
+              data-testid="accordion-content"
+              id="What type of coffee?-content"
+              style="max-height: 0px;"
+            >
+              <div
+                class="cardsContainer"
+              >
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
                 >
-                  Espresso
-                </h4>
-                <p
-                  class="btnContent lh-300"
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Single Origin
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Distinct, high quality coffee from a specific family-owned farm
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
                 >
-                  Dense and finely ground beans for an intense, flavorful experience
-                </p>
-              </button>
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Decaf
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Just like regular coffee, except the caffeine has been removed
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Blended
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Combination of two or three dark roasted beans of organic coffees
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accordionItem"
+            id="step-3"
+          >
+            <button
+              aria-controls="How much would you like?-content"
+              aria-expanded="false"
+              class="accordionToggle bg-light"
+            >
+              <span
+                class="accordionLabel  ff-serif"
+              >
+                How much would you like?
+              </span>
+              <img
+                alt="toggle icon"
+                aria-hidden="true"
+                class="accordionIcon "
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+            <div
+              class="accordionContent "
+              data-testid="accordion-content"
+              id="How much would you like?-content"
+              style="max-height: 0px;"
+            >
+              <div
+                class="cardsContainer"
+              >
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    250g
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Perfect for the solo drinker. Yields about 12 delicious cups.
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    500g
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Perfect option for a couple. Yields about 40 delectable cups.
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    1000g
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Perfect for offices and events. Yields about 90 delightful cups.
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accordionItem"
+            id="step-4"
+          >
+            <button
+              aria-controls="Want us to grind them?-content"
+              aria-expanded="false"
+              class="accordionToggle bg-light"
+            >
+              <span
+                class="accordionLabel  ff-serif"
+              >
+                Want us to grind them?
+              </span>
+              <img
+                alt="toggle icon"
+                aria-hidden="true"
+                class="accordionIcon "
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+            <div
+              class="accordionContent "
+              data-testid="accordion-content"
+              id="Want us to grind them?-content"
+              style="max-height: 0px;"
+            >
+              <div
+                class="cardsContainer"
+              >
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Wholebean
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Best choice if you cherish the full sensory experience
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Filter
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    For drip or pour-over coffee methods such as V60 or Aeropress
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Cafetiére
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    Coarse ground beans specially suited for French press coffee
+                  </p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="accordionItem"
+            id="step-5"
+          >
+            <button
+              aria-controls="How often should we deliver?-content"
+              aria-expanded="false"
+              class="accordionToggle bg-light"
+            >
+              <span
+                class="accordionLabel  ff-serif"
+              >
+                How often should we deliver?
+              </span>
+              <img
+                alt="toggle icon"
+                aria-hidden="true"
+                class="accordionIcon "
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+                style="color: transparent;"
+                width="40"
+              />
+            </button>
+            <div
+              class="accordionContent "
+              data-testid="accordion-content"
+              id="How often should we deliver?-content"
+              style="max-height: 0px;"
+            >
+              <div
+                class="cardsContainer"
+              >
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Every week
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    $7.20 per shipment. Includes free first-class shipping.
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Every 2 weeks
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    $9.60 per shipment. Includes free priority shipping.
+                  </p>
+                </button>
+                <button
+                  class="btn  bg-muted text-dark"
+                  role="tab"
+                >
+                  <h4
+                    class="btnTitle fs-400 ff-serif"
+                  >
+                    Every month
+                  </h4>
+                  <p
+                    class="btnContent lh-300"
+                  >
+                    $12.00 per shipment. Includes free priority shipping.
+                  </p>
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <div
-          class="accordionItem"
-          id="step-2"
+          class="orderSummary"
         >
-          <button
-            aria-controls="What type of coffee?-content"
-            aria-expanded="false"
-            class="accordionToggle bg-light"
-          >
-            <span
-              class="accordionLabel  ff-serif"
-            >
-              What type of coffee?
-            </span>
-            <img
-              alt="toggle icon"
-              aria-hidden="true"
-              class="accordionIcon "
-              data-nimg="1"
-              decoding="async"
-              height="40"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-              style="color: transparent;"
-              width="40"
-            />
-          </button>
           <div
-            class="accordionContent "
-            data-testid="accordion-content"
-            id="What type of coffee?-content"
-            style="max-height: 0px;"
+            class="summaryContent bg-dark"
           >
-            <div
-              class="cardsContainer"
+            <h2
+              class="heading uppercase"
+              id="order-summary-heading"
             >
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Single Origin
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Distinct, high quality coffee from a specific family-owned farm
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Decaf
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Just like regular coffee, except the caffeine has been removed
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Blended
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Combination of two or three dark roasted beans of organic coffees
-                </p>
-              </button>
-            </div>
+              Order Summary
+            </h2>
+            <p
+              class="summaryDetails text-light ff-serif fs-450"
+            >
+              “I drink my coffee using 
+              <span>
+                _____
+              </span>
+              , with a
+               
+              <span>
+                _____
+              </span>
+               type of bean. 
+              <span>
+                _____
+              </span>
+               
+              ground ala 
+              <span>
+                _____
+              </span>
+              , sent to me 
+              <span>
+                _____
+              </span>
+              .”
+            </p>
           </div>
-        </div>
-        <div
-          class="accordionItem"
-          id="step-3"
-        >
           <button
-            aria-controls="How much would you like?-content"
-            aria-expanded="false"
-            class="accordionToggle bg-light"
+            class="btn bg-primary ff-serif text-light"
           >
-            <span
-              class="accordionLabel  ff-serif"
-            >
-              How much would you like?
-            </span>
-            <img
-              alt="toggle icon"
-              aria-hidden="true"
-              class="accordionIcon "
-              data-nimg="1"
-              decoding="async"
-              height="40"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-              style="color: transparent;"
-              width="40"
-            />
+            Create my plan!
           </button>
-          <div
-            class="accordionContent "
-            data-testid="accordion-content"
-            id="How much would you like?-content"
-            style="max-height: 0px;"
-          >
-            <div
-              class="cardsContainer"
-            >
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  250g
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Perfect for the solo drinker. Yields about 12 delicious cups.
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  500g
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Perfect option for a couple. Yields about 40 delectable cups.
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  1000g
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Perfect for offices and events. Yields about 90 delightful cups.
-                </p>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="accordionItem"
-          id="step-4"
-        >
-          <button
-            aria-controls="Want us to grind them?-content"
-            aria-expanded="false"
-            class="accordionToggle bg-light"
-          >
-            <span
-              class="accordionLabel  ff-serif"
-            >
-              Want us to grind them?
-            </span>
-            <img
-              alt="toggle icon"
-              aria-hidden="true"
-              class="accordionIcon "
-              data-nimg="1"
-              decoding="async"
-              height="40"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-              style="color: transparent;"
-              width="40"
-            />
-          </button>
-          <div
-            class="accordionContent "
-            data-testid="accordion-content"
-            id="Want us to grind them?-content"
-            style="max-height: 0px;"
-          >
-            <div
-              class="cardsContainer"
-            >
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Wholebean
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Best choice if you cherish the full sensory experience
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Filter
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  For drip or pour-over coffee methods such as V60 or Aeropress
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Cafetiére
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  Coarse ground beans specially suited for French press coffee
-                </p>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="accordionItem"
-          id="step-5"
-        >
-          <button
-            aria-controls="How often should we deliver?-content"
-            aria-expanded="false"
-            class="accordionToggle bg-light"
-          >
-            <span
-              class="accordionLabel  ff-serif"
-            >
-              How often should we deliver?
-            </span>
-            <img
-              alt="toggle icon"
-              aria-hidden="true"
-              class="accordionIcon "
-              data-nimg="1"
-              decoding="async"
-              height="40"
-              loading="lazy"
-              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
-              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
-              style="color: transparent;"
-              width="40"
-            />
-          </button>
-          <div
-            class="accordionContent "
-            data-testid="accordion-content"
-            id="How often should we deliver?-content"
-            style="max-height: 0px;"
-          >
-            <div
-              class="cardsContainer"
-            >
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Every week
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  $7.20 per shipment. Includes free first-class shipping.
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Every 2 weeks
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  $9.60 per shipment. Includes free priority shipping.
-                </p>
-              </button>
-              <button
-                class="btn  bg-muted text-dark"
-                role="tab"
-              >
-                <h4
-                  class="btnTitle fs-400 ff-serif"
-                >
-                  Every month
-                </h4>
-                <p
-                  class="btnContent lh-300"
-                >
-                  $12.00 per shipment. Includes free priority shipping.
-                </p>
-              </button>
-            </div>
-          </div>
         </div>
       </div>
-    </section>
-    <section
-      aria-labelledby="order-summary-heading"
-      aria-live="polite"
-      role="region"
-    >
-      <h2
-        class="heading"
-        id="order-summary-heading"
-      >
-        Order Summary
-      </h2>
-      <p>
-        “I drink my coffee using 
-        <span />
-        , with a
-         
-        <span />
-         type of bean.
-        <span />
-         
-        ground ala 
-        <span />
-        , sent to me 
-        <span />
-        .”
-      </p>
     </section>
   </main>
 </div>

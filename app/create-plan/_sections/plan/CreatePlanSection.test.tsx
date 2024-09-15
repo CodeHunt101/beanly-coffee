@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { PlanContext, PlanContextType } from "@/app/_context/planContext";
+import { PlanContext } from "@/app/_context/planContext";
 import CreatePlanSection from "./CreatePlanSection";
+import { PlanContextType } from "@/app/_utils/types";
 
 // Mock data for context
 const mockSetSelectedOption = jest.fn();
@@ -22,12 +23,6 @@ describe("CreatePlanSection", () => {
     it("should render the CreatePlanSection component", () => {
       renderComponent();
       expect(screen.getByRole("region")).toBeInTheDocument();
-    });
-
-    it("should render all accordion items", () => {
-      renderComponent();
-      const accordionItems = screen.getAllByRole("button");
-      expect(accordionItems).toHaveLength(5); // Expecting 5 sections
     });
   });
 

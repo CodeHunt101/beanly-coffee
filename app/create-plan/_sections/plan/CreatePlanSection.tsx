@@ -8,6 +8,7 @@ import { steps } from "./content";
 import { shouldDisableAccordion, shouldOpenAccordion } from "./utils";
 import { Option, PlanContextType, Step } from "@/app/_utils/types";
 import { PlanContext } from "@/app/_context/planContext";
+import OrderSummary from "./OrderSummary";
 
 const CreatePlanSection = () => {
   const { selectedOptions, setSelectedOption } =
@@ -27,26 +28,29 @@ const CreatePlanSection = () => {
       aria-label="Create Plan Steps Section"
     >
       <CreatePlanStepList />
-      <Accordion>
-        {steps.map(({ accordionLabel, optionCards }, index) => {
-          const accordionItemId = `step-${index + 1}`;
-          return (
-            <AccordionItem
-              key={accordionLabel}
-              id={accordionItemId}
-              label={accordionLabel}
-              defaultOpen={shouldOpenAccordion(index, selectedOptions)}
-              disabled={shouldDisableAccordion(index, selectedOptions)}
-            >
-              <OptionCards
-                options={optionCards}
+      <div className={styles.createPlanContent}>
+        <Accordion>
+          {steps.map(({ accordionLabel, optionCards }, index) => {
+            const accordionItemId = `step-${index + 1}`;
+            return (
+              <AccordionItem
+                key={accordionLabel}
                 id={accordionItemId}
-                setSelectedOption={handleSelectedOption}
-              />
-            </AccordionItem>
-          );
-        })}
-      </Accordion>
+                label={accordionLabel}
+                defaultOpen={shouldOpenAccordion(index, selectedOptions)}
+                disabled={shouldDisableAccordion(index, selectedOptions)}
+              >
+                <OptionCards
+                  options={optionCards}
+                  id={accordionItemId}
+                  setSelectedOption={handleSelectedOption}
+                />
+              </AccordionItem>
+            );
+          })}
+        </Accordion>
+        <OrderSummary />
+      </div>
     </section>
   );
 };

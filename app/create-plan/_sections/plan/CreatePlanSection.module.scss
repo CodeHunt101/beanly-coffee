@@ -18,10 +18,14 @@
   .stepList {
     display: none;
     padding: 0;
-    margin: 0;
+    margin-bottom: 6.875rem;
     min-width: 255px;
     height: 356px;
     @include font-size(450);
+
+    @include md {
+      margin-bottom: 5.5rem;
+    }
 
     @include lg {
       display: flex;
@@ -29,6 +33,7 @@
       justify-content: space-between;
       position: sticky;
       top: 113px;
+      margin-bottom: 5.5rem;
     }
   }
 
@@ -75,6 +80,68 @@
       left: 0;
       height: 1px;
       @include bg-colour($clr-neutral, 25%);
+    }
+  }
+
+  .createPlanContent {
+    max-width: 730px;
+  }
+
+  .orderSummary {
+    @include md {
+      padding-bottom: 1.5rem;
+    }
+
+    @include lg {
+      padding-bottom: 3rem;
+    }
+
+    .summaryContent {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 338px;
+      padding-inline: 1.688em;
+      border-radius: 0.625rem;
+      margin-bottom: 3.5rem;
+
+      @include sm {
+        min-height: 230px;
+      }
+
+      @include md {
+        margin-bottom: 2.5rem;
+        min-height: 208px;
+      }
+
+      @include lg {
+        padding-inline: 2.938em;
+      }
+    }
+
+    .heading {
+      @include font-size(300);
+      @include text-colour($clr-light, 50.37%);
+      @include line-height(300);
+      margin-bottom: 0.5rem;
+      font-weight: 200;
+    }
+    .summaryDetails {
+      line-height: 1.5;
+
+      span {
+        @include text-colour($clr-primary);
+      }
+    }
+
+    button {
+      display: block;
+      margin-inline: auto;
+
+      @include lg {
+        margin-left: auto;
+        margin-right: 0;
+      }
     }
   }
 }

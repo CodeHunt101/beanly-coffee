@@ -5,6 +5,14 @@
 .accordion {
   .accordionItem {
     margin-bottom: 6.875rem;
+
+    @include md {
+      margin-bottom: 6.25rem;
+    }
+
+    @include lg {
+      margin-bottom: 5.5rem;
+    }
     &:last-child {
       border-bottom: none;
     }
