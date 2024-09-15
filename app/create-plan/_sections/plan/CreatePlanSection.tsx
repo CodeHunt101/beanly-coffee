@@ -5,10 +5,10 @@ import OptionCards from "@/components/optionCards/OptionCards";
 import CreatePlanStepList from "./CreatePlanStepsList";
 import { useContext, useMemo } from "react";
 import { steps } from "./content";
-import { shouldDisableAccordion, shouldOpenAccordion } from "./utils";
+import { shouldDisableAccordion, shouldOpenAccordion } from "./helpers/utils";
 import { Option, PlanContextType, Step } from "@/app/_utils/types";
 import { PlanContext } from "@/app/_context/planContext";
-import OrderSummary from "./OrderSummary";
+import OrderSummary from "./orderSummary/OrderSummary";
 
 const CreatePlanSection = () => {
   const { selectedOptions, setSelectedOption } =

@@ -1,5 +1,5 @@
-import { Option, SelectedOptions, Step } from "@/app/_utils/types";
-import { steps } from "./content";
+import { SelectedOptions, Step } from "@/app/_utils/types";
+import { steps } from "../content";
 
 // Utility functions to handle accordion open and disable state
 export const shouldOpenAccordion = (
