@@ -4,16 +4,20 @@ import styles from "./CreatePlanSection.module.scss";
 import OptionCards from "@/components/optionCards/OptionCards";
 import CreatePlanStepList from "./CreatePlanStepsList";
 import { PlanContext, PlanContextType } from "@/app/_context/planContext";
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import { steps } from "./content";
+import { shouldDisableAccordion, shouldOpenAccordion } from "./utils";
 
 const CreatePlanSection = () => {
   const { selectedOptions, setSelectedOption } =
     useContext<PlanContextType>(PlanContext);
 
-  const handleSelectedOption = (stepId: string, optionTitle: string) => {
-    setSelectedOption(stepId, optionTitle);
-  };
+  const handleSelectedOption = useMemo(
+    () => (stepId: string, optionTitle: string) => {
+      setSelectedOption(stepId, optionTitle);
+    },
+    [setSelectedOption],
+  );
 
   return (
     <section
@@ -25,26 +29,13 @@ const CreatePlanSection = () => {
       <Accordion>
         {steps.map(({ accordionLabel, optionCards }, index) => {
           const accordionItemId = `step-${index + 1}`;
-          const isFirstStep = index === 0;
-          const isPreviousStepOptionSelected =
-            !!selectedOptions[`step-${index}`];
-          const isCapsuleCoffeeTypeSelected =
-            selectedOptions["step-1"] === "Capsule";
-          const isSecondPreviousStepOptionSelected =
-            !!selectedOptions[`step-${index - 1}`];
           return (
             <AccordionItem
               key={accordionLabel}
               id={accordionItemId}
               label={accordionLabel}
-              defaultOpen={
-                isFirstStep ||
-                (!isFirstStep && isPreviousStepOptionSelected) ||
-                (index === 4 &&
-                  isSecondPreviousStepOptionSelected &&
-                  isCapsuleCoffeeTypeSelected)
-              }
-              disabled={index === 3 && isCapsuleCoffeeTypeSelected}
+              defaultOpen={shouldOpenAccordion(index, selectedOptions)}
+              disabled={shouldDisableAccordion(index, selectedOptions)}
             >
               <OptionCards
                 options={optionCards}
