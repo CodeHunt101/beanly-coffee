@@ -47,6 +47,6 @@ export type SelectedOptions = {
 };
 
 export type PlanContextType = {
-  selectedOptions: SelectedOptions;
+  selectedOptions: Partial<SelectedOptions>;
   setSelectedOption: (step: Step, option: Option) => void;
 };

@@ -1324,6 +1324,33 @@ exports[`renders /create-plan page unchanged 1`] = `
         </div>
       </div>
     </section>
+    <section
+      aria-labelledby="order-summary-heading"
+      aria-live="polite"
+      role="region"
+    >
+      <h2
+        class="heading"
+        id="order-summary-heading"
+      >
+        Order Summary
+      </h2>
+      <p>
+        “I drink my coffee using 
+        <span />
+        , with a
+         
+        <span />
+         type of bean.
+        <span />
+         
+        ground ala 
+        <span />
+        , sent to me 
+        <span />
+        .”
+      </p>
+    </section>
   </main>
 </div>
 `;

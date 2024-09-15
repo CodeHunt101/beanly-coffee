@@ -1,10 +1,10 @@
-import { Option, Step } from "@/app/_utils/types";
+import { Option, SelectedOptions, Step } from "@/app/_utils/types";
 import { steps } from "./content";
 
 // Utility functions to handle accordion open and disable state
 export const shouldOpenAccordion = (
   index: number,
-  selectedOptions: Record<Step, Option>,
+  selectedOptions: Partial<SelectedOptions>,
 ) => {
   const isFirstStep = index === 0;
   const prevStep = `step-${index}` as Step;
@@ -24,7 +24,7 @@ export const shouldOpenAccordion = (
 
 export const shouldDisableAccordion = (
   index: number,
-  selectedOptions: Record<Step, Option>,
+  selectedOptions: Partial<SelectedOptions>,
 ) => {
   return index === 3 && selectedOptions[Step.BrewMethod] === "Capsule";
 };
