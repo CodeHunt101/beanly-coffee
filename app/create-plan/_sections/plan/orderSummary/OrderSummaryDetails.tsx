@@ -1,9 +1,14 @@
 import { useContext } from "react";
 import { PlanContext } from "@/app/_context/planContext";
 import { Step } from "@/app/_utils/types";
-import styles from "./CreatePlanSection.module.scss";
+import styles from "../CreatePlanSection.module.scss";
 
-const OrderSummaryDetails = () => {
+type OrderSummaryDetailsProps = {
+  fontColour?: "light" | "neutral";
+};
+const OrderSummaryDetails = ({
+  fontColour = "light",
+}: OrderSummaryDetailsProps) => {
   const { selectedOptions } = useContext(PlanContext);
   const {
     [Step.BrewMethod]: brewMethod = "_____",
@@ -15,7 +20,9 @@ const OrderSummaryDetails = () => {
   const isCapsule = brewMethod === "Capsule";
 
   return (
-    <p className={`${styles.summaryDetails} text-light ff-serif fs-450`}>
+    <p
+      className={`${styles.summaryDetails} text-${fontColour} ff-serif fs-450`}
+    >
       “I drink my coffee using <span>{brewMethod}</span>, with a{" "}
       <span>{beanType}</span> type of bean. <span>{size}</span>
       {!isCapsule && (

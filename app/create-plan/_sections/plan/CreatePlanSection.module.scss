@@ -1,5 +1,6 @@
 @use "@/styles/abstracts/mixins" as *;
 @use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/functions" as *;
 
 .createPlanSection {
   margin-top: 7.5rem;
@@ -142,6 +143,72 @@
         margin-left: auto;
         margin-right: 0;
       }
+    }
+  }
+
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    min-height: 540px;
+    border-radius: 1rem;
+    max-width: 540px;
+    box-shadow: 0 0 15px to-hsl-comma-sep($clr-dark, 0.3);
+    @include bg-colour($clr-light);
+
+    .modalTitleWrapper {
+      display: flex;
+      border-radius: 0.625rem 0.625rem 0 0;
+      align-items: center;
+      min-height: 136px;
+      margin-bottom: 1.563rem;
+      @include bg-colour($clr-dark);
+
+      * {
+        font-size: 2rem;
+        padding: 0 4.625em 0 1.75em;
+        @include text-colour($clr-light);
+      }
+    }
+
+    .modalDescription {
+      p {
+        padding-top: 1.333em;
+        padding-bottom: 0.317em;
+      }
+
+      p,
+      small {
+        display: block;
+        margin-inline: 3.5rem;
+        text-align: start;
+        min-width: 428px;
+      }
+
+      small {
+        @include font-size(300);
+        @include line-height(300);
+        @include text-colour($clr-dark, 80%);
+        font-weight: 300;
+      }
+    }
+
+    .modalCheckout {
+      display: flex;
+      margin-inline: 3.5rem;
+      justify-content: space-between;
+      margin-top: 2.938rem;
+      margin-bottom: 3.5rem;
+      align-items: center;
+
+      button {
+        margin: 0;
+        height: 3.5rem;
+      }
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: bold;
     }
   }
 }
