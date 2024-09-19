@@ -6,6 +6,7 @@ import Modal from "@/components/modal/Modal";
 import Price from "./Price";
 import { calculatePrice } from "../helpers/utils";
 import { PlanContext } from "@/app/_context/planContext";
+import { Step } from "@/app/_utils/types";
 
 const OrderSummary = () => {
   const { selectedOptions } = useContext(PlanContext);
@@ -13,6 +14,23 @@ const OrderSummary = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   const price = calculatePrice(selectedOptions);
+
+  const isCapsule = selectedOptions[Step.BrewMethod] === "Capsule";
+
+  const hasBrewMethod = Boolean(selectedOptions[Step.BrewMethod]);
+  const hasBeanType = Boolean(selectedOptions[Step.BeanType]);
+  const hasDeliveryFrequency = Boolean(selectedOptions[Step.DeliveryFrequency]);
+  const hasGrindOption = Boolean(selectedOptions[Step.GrindOption]);
+  const hasSize = Boolean(selectedOptions[Step.Size]);
+
+  const areRequiredOptionsSelected = () =>
+    isCapsule
+      ? hasBeanType && hasSize && hasDeliveryFrequency
+      : hasBrewMethod &&
+        hasBeanType &&
+        hasSize &&
+        hasGrindOption &&
+        hasDeliveryFrequency;
 
   return (
     <div className={styles.orderSummary}>
@@ -25,7 +43,9 @@ const OrderSummary = () => {
         </h2>
         <OrderSummaryDetails />
       </div>
-      <Button onClick={openModal}>Create my plan!</Button>
+      <Button onClick={openModal} disabled={!areRequiredOptionsSelected()}>
+        Create my plan!
+      </Button>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <div className={styles.modalContent}>
           <div className={styles.modalTitleWrapper}>

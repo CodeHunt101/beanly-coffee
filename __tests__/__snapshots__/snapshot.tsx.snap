@@ -1371,6 +1371,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           </div>
           <button
             class="btn bg-primary ff-serif text-light"
+            disabled=""
           >
             Create my plan!
           </button>
