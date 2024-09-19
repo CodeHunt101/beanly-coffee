@@ -3,6 +3,7 @@ import Button from "@/components/buttons/Button";
 import OrderSummaryDetails from "./OrderSummaryDetails";
 import { useState } from "react";
 import Modal from "@/components/modal/Modal";
+import Price from "./Price";
 
 const OrderSummary = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,13 +31,15 @@ const OrderSummary = () => {
             <OrderSummaryDetails fontColour="neutral" />
             <small>
               Is this correct? You can proceed to checkout or go back to plan
-              selection if something is off. Remember this is a demo page so
-              there's no actual checkout. 😁{" "}
+              selection if something is off. Remember, this is a demo website,
+              so there is not an actual checkout. 😁{" "}
             </small>
           </div>
           <div className={`${styles.modalCheckout} ff-serif`}>
-            <p className={styles.price}>$14.00 / mo</p>
-            <Button onClick={closeModal}>Close</Button>
+            <Price />
+            <Button onClick={closeModal}>
+              Close <Price prefix="-" />
+            </Button>
           </div>
         </div>
       </Modal>
