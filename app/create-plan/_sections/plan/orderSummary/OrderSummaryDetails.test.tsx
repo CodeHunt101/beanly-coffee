@@ -21,7 +21,7 @@ describe("OrderSummaryDetails Component", () => {
   describe("when selectedOptions are empty", () => {
     it("renders default values", () => {
       render(<OrderSummaryDetails />);
-      const textElement = screen.getByText(/I drink my coffee using/);
+      const textElement = screen.getByText(/I drink my coffee/);
       expect(textElement).toBeInTheDocument();
     });
   });

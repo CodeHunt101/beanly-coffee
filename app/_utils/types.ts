@@ -17,11 +17,11 @@ export type Styles = {
   readonly [key: string]: string;
 };
 
-type BrewMethod = "Capsule" | "Filter" | "Espresso" | null;
-type BeanType = "Single Origin" | "Decaf" | "Blended" | null;
-type Size = "250g" | "500g" | "1000g" | null;
-type GrindOption = "Wholebean" | "Filter" | "Cafetiére" | null;
-type DeliveryFrequency = "Every week" | "Every 2 weeks" | "Every month" | null;
+type BrewMethod = "Capsule" | "Filter" | "Espresso";
+type BeanType = "Single Origin" | "Decaf" | "Blended";
+export type Size = "250g" | "500g" | "1000g";
+type GrindOption = "Wholebean" | "Filter" | "Cafetiére";
+export type DeliveryFrequency = "Every week" | "Every 2 weeks" | "Every month";
 
 export type Option =
   | BrewMethod

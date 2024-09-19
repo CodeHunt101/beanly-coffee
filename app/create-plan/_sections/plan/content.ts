@@ -1,3 +1,4 @@
+import { DeliveryFrequency, Size } from "@/app/_utils/types";
 import { OptionCardData } from "@/components/optionCards/OptionCards";
 
 export const stepLinks = [
@@ -107,3 +108,31 @@ export const steps: {
     ],
   },
 ];
+
+// Price data
+export const perShipmentWeightPrice: Record<
+  Size,
+  Record<DeliveryFrequency, number>
+> = {
+  "250g": {
+    "Every week": 7.2,
+    "Every 2 weeks": 9.6,
+    "Every month": 12,
+  },
+  "500g": {
+    "Every week": 13,
+    "Every 2 weeks": 17.5,
+    "Every month": 22,
+  },
+  "1000g": {
+    "Every week": 22,
+    "Every 2 weeks": 32,
+    "Every month": 42,
+  },
+};
+
+export const multiplier: Record<DeliveryFrequency, number> = {
+  "Every week": 4,
+  "Every 2 weeks": 2,
+  "Every month": 1,
+};

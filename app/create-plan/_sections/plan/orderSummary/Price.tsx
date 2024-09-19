@@ -2,10 +2,14 @@ import styles from "../CreatePlanSection.module.scss";
 
 type PriceProps = {
   prefix?: string;
+  priceValue: string;
 };
 
-const Price = ({ prefix = "" }: PriceProps) => (
-  <p className={styles.price}>{prefix ? prefix + " " : ""}$14.00 / mo</p>
+const Price = ({ prefix = "", priceValue }: PriceProps) => (
+  <p className={styles.price}>
+    {prefix ? prefix + " " : ""}
+    {priceValue} / mo
+  </p>
 );
 
 export default Price;

@@ -1341,7 +1341,9 @@ exports[`renders /create-plan page unchanged 1`] = `
             <p
               class="summaryDetails text-light ff-serif fs-450"
             >
-              “I drink my coffee using 
+              "I drink my coffee 
+              as
+               
               <span>
                 _____
               </span>
@@ -1364,7 +1366,7 @@ exports[`renders /create-plan page unchanged 1`] = `
               <span>
                 _____
               </span>
-              .”
+              ."
             </p>
           </div>
           <button
