@@ -2,18 +2,15 @@ import styles from "../CreatePlanSection.module.scss";
 import Button from "@/components/buttons/Button";
 import OrderSummaryDetails from "./OrderSummaryDetails";
 import { useContext, useState } from "react";
-import Modal from "@/components/modal/Modal";
-import Price from "./Price";
-import { calculatePrice } from "../helpers/utils";
 import { PlanContext } from "@/app/_context/planContext";
 import { Step } from "@/app/_utils/types";
+import OrderSummaryModal from "./OrderSummaryModal";
 
 const OrderSummary = () => {
   const { selectedOptions } = useContext(PlanContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-  const price = calculatePrice(selectedOptions);
 
   const isCapsule = selectedOptions[Step.BrewMethod] === "Capsule";
 
@@ -46,27 +43,7 @@ const OrderSummary = () => {
       <Button onClick={openModal} disabled={!areRequiredOptionsSelected()}>
         Create my plan!
       </Button>
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <div className={styles.modalContent}>
-          <div className={styles.modalTitleWrapper}>
-            <h2 className="ff-serif">Order Summary</h2>
-          </div>
-          <div className={styles.modalDescription}>
-            <OrderSummaryDetails fontColour="neutral" />
-            <small>
-              Is this correct? You can proceed to checkout or go back to plan
-              selection if something is off. Remember, this is a demo website,
-              so there is not an actual checkout. 😁{" "}
-            </small>
-          </div>
-          <div className={`${styles.modalCheckout} ff-serif`}>
-            <Price priceValue={price} />
-            <Button onClick={closeModal}>
-              Close <Price prefix="-" priceValue={price} />
-            </Button>
-          </div>
-        </div>
-      </Modal>
+      <OrderSummaryModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
