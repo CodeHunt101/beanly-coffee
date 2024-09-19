@@ -133,6 +133,10 @@
       span {
         @include text-colour($clr-primary);
       }
+
+      .unhighlighted {
+        @include text-colour($clr-light);
+      }
     }
 
     button {

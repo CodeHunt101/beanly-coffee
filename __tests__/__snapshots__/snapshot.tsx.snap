@@ -1354,10 +1354,11 @@ exports[`renders /create-plan page unchanged 1`] = `
               <span>
                 _____
               </span>
-               
-              ground ala 
               <span>
-                _____
+                 
+                <span>
+                  _____
+                </span>
               </span>
               , sent to me 
               <span>

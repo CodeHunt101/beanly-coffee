@@ -6,18 +6,22 @@ import styles from "../CreatePlanSection.module.scss";
 type OrderSummaryDetailsProps = {
   fontColour?: "light" | "neutral";
 };
+
 const OrderSummaryDetails = ({
   fontColour = "light",
 }: OrderSummaryDetailsProps) => {
-  const { selectedOptions } = useContext(PlanContext);
   const {
-    [Step.BrewMethod]: brewMethod = "_____",
-    [Step.BeanType]: beanType = "_____",
-    [Step.Size]: size = "_____",
-    [Step.GrindOption]: grindOption = "_____",
-    [Step.DeliveryFrequency]: deliveryFrequency = "_____",
-  } = selectedOptions || {};
+    selectedOptions: {
+      [Step.BrewMethod]: brewMethod = "_____",
+      [Step.BeanType]: beanType = "_____",
+      [Step.Size]: size = "_____",
+      [Step.GrindOption]: grindOption = "_____",
+      [Step.DeliveryFrequency]: deliveryFrequency = "_____",
+    } = {},
+  } = useContext(PlanContext);
+
   const isCapsule = brewMethod === "Capsule";
+  const isCafetiere = grindOption === "Cafetiére";
 
   return (
     <p
@@ -26,10 +30,12 @@ const OrderSummaryDetails = ({
       “I drink my coffee using <span>{brewMethod}</span>, with a{" "}
       <span>{beanType}</span> type of bean. <span>{size}</span>
       {!isCapsule && (
-        <>
-          {" "}
-          ground ala <span>{grindOption}</span>
-        </>
+        <span>
+          {isCafetiere && (
+            <span className={styles.unhighlighted}> ground ala</span>
+          )}{" "}
+          <span>{grindOption}</span>
+        </span>
       )}
       , sent to me <span>{deliveryFrequency}</span>.”
     </p>
