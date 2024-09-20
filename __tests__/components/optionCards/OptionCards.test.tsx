@@ -27,7 +27,7 @@ describe("OptionCards component", () => {
   describe("Rendering", () => {
     it("renders three OptionCard components", () => {
       render(<OptionCards {...defaultProps} />);
-      const cards = screen.getAllByRole("tab");
+      const cards = screen.getAllByRole("button");
       expect(cards.length).toBe(3); // One for each option
     });
 

@@ -1,3 +1,4 @@
+import HeadingTag from "../headingTag/HeadingTag";
 import styles from "./OptionCards.module.scss";
 
 type OptionCardProps = {
@@ -15,11 +16,12 @@ const OptionCard = ({
 }: OptionCardProps) => {
   return (
     <button
-      role="tab"
       className={`${styles.btn} ${isSelected ? styles.selected : ""} bg-muted text-dark`}
       onClick={onSelect}
     >
-      <h4 className={`${styles.btnTitle} fs-400 ff-serif`}>{title}</h4>
+      <HeadingTag level="h3" className={`${styles.btnTitle} fs-400 ff-serif`}>
+        {title}
+      </HeadingTag>
       <p className={`${styles.btnContent} lh-300`}>{content}</p>
     </button>
   );

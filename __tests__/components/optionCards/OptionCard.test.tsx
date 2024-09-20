@@ -19,7 +19,7 @@ describe("OptionCard component", () => {
   describe("Rendering", () => {
     it("renders the title correctly", () => {
       render(<OptionCard {...props} />);
-      const titleElement = screen.getByRole("heading", { level: 4 });
+      const titleElement = screen.getByRole("heading", { level: 3 });
       expect(titleElement).toHaveTextContent("Test Title");
     });
 
@@ -33,19 +33,19 @@ describe("OptionCard component", () => {
   describe("Button styles", () => {
     it("applies default button styles when not selected", () => {
       render(<OptionCard {...props} />);
-      const button = screen.getByRole("tab");
+      const button = screen.getByRole("button");
       expect(button).toHaveClass("bg-muted text-dark");
     });
 
     it("does not apply selected class when not selected", () => {
       render(<OptionCard {...props} />);
-      const button = screen.getByRole("tab");
+      const button = screen.getByRole("button");
       expect(button).not.toHaveClass("selected");
     });
 
     it("applies selected styles when isSelected is true", () => {
       render(<OptionCard {...props} isSelected={true} />);
-      const button = screen.getByRole("tab");
+      const button = screen.getByRole("button");
       expect(button).toHaveClass("selected");
     });
   });
@@ -53,7 +53,7 @@ describe("OptionCard component", () => {
   describe("Interactions", () => {
     it("calls onSelect function when clicked", () => {
       render(<OptionCard {...props} />);
-      const button = screen.getByRole("tab");
+      const button = screen.getByRole("button");
       fireEvent.click(button);
       expect(mockOnSelect).toHaveBeenCalledTimes(1);
     });

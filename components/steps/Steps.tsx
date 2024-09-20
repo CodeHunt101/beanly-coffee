@@ -4,6 +4,7 @@ import styles from "./Steps.module.scss";
 export type StepsProps = {
   title?: string;
   theme?: "light" | "dark";
+  stepsHeadingLevel?: "h2" | "h3" | "h4" | "h5";
 };
 
 const stepsData = [
@@ -27,7 +28,7 @@ const stepsData = [
   },
 ];
 
-const Steps = ({ title, theme = "light" }: StepsProps) => {
+const Steps = ({ title, theme = "light", stepsHeadingLevel }: StepsProps) => {
   return (
     <div
       className={`${styles.stepsWrapper} ${theme === "light" ? styles.light : styles.dark}`}
@@ -47,6 +48,7 @@ const Steps = ({ title, theme = "light" }: StepsProps) => {
             title={step.title}
             description={step.description}
             theme={theme}
+            headingLevel={stepsHeadingLevel}
           />
         ))}
       </ol>

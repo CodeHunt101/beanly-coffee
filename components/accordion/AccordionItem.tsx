@@ -13,6 +13,14 @@ type AccordionItemProps = {
   defaultOpen?: boolean;
 };
 
+// Utility function to convert label to a valid ID format
+const formatLabel = (label: string) => {
+  return label
+    .toLowerCase()
+    .replace(/\s+/g, "-") // Replace spaces with dashes
+    .replace(/[^a-z0-9-]/g, ""); // Remove any special characters
+};
+
 const AccordionItem = ({
   id,
   label,
@@ -42,17 +50,22 @@ const AccordionItem = ({
     }
   }, [defaultOpen, disabled]);
 
+  const formattedLabel = formatLabel(label); // Format the label
+
   return (
     <div id={id} className={styles.accordionItem}>
       <button
+        data-testid="collapsible-button"
         className={`${styles.accordionToggle} bg-light`}
         onClick={toggleAccordion}
         disabled={disabled}
         aria-expanded={isOpen}
-        aria-controls={`${label}-content`}
+        aria-controls={`${formattedLabel}-content`}
       >
         <span
-          className={`${styles.accordionLabel} ${isOpen ? styles.open : ""} ff-serif`}
+          className={`${styles.accordionLabel} ${
+            isOpen ? styles.open : ""
+          } ff-serif`}
         >
           {label}
         </span>
@@ -65,7 +78,7 @@ const AccordionItem = ({
       </button>
       <div
         data-testid="accordion-content"
-        id={`${label}-content`}
+        id={`${formattedLabel}-content`}
         ref={contentRef}
         className={`${styles.accordionContent} ${isOpen ? styles.open : ""}`}
       >
