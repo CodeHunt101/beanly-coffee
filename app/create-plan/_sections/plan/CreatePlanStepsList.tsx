@@ -26,30 +26,32 @@ const CreatePlanStepList = () => {
   }, [handleScroll]);
 
   return (
-    <ol className={`${styles.stepList} ff-serif`} role="navigation">
-      {stepLinks.map((stepLink, index) => {
-        const step = `step-${index + 1}` as Step;
-        const isSelected = !!selectedOptions[step];
-        const isActive = activeStep === index;
+    <nav>
+      <ol className={`${styles.stepList} ff-serif`}>
+        {stepLinks.map((stepLink, index) => {
+          const step = `step-${index + 1}` as Step;
+          const isSelected = !!selectedOptions[step];
+          const isActive = activeStep === index;
 
-        return (
-          <li key={stepLink} className={styles.stepListItem}>
-            <Link href={`#${step}`}>
-              <span
-                className={`${styles.number} ${isSelected ? styles.selected : ""}`}
-              >
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span
-                className={`${styles.step} ${isActive ? styles.active : ""}`}
-              >
-                {stepLink}
-              </span>
-            </Link>
-          </li>
-        );
-      })}
-    </ol>
+          return (
+            <li key={stepLink} className={styles.stepListItem}>
+              <Link href={`#${step}`}>
+                <span
+                  className={`${styles.number} ${isSelected ? styles.selected : ""}`}
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span
+                  className={`${styles.step} ${isActive ? styles.active : ""}`}
+                >
+                  {stepLink}
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
   );
 };
 

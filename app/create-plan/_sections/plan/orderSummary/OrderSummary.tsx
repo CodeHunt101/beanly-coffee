@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { PlanContext } from "@/app/_context/planContext";
 import { Step } from "@/app/_utils/types";
 import OrderSummaryModal from "./OrderSummaryModal";
+import HeadingTag from "@/components/headingTag/HeadingTag";
 
 const OrderSummary = () => {
   const { selectedOptions } = useContext(PlanContext);
@@ -31,13 +32,10 @@ const OrderSummary = () => {
 
   return (
     <div className={styles.orderSummary}>
-      <div className={`${styles.summaryContent} bg-dark`}>
-        <h2
-          id="order-summary-heading"
-          className={`${styles.heading} uppercase`}
-        >
+      <div className={`${styles.summaryContent} bg-darker`}>
+        <HeadingTag level="h4" className={`${styles.heading} uppercase`}>
           Order Summary
-        </h2>
+        </HeadingTag>
         <OrderSummaryDetails />
       </div>
       <Button onClick={openModal} disabled={!areRequiredOptionsSelected()}>

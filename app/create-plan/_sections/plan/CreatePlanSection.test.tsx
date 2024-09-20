@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { PlanContext } from "@/app/_context/planContext";
 import CreatePlanSection from "./CreatePlanSection";
 import { PlanContextType } from "@/app/_utils/types";
+import { steps } from "./content";
 
 // Mock data for context
 const mockSetSelectedOption = jest.fn();
@@ -22,21 +23,36 @@ describe("CreatePlanSection", () => {
   describe("Rendering", () => {
     it("should render the CreatePlanSection component", () => {
       renderComponent();
-      expect(screen.getByRole("region")).toBeInTheDocument();
+      expect(
+        screen.getByRole("region", { name: "Create Plan Steps Section" }),
+      ).toBeInTheDocument();
+    });
+
+    it("should render the correct number of AccordionItems", () => {
+      renderComponent();
+      const accordionItems = screen.getAllByTestId("collapsible-button");
+      expect(accordionItems.length).toBe(steps.length);
     });
   });
 
   describe("Accordion behavior", () => {
     it("should have the first accordion item open by default", () => {
       renderComponent();
-      const accordionButtons = screen.getAllByRole("button");
-      expect(accordionButtons[0]).toHaveAttribute("aria-expanded", "true");
+      const firstAccordionItem = screen.getAllByTestId("collapsible-button")[0];
+      expect(firstAccordionItem).toHaveAttribute("aria-expanded", "true");
     });
 
     it("should close all other accordion items by default", () => {
       renderComponent();
-      const accordionButtons = screen.getAllByRole("button");
-      expect(accordionButtons[1]).toHaveAttribute("aria-expanded", "false");
+      const accordionItems = screen.getAllByTestId("collapsible-button");
+
+      accordionItems.forEach((item, index) => {
+        if (index === 0) {
+          expect(item).toHaveAttribute("aria-expanded", "true");
+        } else {
+          expect(item).toHaveAttribute("aria-expanded", "false");
+        }
+      });
     });
   });
 

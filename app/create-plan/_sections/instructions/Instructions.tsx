@@ -9,7 +9,7 @@ const Instructions = () => {
       aria-label="Instructions Section"
     >
       <div className={styles.content}>
-        <Steps theme="dark" />
+        <Steps theme="dark" stepsHeadingLevel="h2" />
       </div>
     </section>
   );
