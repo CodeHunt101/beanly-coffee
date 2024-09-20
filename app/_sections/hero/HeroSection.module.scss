@@ -14,6 +14,11 @@ $image-desktop: "/assets/home/desktop/image-hero-coffeepress.jpg";
   background-image: url($image-mobile);
   a {
     text-decoration: none;
+    text-align: center;
+    @include lg {
+      display: block;
+      max-width: 217px;
+    }
   }
   @include md {
     background-image: url($image-tablet);
@@ -30,11 +35,11 @@ $image-desktop: "/assets/home/desktop/image-hero-coffeepress.jpg";
   @include lg {
     background-image: url($image-desktop);
     padding: 7.25em 5.313em;
+    min-height: 600px;
 
     .content {
       width: 55%;
-      min-width: 491px;
-      max-width: auto;
+      min-width: 493px;
     }
   }
 
@@ -68,6 +73,8 @@ $image-desktop: "/assets/home/desktop/image-hero-coffeepress.jpg";
     @include lg {
       margin-bottom: 3.5rem;
       width: 80%;
+      @include font-size(300);
+      @include line-height(300);
     }
   }
 }
