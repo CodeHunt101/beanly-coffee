@@ -1,15 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import OptionCard from "./OptionCard";
 import styles from "./OptionCards.module.scss";
 
-export type OptionCardData = {
+export type OptionCardContent = {
   optionTitle: string;
   content: string;
 };
 
 type OptionCardsProps = {
-  options: OptionCardData[];
+  options: OptionCardContent[];
   id: string;
   setSelectedOption: (id: string, title: string) => void;
 };
@@ -17,10 +17,13 @@ type OptionCardsProps = {
 const OptionCards = ({ options, id, setSelectedOption }: OptionCardsProps) => {
   const [selectedCard, setSelectedCard] = useState<string | null>(null);
 
-  const handleSelect = (title: string) => {
-    setSelectedCard(title);
-    setSelectedOption(id, title);
-  };
+  const handleSelect = useCallback(
+    (title: string) => {
+      setSelectedCard(title);
+      setSelectedOption(id, title);
+    },
+    [id, setSelectedOption],
+  );
 
   return (
     <div className={styles.cardsContainer}>

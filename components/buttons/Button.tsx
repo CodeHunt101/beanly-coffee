@@ -9,16 +9,14 @@ type ButtonProps = {
   disabled?: boolean;
 };
 
-const Button = ({ children, onClick, disabled = false }: ButtonProps) => {
-  return (
-    <button
-      className={`${styles.btn} bg-primary ff-serif`}
-      disabled={disabled}
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  );
-};
+const Button = ({ children, onClick, disabled = false }: ButtonProps) => (
+  <button
+    className={`${styles.btn} bg-primary ff-serif`}
+    disabled={disabled}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+);
 
 export default Button;

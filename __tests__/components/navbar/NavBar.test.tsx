@@ -23,7 +23,7 @@ describe("NavBar Component", () => {
 
     it("renders the hamburger icon initially", () => {
       renderNavBar();
-      const hamburgerIcon = screen.getByAltText("Open menu icon");
+      const hamburgerIcon = screen.getByAltText("Open menu hamburger icon");
       expect(hamburgerIcon).toBeInTheDocument();
     });
   });
@@ -32,13 +32,17 @@ describe("NavBar Component", () => {
     it("menu is closed initially", () => {
       renderNavBar();
       const button = screen.getByRole("button", { name: /open menu/i });
-      expect(button).toHaveAttribute("aria-expanded", "false");
+
+      // Check that aria-expanded is not present when the menu is closed
+      expect(button.getAttribute("aria-expanded")).toBeNull();
     });
 
     it("menu opens when the hamburger button is clicked", () => {
       renderNavBar();
       const button = screen.getByRole("button", { name: /open menu/i });
       fireEvent.click(button);
+
+      // When the menu is open, aria-expanded should be true
       expect(button).toHaveAttribute("aria-expanded", "true");
     });
 
@@ -47,7 +51,9 @@ describe("NavBar Component", () => {
       const button = screen.getByRole("button", { name: /open menu/i });
       fireEvent.click(button); // Open menu
       fireEvent.click(button); // Close menu
-      expect(button).toHaveAttribute("aria-expanded", "false");
+
+      // When the menu is closed again, aria-expanded should be null (not present)
+      expect(button.getAttribute("aria-expanded")).toBeNull();
     });
   });
 
@@ -75,10 +81,10 @@ describe("NavBar Component", () => {
     it("closes the menu when a navigation link is clicked", () => {
       renderNavBar();
       const button = screen.getByRole("button", { name: /open menu/i });
-      fireEvent.click(button);
+      fireEvent.click(button); // Open menu
       const homeLink = screen.getByText("Home");
-      fireEvent.click(homeLink);
-      expect(button).toHaveAttribute("aria-expanded", "false");
+      fireEvent.click(homeLink); // Click on link
+      expect(button.getAttribute("aria-expanded")).toBeNull(); // Menu should close
     });
   });
 
@@ -86,19 +92,24 @@ describe("NavBar Component", () => {
     it("has correct aria-controls attribute", () => {
       renderNavBar();
       const button = screen.getByRole("button", { name: /open menu/i });
+      fireEvent.click(button);
       expect(button).toHaveAttribute("aria-controls", "primary-navigation");
     });
 
-    it("has aria-expanded set to false when menu is closed", () => {
+    it("does not have aria-expanded attribute when menu is closed", () => {
       renderNavBar();
       const button = screen.getByRole("button", { name: /open menu/i });
-      expect(button).toHaveAttribute("aria-expanded", "false");
+
+      // aria-expanded should be null when menu is closed
+      expect(button.getAttribute("aria-expanded")).toBeNull();
     });
 
     it("has aria-expanded set to true when menu is open", () => {
       renderNavBar();
       const button = screen.getByRole("button", { name: /open menu/i });
-      fireEvent.click(button);
+      fireEvent.click(button); // Open menu
+
+      // aria-expanded should be true when menu is open
       expect(button).toHaveAttribute("aria-expanded", "true");
     });
   });

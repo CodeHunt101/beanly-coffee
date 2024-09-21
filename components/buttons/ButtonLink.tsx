@@ -7,16 +7,14 @@ type ButtonLinkProps = {
   href: string;
 };
 
-const ButtonLink = ({ children, href }: ButtonLinkProps) => {
-  return (
-    <Link
-      role="button"
-      className={`${styles.btn} bg-primary ff-serif`}
-      href={href}
-    >
-      {children}
-    </Link>
-  );
-};
+const ButtonLink = ({ children, href }: ButtonLinkProps) => (
+  <Link
+    role="button"
+    className={`${styles.btn} bg-primary ff-serif`}
+    href={href}
+  >
+    {children}
+  </Link>
+);
 
 export default ButtonLink;

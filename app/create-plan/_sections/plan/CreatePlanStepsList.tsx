@@ -26,7 +26,10 @@ const CreatePlanStepList = () => {
   }, [handleScroll]);
 
   return (
-    <nav aria-label="Coffee plan navigation">
+    <nav
+      className={styles.stepListContainer}
+      aria-label="Coffee plan navigation"
+    >
       <ol className={`${styles.stepList} ff-serif`}>
         {stepLinks.map((stepLink, index) => {
           const step = `step-${index + 1}` as Step;

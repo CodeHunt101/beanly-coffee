@@ -2,7 +2,7 @@
 @use "@/styles/abstracts/variables" as *;
 @use "@/styles/abstracts/functions" as *;
 
-#mainHeader {
+.mainHeader {
   padding: 2em 0 2em;
   width: auto;
   background-image: linear-gradient(

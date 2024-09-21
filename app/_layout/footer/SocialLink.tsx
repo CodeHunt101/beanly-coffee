@@ -10,7 +10,7 @@ type SocialLinkProps = {
 
 const SocialLink = ({ href, src, alt, ariaLabel }: SocialLinkProps) => (
   <li>
-    <Link href={href} aria-label={ariaLabel}>
+    <Link href={href} aria-label={ariaLabel} rel="noopener noreferrer">
       <Image src={src} alt={alt} />
     </Link>
   </li>

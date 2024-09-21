@@ -19,12 +19,25 @@ const NavBar = () => {
 
   useScreenSizeHandler(setIsMenuOpen, false, BreakPoints.MD);
 
-  const renderNavItem = (path: Path, label: string) => (
-    <li className={`${pathname === path ? "active" : ""} flex`} key={path}>
-      <Link href={path} aria-current={pathname === path ? "page" : undefined}>
-        {label}
-      </Link>
-    </li>
+  const navItems = [
+    { path: Path.HOME, label: "Home" },
+    { path: Path.ABOUT, label: "About us" },
+    { path: Path.CREATE_PLAN, label: "Create your plan" },
+  ];
+
+  const renderNavItem = useCallback(
+    (path: Path, label: string) => (
+      <li className={`${pathname === path ? "active" : ""} flex`} key={path}>
+        <Link
+          href={path}
+          aria-current={pathname === path ? "page" : undefined}
+          aria-label={`Go to ${label} page`}
+        >
+          {label}
+        </Link>
+      </li>
+    ),
+    [pathname],
   );
 
   const handleNavClick = useCallback((event: React.MouseEvent) => {
@@ -43,12 +56,16 @@ const NavBar = () => {
         className={styles.hamburger}
         onClick={toggleMenu}
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        aria-controls="primary-navigation"
-        aria-expanded={isMenuOpen}
+        {...(isMenuOpen && {
+          "aria-expanded": true,
+          "aria-controls": "primary-navigation",
+        })}
       >
         <Image
           src={isMenuOpen ? iconClose : iconHamburger}
-          alt={isMenuOpen ? "Close menu icon" : "Open menu icon"}
+          alt="Open menu hamburger icon"
+          aria-hidden="true"
+          priority
         />
       </button>
       <nav
@@ -60,9 +77,7 @@ const NavBar = () => {
           id="primary-navigation"
           className={`fw-700 ${isMenuOpen ? styles.menuOpen : ""} letter-spacing-1`}
         >
-          {renderNavItem(Path.HOME, "Home")}
-          {renderNavItem(Path.ABOUT, "About us")}
-          {renderNavItem(Path.CREATE_PLAN, "Create your plan")}
+          {navItems.map(({ path, label }) => renderNavItem(path, label))}
         </ul>
       </nav>
     </div>

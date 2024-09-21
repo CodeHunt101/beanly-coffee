@@ -1,5 +1,5 @@
 import { DeliveryFrequency, Size } from "@/app/_utils/types";
-import { OptionCardData } from "@/components/optionCards/OptionCards";
+import { OptionCardContent } from "@/components/optionCards/OptionCards";
 
 export const stepLinks = [
   "Preferences",
@@ -11,7 +11,7 @@ export const stepLinks = [
 
 export const steps: {
   accordionLabel: string;
-  optionCards: OptionCardData[];
+  optionCards: OptionCardContent[];
 }[] = [
   {
     accordionLabel: "How do you drink your coffee?",

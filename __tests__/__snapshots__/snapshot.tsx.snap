@@ -32,6 +32,7 @@ exports[`renders / page unchanged 1`] = `
       </div>
     </section>
     <section
+      aria-labelledby="products-heading"
       class="products"
     >
       <header
@@ -39,6 +40,7 @@ exports[`renders / page unchanged 1`] = `
       >
         <h2
           class="title ff-serif lowercase"
+          id="products-heading"
         >
           Our Collection
         </h2>
@@ -173,6 +175,7 @@ exports[`renders / page unchanged 1`] = `
       </ul>
     </section>
     <section
+      aria-labelledby="features-heading"
       class="features"
     >
       <div
@@ -183,6 +186,7 @@ exports[`renders / page unchanged 1`] = `
         >
           <h2
             class="title ff-serif"
+            id="features-heading"
           >
             Why choose us?
           </h2>
@@ -298,6 +302,7 @@ exports[`renders / page unchanged 1`] = `
       </ul>
     </section>
     <section
+      aria-label="How the service works"
       class="howItWorks"
     >
       <div
@@ -313,6 +318,7 @@ exports[`renders / page unchanged 1`] = `
           </h2>
         </div>
         <ol
+          aria-label="Step sequence"
           class="stepsList"
         >
           <li
@@ -324,11 +330,11 @@ exports[`renders / page unchanged 1`] = `
             <div
               class="stepContent"
             >
-              <div
+              <strong
                 class="stepNumber ff-serif fs-700"
               >
                 01
-              </div>
+              </strong>
               <h3
                 class="stepTitle ff-serif"
               >
@@ -350,11 +356,11 @@ exports[`renders / page unchanged 1`] = `
             <div
               class="stepContent"
             >
-              <div
+              <strong
                 class="stepNumber ff-serif fs-700"
               >
                 02
-              </div>
+              </strong>
               <h3
                 class="stepTitle ff-serif"
               >
@@ -376,11 +382,11 @@ exports[`renders / page unchanged 1`] = `
             <div
               class="stepContent"
             >
-              <div
+              <strong
                 class="stepNumber ff-serif fs-700"
               >
                 03
-              </div>
+              </strong>
               <h3
                 class="stepTitle ff-serif"
               >
@@ -710,6 +716,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           class="stepsWrapper dark"
         >
           <ol
+            aria-label="Step sequence"
             class="stepsList"
           >
             <li
@@ -721,11 +728,11 @@ exports[`renders /create-plan page unchanged 1`] = `
               <div
                 class="stepContent"
               >
-                <div
+                <strong
                   class="stepNumber ff-serif fs-700"
                 >
                   01
-                </div>
+                </strong>
                 <h2
                   class="stepTitle ff-serif"
                 >
@@ -747,11 +754,11 @@ exports[`renders /create-plan page unchanged 1`] = `
               <div
                 class="stepContent"
               >
-                <div
+                <strong
                   class="stepNumber ff-serif fs-700"
                 >
                   02
-                </div>
+                </strong>
                 <h2
                   class="stepTitle ff-serif"
                 >
@@ -773,11 +780,11 @@ exports[`renders /create-plan page unchanged 1`] = `
               <div
                 class="stepContent"
               >
-                <div
+                <strong
                   class="stepNumber ff-serif fs-700"
                 >
                   03
-                </div>
+                </strong>
                 <h2
                   class="stepTitle ff-serif"
                 >
@@ -801,6 +808,7 @@ exports[`renders /create-plan page unchanged 1`] = `
     >
       <nav
         aria-label="Coffee plan navigation"
+        class="stepListContainer"
       >
         <ol
           class="stepList ff-serif"
@@ -902,6 +910,7 @@ exports[`renders /create-plan page unchanged 1`] = `
       >
         <div
           class="accordion"
+          role="group"
         >
           <div
             class="accordionItem"
@@ -909,6 +918,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           >
             <button
               aria-controls="how-do-you-drink-your-coffee-content"
+              aria-disabled="false"
               aria-expanded="true"
               class="accordionToggle bg-light"
               data-testid="collapsible-button"
@@ -933,15 +943,18 @@ exports[`renders /create-plan page unchanged 1`] = `
               />
             </button>
             <div
+              aria-labelledby="step-1"
               class="accordionContent open"
               data-testid="accordion-content"
               id="how-do-you-drink-your-coffee-content"
+              role="region"
               style="max-height: 0px;"
             >
               <div
                 class="cardsContainer"
               >
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -956,6 +969,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -970,6 +984,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -992,6 +1007,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           >
             <button
               aria-controls="what-type-of-coffee-content"
+              aria-disabled="false"
               aria-expanded="false"
               class="accordionToggle bg-light"
               data-testid="collapsible-button"
@@ -1016,15 +1032,18 @@ exports[`renders /create-plan page unchanged 1`] = `
               />
             </button>
             <div
+              aria-labelledby="step-2"
               class="accordionContent "
               data-testid="accordion-content"
               id="what-type-of-coffee-content"
+              role="region"
               style="max-height: 0px;"
             >
               <div
                 class="cardsContainer"
               >
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1039,6 +1058,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1053,6 +1073,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1075,6 +1096,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           >
             <button
               aria-controls="how-much-would-you-like-content"
+              aria-disabled="false"
               aria-expanded="false"
               class="accordionToggle bg-light"
               data-testid="collapsible-button"
@@ -1099,15 +1121,18 @@ exports[`renders /create-plan page unchanged 1`] = `
               />
             </button>
             <div
+              aria-labelledby="step-3"
               class="accordionContent "
               data-testid="accordion-content"
               id="how-much-would-you-like-content"
+              role="region"
               style="max-height: 0px;"
             >
               <div
                 class="cardsContainer"
               >
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1122,6 +1147,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1136,6 +1162,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1158,6 +1185,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           >
             <button
               aria-controls="want-us-to-grind-them-content"
+              aria-disabled="false"
               aria-expanded="false"
               class="accordionToggle bg-light"
               data-testid="collapsible-button"
@@ -1182,15 +1210,18 @@ exports[`renders /create-plan page unchanged 1`] = `
               />
             </button>
             <div
+              aria-labelledby="step-4"
               class="accordionContent "
               data-testid="accordion-content"
               id="want-us-to-grind-them-content"
+              role="region"
               style="max-height: 0px;"
             >
               <div
                 class="cardsContainer"
               >
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1205,6 +1236,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1219,6 +1251,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1241,6 +1274,7 @@ exports[`renders /create-plan page unchanged 1`] = `
           >
             <button
               aria-controls="how-often-should-we-deliver-content"
+              aria-disabled="false"
               aria-expanded="false"
               class="accordionToggle bg-light"
               data-testid="collapsible-button"
@@ -1265,15 +1299,18 @@ exports[`renders /create-plan page unchanged 1`] = `
               />
             </button>
             <div
+              aria-labelledby="step-5"
               class="accordionContent "
               data-testid="accordion-content"
               id="how-often-should-we-deliver-content"
+              role="region"
               style="max-height: 0px;"
             >
               <div
                 class="cardsContainer"
               >
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1288,6 +1325,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1302,6 +1340,7 @@ exports[`renders /create-plan page unchanged 1`] = `
                   </p>
                 </button>
                 <button
+                  aria-pressed="false"
                   class="btn  bg-muted text-dark"
                 >
                   <h3
@@ -1331,6 +1370,7 @@ exports[`renders /create-plan page unchanged 1`] = `
               Order Summary
             </h4>
             <p
+              aria-live="polite"
               class="summaryDetails text-light ff-serif fs-450"
             >
               "I drink my coffee 
@@ -1339,8 +1379,7 @@ exports[`renders /create-plan page unchanged 1`] = `
               <span>
                 _____
               </span>
-              , with a
-               
+              , with a 
               <span>
                 _____
               </span>

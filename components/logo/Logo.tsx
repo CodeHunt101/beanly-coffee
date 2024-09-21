@@ -8,16 +8,14 @@ type LogoProps = {
   footer?: boolean;
 };
 
-const Logo = ({ footer = false }: LogoProps) => {
-  return (
-    <Link href={Path.HOME}>
-      <Image
-        src={footer ? logoFooter : logoHeader}
-        alt="beanly logo"
-        priority
-      />
-    </Link>
-  );
-};
+const Logo = ({ footer = false }: LogoProps) => (
+  <Link href={Path.HOME} aria-label="Go to Home page">
+    <Image
+      src={footer ? logoFooter : logoHeader}
+      alt="beanly logo"
+      priority={!footer}
+    />
+  </Link>
+);
 
 export default Logo;

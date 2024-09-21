@@ -135,6 +135,7 @@
 }
 
 .stepNumber {
+  display: block;
   line-height: 1;
   margin: 3.5rem 0 1.5rem;
   @include text-colour($clr-secondary);

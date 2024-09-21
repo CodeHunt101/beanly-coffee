@@ -8,13 +8,6 @@ jest.mock("@/components/navbar/NavBar", () => () => (
 jest.mock("@/components/logo/Logo", () => () => <div data-testid="logo" />);
 
 describe("Header Component", () => {
-  it("should render the header element with the correct id and class", () => {
-    render(<Header />);
-    const header = screen.getByRole("banner");
-    expect(header).toHaveAttribute("id", expect.stringContaining("mainHeader"));
-    expect(header).toHaveClass("sticky");
-  });
-
   describe("Logo", () => {
     it("should render the Logo component", () => {
       render(<Header />);

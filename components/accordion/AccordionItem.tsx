@@ -40,6 +40,12 @@ const AccordionItem = ({
     if (content) {
       content.style.maxHeight = isOpen ? `${content.scrollHeight}px` : "0px";
     }
+
+    return () => {
+      if (content) {
+        content.style.maxHeight = "0px";
+      }
+    };
   }, [isOpen]);
 
   useEffect(() => {
@@ -50,7 +56,7 @@ const AccordionItem = ({
     }
   }, [defaultOpen, disabled]);
 
-  const formattedLabel = formatLabel(label); // Format the label
+  const formattedLabel = formatLabel(label);
 
   return (
     <div id={id} className={styles.accordionItem}>
@@ -59,6 +65,7 @@ const AccordionItem = ({
         className={`${styles.accordionToggle} bg-light`}
         onClick={toggleAccordion}
         disabled={disabled}
+        aria-disabled={disabled}
         aria-expanded={isOpen}
         aria-controls={`${formattedLabel}-content`}
       >
@@ -78,9 +85,11 @@ const AccordionItem = ({
       </button>
       <div
         data-testid="accordion-content"
+        role="region"
         id={`${formattedLabel}-content`}
         ref={contentRef}
         className={`${styles.accordionContent} ${isOpen ? styles.open : ""}`}
+        aria-labelledby={id}
       >
         {children}
       </div>

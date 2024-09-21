@@ -1,3 +1,4 @@
+import { Path } from "@/app/_utils/types";
 import ButtonLink from "@/components/buttons/ButtonLink";
 
 type BaseHeroProps = {
@@ -33,7 +34,7 @@ const Hero = ({
       <h1 className={`${styles?.title} ff-serif`}>{title}</h1>
       <p className={`${styles?.description} fw-300`}>{description}</p>
       {linkButton && (
-        <ButtonLink href="/create-plan">
+        <ButtonLink href={Path.CREATE_PLAN}>
           {(props as HeroPropsWithLink).linkButtonContent}
         </ButtonLink>
       )}

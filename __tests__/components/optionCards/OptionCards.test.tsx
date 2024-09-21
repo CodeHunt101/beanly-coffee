@@ -2,11 +2,11 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import OptionCards, {
-  OptionCardData,
+  OptionCardContent,
 } from "@/components/optionCards/OptionCards";
 
 describe("OptionCards component", () => {
-  const mockOptions: OptionCardData[] = [
+  const mockOptions: OptionCardContent[] = [
     { optionTitle: "Option 1", content: "Content for Option 1" },
     { optionTitle: "Option 2", content: "Content for Option 2" },
     { optionTitle: "Option 3", content: "Content for Option 3" },

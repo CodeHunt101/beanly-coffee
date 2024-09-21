@@ -16,6 +16,13 @@
     padding-inline: 85px;
   }
 
+  .stepListContainer {
+    @include lg {
+      position: sticky;
+      top: 113px;
+    }
+  }
+
   .stepList {
     display: none;
     padding: 0;
@@ -32,8 +39,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: sticky;
-      top: 113px;
       margin-bottom: 5.5rem;
     }
   }
