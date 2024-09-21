@@ -5,10 +5,12 @@
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  padding: 1em 2em;
-  min-width: 13.563em;
+  padding: 1rem 1.938rem;
+  min-width: 217px;
   border: none;
   border-radius: 0.375rem;
+  line-height: 1.389;
+  @include font-size(350);
 
   &:hover {
     @include bg-colour($clr-accent);

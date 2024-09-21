@@ -15,10 +15,6 @@ $image-desktop: "/assets/home/desktop/image-hero-coffeepress.jpg";
   a {
     text-decoration: none;
     text-align: center;
-    @include lg {
-      display: block;
-      max-width: 217px;
-    }
   }
   @include md {
     background-image: url($image-tablet);
