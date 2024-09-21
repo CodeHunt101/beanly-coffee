@@ -11,4 +11,14 @@
   z-index: 9999;
   width: 100vw;
   height: 100vh;
+  opacity: 0.1;
+  animation: fadeIn 0.25s ease-in forwards;
+  @keyframes fadeIn {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
