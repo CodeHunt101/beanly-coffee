@@ -61,7 +61,7 @@ $image-desktop: "/assets/about/desktop/bg-quality.png";
 
   .description {
     @include font-size(200);
-    @include text-colour($clr-light, 80%);
+    @include text-colour($clr-light, 85%);
     line-height: 1.667;
     font-weight: 200;
     margin-bottom: 4rem;

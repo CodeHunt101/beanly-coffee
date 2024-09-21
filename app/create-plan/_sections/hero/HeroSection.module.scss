@@ -61,7 +61,7 @@ $image-desktop: "/assets/plan/desktop/image-hero-blackcup.jpg";
   .description {
     font-weight: 400;
     @include font-size(200);
-    @include text-colour($clr-light, 80%);
+    @include text-colour($clr-light, 85%);
 
     @include lg {
       width: 85%;

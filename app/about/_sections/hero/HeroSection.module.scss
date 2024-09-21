@@ -64,7 +64,7 @@ $gradient: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   .description {
     font-weight: 400;
     @include font-size(200);
-    @include text-colour($clr-light, 80%);
+    @include text-colour($clr-light, 85%);
 
     @include lg {
       width: 81%;

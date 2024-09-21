@@ -68,7 +68,7 @@ $image-desktop: "/assets/home/desktop/image-hero-coffeepress.jpg";
     margin-bottom: 2.5rem;
     font-weight: 200;
     @include font-size(200);
-    @include text-colour($clr-light, 80%);
+    @include text-colour($clr-light, 85%);
 
     @include lg {
       margin-bottom: 3.5rem;
