@@ -132,6 +132,14 @@
   line-height: 1;
   margin: 3.5rem 0 1.5rem;
   @include text-colour($clr-secondary);
+
+  @include md {
+    margin: 3rem 0 2.625rem;
+  }
+
+  @include lg {
+    margin-top: 4.188rem 0 2.375rem;
+  }
 }
 
 .stepTitle {

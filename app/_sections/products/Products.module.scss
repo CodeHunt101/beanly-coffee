@@ -10,7 +10,7 @@
   }
 
   @include lg {
-    margin-top: 1.75rem;
+    margin-top: 0.875rem;
   }
 
   .title {
@@ -60,7 +60,8 @@
     }
 
     @include xl {
-      gap: 0;
+      gap: 1.875rem;
+      margin: 1.75rem auto 0 7.7rem;
     }
   }
 
@@ -81,6 +82,7 @@
       align-items: center;
       flex-direction: column;
       text-align: center;
+      gap: 4.472rem;
     }
 
     img {
@@ -88,13 +90,14 @@
       height: auto;
       @include md {
         width: 255px;
-        height: auto;
+        height: 193px;
       }
     }
   }
 
   .productName {
-    @include font-size(400);
+    @include font-size(450);
+    line-height: 1.333;
     margin-bottom: 1rem;
 
     @include md {
