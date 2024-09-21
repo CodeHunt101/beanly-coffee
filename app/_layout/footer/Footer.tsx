@@ -9,7 +9,7 @@ import SocialLink from "./SocialLink";
 
 const Footer = () => {
   return (
-    <footer className={`${styles.footer} bg-dark`}>
+    <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.footerNav}>
           <Logo footer />
