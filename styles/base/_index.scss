@@ -8,12 +8,21 @@
   top: 0;
   width: 100%;
   z-index: 999;
+}
 
-  // ~ main:first-of-type {
-  //   padding-top: 5.5em;
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  padding: 8px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  transition: top 0.3s ease;
 
-  //   @include md {
-  //     padding-top: 5.5em;
-  //   }
-  // }
+  &:focus {
+    top: 0;
+    z-index: 1001;
+  }
 }
