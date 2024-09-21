@@ -138,7 +138,7 @@
   }
 
   @include lg {
-    margin-top: 4.188rem 0 2.375rem;
+    margin: 4.188rem 0 2.375rem;
   }
 }
 
@@ -149,10 +149,12 @@
 
   @include md {
     max-width: 200px;
+    margin-bottom: 2.375rem;
   }
 
   @include lg {
     max-width: 255px;
+    margin-bottom: 2.625rem;
     @include font-size(550);
   }
 }

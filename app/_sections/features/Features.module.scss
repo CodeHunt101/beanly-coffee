@@ -41,18 +41,28 @@ $image-desktop: "/assets/about/desktop/bg-quality.png";
   }
 
   .title {
-    margin-bottom: 0.857em;
+    margin-bottom: 1.5rem;
     @include text-colour($clr-light);
     @include font-size(500);
+    line-height: 1;
+
+    @include md {
+      @include font-size(550);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
 
     @include lg {
       @include font-size(600);
+      margin-bottom: 2rem;
+      line-height: 1.2;
     }
   }
 
   .description {
     @include font-size(200);
     @include text-colour($clr-light, 80%);
+    line-height: 1.667;
     font-weight: 200;
     margin-bottom: 4rem;
     margin-inline: auto;
@@ -66,6 +76,7 @@ $image-desktop: "/assets/about/desktop/bg-quality.png";
     @include lg {
       margin-bottom: 5.375rem;
       @include font-size(300);
+      @include line-height(300);
     }
   }
 
@@ -86,7 +97,7 @@ $image-desktop: "/assets/about/desktop/bg-quality.png";
 
     @include lg {
       padding-inline: 0;
-      margin-top: -15rem;
+      margin-top: -15.3rem;
       flex-direction: row;
       margin-inline: auto;
       width: 85.305%;
