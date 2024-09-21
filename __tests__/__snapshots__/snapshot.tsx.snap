@@ -23,7 +23,7 @@ exports[`renders / page unchanged 1`] = `
           Start your mornings with the world's best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.
         </p>
         <a
-          class="btn bg-primary ff-serif text-light"
+          class="btn bg-primary ff-serif"
           href="/create-plan"
           role="button"
         >
@@ -399,7 +399,7 @@ exports[`renders / page unchanged 1`] = `
         class="ctaBtn"
       >
         <a
-          class="btn bg-primary ff-serif text-light"
+          class="btn bg-primary ff-serif"
           href="/create-plan"
           role="button"
         >
@@ -1362,7 +1362,7 @@ exports[`renders /create-plan page unchanged 1`] = `
             </p>
           </div>
           <button
-            class="btn bg-primary ff-serif text-light"
+            class="btn bg-primary ff-serif"
             disabled=""
           >
             Create my plan!

@@ -11,7 +11,7 @@ const ButtonLink = ({ children, href }: ButtonLinkProps) => {
   return (
     <Link
       role="button"
-      className={`${styles.btn} bg-primary ff-serif text-light`}
+      className={`${styles.btn} bg-primary ff-serif`}
       href={href}
     >
       {children}

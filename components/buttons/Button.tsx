@@ -12,7 +12,7 @@ type ButtonProps = {
 const Button = ({ children, onClick, disabled = false }: ButtonProps) => {
   return (
     <button
-      className={`${styles.btn} bg-primary ff-serif text-light`}
+      className={`${styles.btn} bg-primary ff-serif`}
       disabled={disabled}
       onClick={onClick}
     >

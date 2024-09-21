@@ -28,11 +28,4 @@ describe("ButtonLink component", () => {
     const linkElement = screen.getByRole("button", { name: /test button/i });
     expect(linkElement).toHaveClass("ff-serif");
   });
-
-  it("has the 'text-light' class", () => {
-    render(<ButtonLink href="/test">Test Button</ButtonLink>);
-
-    const linkElement = screen.getByRole("button", { name: /test button/i });
-    expect(linkElement).toHaveClass("text-light");
-  });
 });

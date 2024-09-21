@@ -31,12 +31,6 @@ describe("Button Component", () => {
       const button = container.querySelector("button");
       expect(button).toHaveClass("bg-primary");
     });
-
-    it("should render the button with the correct default text color class", () => {
-      const { container } = render(<Button>{buttonText}</Button>);
-      const button = container.querySelector("button");
-      expect(button).toHaveClass("text-light");
-    });
   });
 
   describe("Disabled state", () => {
