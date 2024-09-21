@@ -52,6 +52,7 @@ const NavBar = () => {
         />
       </button>
       <nav
+        aria-label="Primary Navigation"
         className={`${styles.navbar} ${isMenuOpen ? styles.menuOpen : ""}`}
         onClick={handleNavClick}
       >

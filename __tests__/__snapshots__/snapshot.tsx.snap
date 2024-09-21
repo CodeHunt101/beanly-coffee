@@ -799,7 +799,9 @@ exports[`renders /create-plan page unchanged 1`] = `
       class="createPlanSection"
       role="region"
     >
-      <nav>
+      <nav
+        aria-label="Coffee plan navigation"
+      >
         <ol
           class="stepList ff-serif"
         >
