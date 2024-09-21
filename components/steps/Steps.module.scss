@@ -3,6 +3,7 @@
 @use "@/styles/abstracts/functions" as *;
 
 .stepsWrapper {
+  --circle-border-width: 2px;
   border-radius: 0.625rem;
 
   @include md {
@@ -33,10 +34,11 @@
 
   @include md {
     text-align: start;
+    margin-bottom: calc(2.5rem - var(--circle-border-width));
   }
 
   @include lg {
-    margin-bottom: 5rem;
+    margin-bottom: calc(5rem - var(--circle-border-width));
   }
 }
 
@@ -53,7 +55,7 @@
   flex-direction: column;
   --gap-md: 0.625rem;
   --gap-lg: 2.5rem;
-  --gap-xl: 5.625rem;
+  --gap-xl: 5.938rem;
 
   @include md {
     flex-direction: row;
@@ -114,13 +116,17 @@
     max-width: 285px;
     min-width: 223px;
   }
+
+  @include xl {
+    min-width: 285px;
+  }
 }
 
 .circle {
   @include md {
     width: var(--circle-diameter);
     height: var(--circle-diameter);
-    border: 2px solid;
+    border: var(--circle-border-width) solid;
     border-radius: 50%;
     border-color: to-hsl-comma-sep($clr-primary);
     z-index: 1; // Ensure the circle appears above connecting line
@@ -156,6 +162,7 @@
     max-width: 255px;
     margin-bottom: 2.625rem;
     @include font-size(550);
+    line-height: 1.125;
   }
 }
 
