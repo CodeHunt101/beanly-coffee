@@ -16,10 +16,11 @@
   left: 0;
   width: 100%;
   padding: 8px;
-  background-color: #fff;
+  background-color: transparent;
   color: #000;
   text-align: center;
   transition: top 0.3s ease;
+  z-index: -1;
 
   &:focus {
     top: 0;

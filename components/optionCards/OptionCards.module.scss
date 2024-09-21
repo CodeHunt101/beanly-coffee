@@ -25,6 +25,7 @@
     min-height: 140px;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.15s ease-in;
 
     @include md {
       max-width: 228px;
