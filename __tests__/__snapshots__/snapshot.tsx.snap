@@ -4,6 +4,7 @@ exports[`renders / page unchanged 1`] = `
 <div>
   <main
     class="container"
+    id="main-content"
   >
     <section
       class="hero text-light"
@@ -421,6 +422,7 @@ exports[`renders /about page unchanged 1`] = `
 <div>
   <main
     class="container"
+    id="main-content"
   >
     <section
       class="hero text-light"
@@ -684,6 +686,7 @@ exports[`renders /create-plan page unchanged 1`] = `
 <div>
   <main
     class="container"
+    id="main-content"
   >
     <section
       class="hero text-light"

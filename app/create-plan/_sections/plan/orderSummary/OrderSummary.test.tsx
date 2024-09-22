@@ -1,10 +1,9 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import OrderSummary from "./OrderSummary";
 import OrderSummaryDetails from "./OrderSummaryDetails";
 import Button from "@/components/buttons/Button";
 import Modal from "@/components/modal/Modal";
 import { PlanContext } from "@/app/_context/planContext";
-import { calculatePrice } from "../helpers/utils";
 import { SelectedOptions, Step } from "@/app/_utils/types";
 
 // Mock OrderSummaryDetails, Button, and Modal components
@@ -16,12 +15,15 @@ jest.mock("../helpers/utils", () => ({
 }));
 
 const setSelectedOption = jest.fn;
+const openModal = jest.fn();
 
 describe("OrderSummary Component", () => {
   const selectedOptions: Partial<SelectedOptions> = {
     [Step.Size]: "500g",
     [Step.DeliveryFrequency]: "Every month",
   };
+
+  const isModalOpen = false;
 
   beforeEach(() => {
     (OrderSummaryDetails as jest.Mock).mockImplementation(() => (
@@ -42,7 +44,9 @@ describe("OrderSummary Component", () => {
 
   const renderWithContext = () => {
     return render(
-      <PlanContext.Provider value={{ selectedOptions, setSelectedOption }}>
+      <PlanContext.Provider
+        value={{ selectedOptions, setSelectedOption, isModalOpen, openModal }}
+      >
         <OrderSummary />
       </PlanContext.Provider>,
     );
@@ -70,37 +74,17 @@ describe("OrderSummary Component", () => {
       });
       expect(buttonElement).toBeInTheDocument();
     });
-  });
 
-  describe("modal behavior", () => {
-    it("opens the modal when the create plan button is clicked", () => {
+    it("should open modal when plan button is clicked", () => {
       renderWithContext();
       const buttonElement = screen.getByRole("button", {
         name: /Create my plan!/i,
       });
       fireEvent.click(buttonElement);
-      const closeButton = screen.getByRole("button", { name: /Close Modal/i });
-      expect(closeButton).toBeInTheDocument();
-    });
-
-    it("closes the modal when the close button is clicked", () => {
-      renderWithContext();
-      const buttonElement = screen.getByRole("button", {
-        name: /Create my plan!/i,
+      expect(openModal).toHaveBeenCalledWith(true);
+      waitFor(() => {
+        expect(isModalOpen).toBe(true);
       });
-      fireEvent.click(buttonElement);
-
-      const closeButton = screen.getByRole("button", { name: /Close Modal/i });
-      fireEvent.click(closeButton);
-
-      expect(closeButton).not.toBeInTheDocument();
-    });
-  });
-
-  describe("price calculation", () => {
-    it("calls calculatePrice with selected options", () => {
-      renderWithContext();
-      expect(calculatePrice).toHaveBeenCalledWith(selectedOptions);
     });
   });
 });

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="container">
+    <main id="main-content" className="container">
       <HeroSection />
       <Commitment />
       <Quality />

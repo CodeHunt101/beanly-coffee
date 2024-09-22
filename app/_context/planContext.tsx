@@ -9,6 +9,8 @@ import {
 export const PlanContext = createContext<PlanContextType>({
   selectedOptions: {},
   setSelectedOption: () => null,
+  isModalOpen: false,
+  openModal: () => null,
 });
 
 export const PlanProvider = ({ children }: { children: ReactNode }) => {
@@ -16,14 +18,20 @@ export const PlanProvider = ({ children }: { children: ReactNode }) => {
     Partial<SelectedOptions>
   >({});
 
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
   const setSelectedOption = (step: Step, option: Option) => {
     setSelectedOptions((prevOptions) => ({ ...prevOptions, [step]: option }));
   };
 
+  const openModal = (isOpen: boolean) => {
+    setIsModalOpen(isOpen);
+  };
+
   // Memoizing the context value to avoid unnecessary re-renders
   const contextValue = useMemo(
-    () => ({ selectedOptions, setSelectedOption }),
-    [selectedOptions],
+    () => ({ selectedOptions, setSelectedOption, isModalOpen, openModal }),
+    [selectedOptions, isModalOpen],
   );
 
   return (

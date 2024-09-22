@@ -1,17 +1,14 @@
 import styles from "../CreatePlanSection.module.scss";
 import Button from "@/components/buttons/Button";
 import OrderSummaryDetails from "./OrderSummaryDetails";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { PlanContext } from "@/app/_context/planContext";
 import { Step } from "@/app/_utils/types";
-import OrderSummaryModal from "./OrderSummaryModal";
 import HeadingTag from "@/components/headingTag/HeadingTag";
 
 const OrderSummary = () => {
-  const { selectedOptions } = useContext(PlanContext);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const { selectedOptions, openModal } = useContext(PlanContext);
+  const handleOpenModal = () => openModal(true);
 
   const isCapsule = selectedOptions[Step.BrewMethod] === "Capsule";
 
@@ -38,10 +35,12 @@ const OrderSummary = () => {
         </HeadingTag>
         <OrderSummaryDetails />
       </div>
-      <Button onClick={openModal} disabled={!areRequiredOptionsSelected()}>
+      <Button
+        onClick={handleOpenModal}
+        disabled={!areRequiredOptionsSelected()}
+      >
         Create my plan!
       </Button>
-      <OrderSummaryModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

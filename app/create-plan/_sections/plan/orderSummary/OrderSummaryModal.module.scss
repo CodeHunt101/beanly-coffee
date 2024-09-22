@@ -1,0 +1,121 @@
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/functions" as *;
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  min-height: 540px;
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  max-width: 327px;
+  box-shadow: 0 0 15px to-hsl-comma-sep($clr-dark, 0.3);
+  @include bg-colour($clr-light);
+
+  @include md {
+    max-width: 540px;
+  }
+
+  .modalTitleWrapper {
+    display: flex;
+    border-radius: 0.625rem 0.625rem 0 0;
+    align-items: center;
+    min-height: 88px;
+    margin-bottom: 1.563rem;
+    @include bg-colour($clr-dark);
+
+    * {
+      font-size: 1.75rem;
+      padding: 0 2.429em 0 0.857em;
+      @include text-colour($clr-light);
+
+      @include md {
+        font-size: 2rem;
+        padding: 0 4.625em 0 1.75em;
+      }
+    }
+  }
+
+  .modalDescription {
+    p {
+      padding-top: 0.208em;
+      padding-bottom: 0.317em;
+
+      @include md {
+        padding-top: 1.333em;
+      }
+    }
+
+    p,
+    small {
+      display: block;
+      margin-inline: 1.563rem;
+      text-align: start;
+      min-width: 279px;
+
+      @include md {
+        min-width: 428px;
+        margin-inline: 3.5rem;
+      }
+    }
+
+    small {
+      @include font-size(200);
+      line-height: 1.667;
+      @include text-colour($clr-dark, 80%);
+      font-weight: 400;
+
+      @include md {
+        @include font-size(300);
+        @include line-height(300);
+      }
+    }
+  }
+
+  .modalCheckout {
+    display: flex;
+    margin-inline: 1.5rem;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+
+    @include md {
+      margin-top: 2.938rem;
+      margin-inline: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    & > .price {
+      display: none;
+      @include md {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+    }
+
+    .price:not(:first-of-type) {
+      display: block;
+      @include md {
+        display: none;
+      }
+    }
+
+    button {
+      margin: 0;
+      height: 3.5rem;
+      min-width: 279px;
+
+      @include md {
+        min-width: 217px;
+      }
+    }
+
+    button .price {
+      display: inline;
+      @include md {
+        display: none;
+      }
+    }
+  }
+}

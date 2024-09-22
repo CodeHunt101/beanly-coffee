@@ -1,0 +1,14 @@
+@use "@/styles/abstracts/mixins" as *;
+@use "@/styles/abstracts/variables" as *;
+
+.summaryDetails {
+  line-height: 1.5;
+
+  span {
+    @include text-colour($clr-primary);
+  }
+
+  .unhighlighted {
+    @include text-colour($clr-light);
+  }
+}

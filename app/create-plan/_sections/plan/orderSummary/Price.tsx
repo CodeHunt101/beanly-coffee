@@ -1,4 +1,4 @@
-import styles from "../CreatePlanSection.module.scss";
+import styles from "./OrderSummaryModal.module.scss";
 
 type PriceProps = {
   prefix?: string;

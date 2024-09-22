@@ -49,4 +49,6 @@ export type SelectedOptions = {
 export type PlanContextType = {
   selectedOptions: Partial<SelectedOptions>;
   setSelectedOption: (step: Step, option: Option) => void;
+  isModalOpen: boolean;
+  openModal: (isOpen: boolean) => void;
 };

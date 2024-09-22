@@ -20,13 +20,15 @@ jest.mock("./content", () => ({
 describe("CreatePlanStepList", () => {
   const mockSelectedOptions: Partial<SelectedOptions> = {
     "step-1": "Capsule",
-    "step-2": null,
-    "step-3": null,
+    "step-2": undefined,
+    "step-3": undefined,
   };
 
   const mockContextValue = {
     selectedOptions: mockSelectedOptions,
     setSelectedOption: jest.fn(),
+    isModalOpen: false,
+    openModal: jest.fn(),
   };
 
   beforeEach(() => {

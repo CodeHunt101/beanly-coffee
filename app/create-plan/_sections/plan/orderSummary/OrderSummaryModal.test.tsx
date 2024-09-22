@@ -27,6 +27,7 @@ jest.mock("./OrderSummaryDetails", () => () => (
 ));
 
 const setSelectedOption = jest.fn();
+const openModal = jest.fn();
 
 describe("OrderSummaryModal", () => {
   const mockSelectedOptions: Partial<SelectedOptions> = {
@@ -37,53 +38,53 @@ describe("OrderSummaryModal", () => {
     [Step.GrindOption]: "Wholebean",
   };
 
-  const renderComponent = (isOpen: boolean, onClose: () => void) =>
+  const renderComponent = (isModalOpen: boolean) =>
     render(
       <PlanContext.Provider
-        value={{ selectedOptions: mockSelectedOptions, setSelectedOption }}
+        value={{
+          selectedOptions: mockSelectedOptions,
+          setSelectedOption,
+          isModalOpen,
+          openModal,
+        }}
       >
-        <OrderSummaryModal isOpen={isOpen} onClose={onClose} />
+        <OrderSummaryModal />
       </PlanContext.Provider>,
     );
 
   describe("Modal functionality", () => {
     it("renders the Modal when isOpen is true", () => {
-      const onClose = jest.fn();
-      renderComponent(true, onClose);
+      renderComponent(true);
       expect(screen.getByTestId("modal")).toBeInTheDocument();
     });
   });
 
   describe("Context usage", () => {
     it("uses the selectedOptions from PlanContext", () => {
-      const onClose = jest.fn();
-      renderComponent(true, onClose);
+      renderComponent(true);
       expect(calculatePrice).toHaveBeenCalledWith(mockSelectedOptions);
     });
   });
 
   describe("Price calculation and display", () => {
     it("displays the calculated price", () => {
-      const onClose = jest.fn();
       (calculatePrice as jest.Mock).mockReturnValue(19.99);
-      renderComponent(true, onClose);
+      renderComponent(true);
       expect(screen.queryAllByText("Price: 19.99")[1]).toBeInTheDocument();
     });
   });
 
   describe("Button interactions", () => {
     it("calls onClose when the Close button is clicked", () => {
-      const onClose = jest.fn();
-      renderComponent(true, onClose);
+      renderComponent(true);
       fireEvent.click(screen.getByTestId("button"));
-      expect(onClose).toHaveBeenCalled();
+      expect(openModal).toHaveBeenCalledWith(false);
     });
   });
 
   describe("Content rendering", () => {
     beforeEach(() => {
-      const onClose = jest.fn();
-      renderComponent(true, onClose);
+      renderComponent(true);
     });
 
     it("renders the Order Summary title", () => {
@@ -107,8 +108,7 @@ describe("OrderSummaryModal", () => {
 
   describe("Styling", () => {
     beforeEach(() => {
-      const onClose = jest.fn();
-      renderComponent(true, onClose);
+      renderComponent(true);
     });
 
     it("applies the correct CSS classes for the title", () => {

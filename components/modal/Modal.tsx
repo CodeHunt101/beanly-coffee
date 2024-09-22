@@ -11,7 +11,7 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className={styles.modal} onClick={onClose}>
+    <div className={styles.modal} onClick={onClose} aria-hidden={!isOpen}>
       <div onClick={(e) => e.stopPropagation()}>{children}</div>
     </div>
   );

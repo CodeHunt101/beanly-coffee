@@ -2,22 +2,18 @@ import { PlanContext } from "@/app/_context/planContext";
 import { useContext } from "react";
 import { calculatePrice } from "../helpers/utils";
 import Modal from "@/components/modal/Modal";
-import styles from "../CreatePlanSection.module.scss";
+import styles from "./OrderSummaryModal.module.scss";
 import OrderSummaryDetails from "./OrderSummaryDetails";
 import Price from "./Price";
 import Button from "@/components/buttons/Button";
 
-const OrderSummaryModal = ({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) => {
-  const { selectedOptions } = useContext(PlanContext);
+const OrderSummaryModal = () => {
+  const { selectedOptions, isModalOpen, openModal } = useContext(PlanContext);
+  const handleOpenModal = () => openModal(false);
+
   const price = calculatePrice(selectedOptions);
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={isModalOpen} onClose={handleOpenModal}>
       <div className={styles.modalContent}>
         <div className={styles.modalTitleWrapper}>
           <h2 className="ff-serif">Order Summary</h2>
@@ -32,7 +28,7 @@ const OrderSummaryModal = ({
         </div>
         <div className={`${styles.modalCheckout} ff-serif`}>
           <Price priceValue={price} />
-          <Button onClick={onClose}>
+          <Button onClick={handleOpenModal}>
             Close <Price prefix="-" priceValue={price} />
           </Button>
         </div>

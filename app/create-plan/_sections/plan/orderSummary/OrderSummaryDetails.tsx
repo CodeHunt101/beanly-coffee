@@ -1,7 +1,7 @@
 import { useContext, useMemo } from "react";
 import { PlanContext } from "@/app/_context/planContext";
 import { Step } from "@/app/_utils/types";
-import styles from "../CreatePlanSection.module.scss";
+import styles from "./OrderSummaryDetails.module.scss";
 
 const OrderSummaryDetails = ({ fontColour = "light" }) => {
   const { selectedOptions } = useContext(PlanContext);

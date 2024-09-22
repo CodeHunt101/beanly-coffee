@@ -9,6 +9,8 @@ const mockSetSelectedOption = jest.fn();
 const mockContextValue: PlanContextType = {
   selectedOptions: {},
   setSelectedOption: mockSetSelectedOption,
+  isModalOpen: false,
+  openModal: jest.fn(),
 };
 
 describe("CreatePlanSection", () => {
