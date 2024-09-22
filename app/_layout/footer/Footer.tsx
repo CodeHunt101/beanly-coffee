@@ -5,7 +5,7 @@ import { Path } from "@/app/_utils/types";
 import FacebookLogo from "@/public/assets/shared/desktop/icon-facebook.svg";
 import TwitterLogo from "@/public/assets/shared/desktop/icon-twitter.svg";
 import InstagramLogo from "@/public/assets/shared/desktop/icon-instagram.svg";
-import SocialLink from "./SocialLink";
+import ImageLink from "@/components/imageLink/ImageLink";
 
 const Footer = () => (
   <footer className={styles.footer}>
@@ -36,24 +36,30 @@ const Footer = () => (
       </div>
 
       <ul className={styles.socialList}>
-        <SocialLink
-          href="https://facebook.com"
-          src={FacebookLogo}
-          alt="Facebook"
-          aria-label="Visit our Facebook page"
-        />
-        <SocialLink
-          href="https://twitter.com"
-          src={TwitterLogo}
-          alt="Twitter"
-          aria-label="Visit our Twitter page"
-        />
-        <SocialLink
-          href="https://instagram.com"
-          src={InstagramLogo}
-          alt="Instagram"
-          aria-label="Visit our Instagram page"
-        />
+        <li>
+          <ImageLink
+            href="https://facebook.com"
+            src={FacebookLogo}
+            alt="Facebook"
+            aria-label="Visit our Facebook page"
+          />
+        </li>
+        <li>
+          <ImageLink
+            href="https://twitter.com"
+            src={TwitterLogo}
+            alt="Twitter"
+            aria-label="Visit our Twitter page"
+          />
+        </li>
+        <li>
+          <ImageLink
+            href="https://instagram.com"
+            src={InstagramLogo}
+            alt="Instagram"
+            aria-label="Visit our Instagram page"
+          />
+        </li>
       </ul>
     </div>
   </footer>
