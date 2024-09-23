@@ -35,10 +35,10 @@ const OrderSummaryDetails = ({ fontColour = "light" }) => {
   const isCafetiere = grindOption === "Cafetiére";
 
   const renderGrindOption = !isCapsule && (
-    <span>
-      {isCafetiere && <span className={styles.unhighlighted}> ground ala</span>}{" "}
-      <span>{grindOption}</span>
-    </span>
+    <>
+      {" "}
+      {isCafetiere && "ground ala"} <span>{grindOption}</span>
+    </>
   );
 
   const brewMethodText = isCapsule ? `${brewMethod}s` : brewMethod;

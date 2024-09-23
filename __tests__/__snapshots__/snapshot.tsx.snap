@@ -1390,11 +1390,10 @@ exports[`renders /create-plan page unchanged 1`] = `
               <span>
                 _____
               </span>
+               
+               
               <span>
-                 
-                <span>
-                  _____
-                </span>
+                _____
               </span>
               , sent to me 
               <span>
