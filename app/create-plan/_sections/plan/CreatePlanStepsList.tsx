@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useCallback } from "react";
+import { useContext, useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import styles from "./CreatePlanSection.module.scss";
 import { stepLinks } from "./content";
