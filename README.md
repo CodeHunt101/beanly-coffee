@@ -18,6 +18,8 @@ You can access the live demo of the application here:
 
 ## Getting Started
 
+This project uses `pnpm` and the `pnpm-lock.yaml` lockfile.
+
 ### Installation
 
 Clone the repository and install dependencies:
@@ -25,7 +27,7 @@ Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/codehunt101/beanly-coffee.git
 cd beanly-coffee
-npm install
+pnpm install
 ```
 
 ### Running the Application
@@ -33,7 +35,7 @@ npm install
 To run the development server, use the following command:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 This will start the app locally at \`http://localhost:3000\`.
@@ -43,7 +45,7 @@ This will start the app locally at \`http://localhost:3000\`.
 To create an optimised production build, run:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 This will generate static and server-rendered pages under the \`.next\` folder, which can then be deployed to any hosting platform.
@@ -53,7 +55,7 @@ This will generate static and server-rendered pages under the \`.next\` folder, 
 The application uses Jest for testing. To run tests:
 
 ```bash
-npm test
+pnpm test
 ```
 
 Snapshot testing is also included to ensure the UI remains consistent.
@@ -108,7 +110,7 @@ Testing is implemented using **Jest** and **React Testing Library**. Test files 
 To run all tests:
 
 ```bash
-npm test
+pnpm test
 ```
 
 This will execute the unit tests, including snapshot tests to ensure UI consistency.
@@ -119,7 +121,7 @@ We welcome contributions! Follow these steps to contribute:
 
 1. Fork the repository.
 2. Create a new branch for your feature/bugfix: \`git checkout -b feature-name\`
-3. Make your changes and ensure tests are passing: \`npm test\`
+3. Make your changes and ensure tests are passing: \`pnpm test\`
 4. Commit your changes: \`git commit -m 'Add new feature'\`
 5. Push the branch: \`git push origin feature-name\`
 6. Submit a pull request.
